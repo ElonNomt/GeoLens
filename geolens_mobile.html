@@ -329,19 +329,6 @@ border:none;border-radius:8px;
 font-family:var(–mono);font-size:11px;font-weight:600;letter-spacing:1px;
 cursor:pointer;
 }
-/* SETTINGS */
-.m-stg-overlay{position:fixed;inset:0;background:rgba(2,8,6,0.92);z-index:200;display:none;align-items:flex-end;justify-content:center;padding-bottom:0;}
-.m-stg-overlay.show{display:flex;}
-.m-stg-sheet{background:#061209;border-top:1px solid rgba(0,255,136,0.18);border-radius:16px 16px 0 0;padding:20px 20px 44px;width:100%;}
-.m-stg-handle{width:36px;height:3px;border-radius:2px;background:rgba(0,255,136,0.2);margin:0 auto 20px;}
-.m-stg-hdr{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;color:rgba(0,255,136,0.5);margin-bottom:18px;}
-.m-stg-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;color:rgba(200,245,216,0.4);margin-bottom:5px;}
-.m-stg-hint{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(200,245,216,0.28);margin-bottom:12px;}
-.m-stg-inp{width:100%;background:#020806;border:1px solid rgba(0,255,136,0.18);border-radius:6px;padding:12px 14px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#c8f5d8;outline:none;margin-bottom:16px;}
-.m-stg-inp:focus{border-color:rgba(0,255,136,0.5);}
-.m-stg-save{width:100%;padding:14px;background:#00ff88;color:#020806;border:none;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:1px;cursor:pointer;margin-bottom:10px;}
-.m-stg-cancel{width:100%;padding:12px;background:transparent;border:1px solid rgba(0,255,136,0.18);border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(200,245,216,0.4);cursor:pointer;}
-.m-stg-status{font-family:'JetBrains Mono',monospace;font-size:9px;color:#00ff88;margin-top:10px;letter-spacing:1px;text-align:center;min-height:14px;}
 </style>
 
 </head>
@@ -364,22 +351,7 @@ cursor:pointer;
     </div>
     <div class="topnav-live"><div class="live-dot"></div>LIVE</div>
     <div class="topnav-time" id="topnav-time">--:-- UTC</div>
-    <button onclick="openMobileSettings()" style="background:transparent;border:1px solid rgba(0,255,136,0.2);border-radius:4px;padding:4px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(0,255,136,0.6);cursor:pointer;letter-spacing:1px;margin-left:8px;">KEY</button>
   </div>
-
-<!-- SETTINGS SHEET -->
-<div class="m-stg-overlay" id="m-stg-overlay" onclick="if(event.target===this)closeMobileSettings()">
-  <div class="m-stg-sheet">
-    <div class="m-stg-handle"></div>
-    <div class="m-stg-hdr">// API CONFIGURATION</div>
-    <div class="m-stg-lbl">GROQ API KEY</div>
-    <div class="m-stg-hint">Free key at console.groq.com · Stored in your browser only</div>
-    <input class="m-stg-inp" id="m-stg-key-inp" type="password" placeholder="gsk_..." autocomplete="off" spellcheck="false"/>
-    <button class="m-stg-save" onclick="saveMobileSettings()">SAVE KEY</button>
-    <button class="m-stg-cancel" onclick="closeMobileSettings()">CANCEL</button>
-    <div class="m-stg-status" id="m-stg-status"></div>
-  </div>
-</div>
 
   <!-- SCROLL AREA -->
 
@@ -600,25 +572,8 @@ function updateClock(){
 }
 updateClock(); setInterval(updateClock,1000);
 
-// ── KEY MANAGEMENT ──
-function getGroqKey(){ return localStorage.getItem('groq_key')||''; }
-function openMobileSettings(){
-  const inp=document.getElementById('m-stg-key-inp');
-  const saved=localStorage.getItem('groq_key');
-  if(saved) inp.value=saved;
-  document.getElementById('m-stg-status').textContent='';
-  document.getElementById('m-stg-overlay').classList.add('show');
-  setTimeout(()=>inp.focus(),200);
-}
-function closeMobileSettings(){ document.getElementById('m-stg-overlay').classList.remove('show'); }
-function saveMobileSettings(){
-  const key=document.getElementById('m-stg-key-inp').value.trim();
-  if(!key){ document.getElementById('m-stg-status').textContent='KEY CANNOT BE EMPTY'; return; }
-  localStorage.setItem('groq_key',key);
-  document.getElementById('m-stg-status').textContent='✓ SAVED — KEY STORED LOCALLY';
-  setTimeout(closeMobileSettings,1100);
-}
-if(!getGroqKey()) setTimeout(openMobileSettings,700);
+const GEMINI_KEY='AIzaSyARyAiFdeFa0EHiZTh1_PwtF2lwdIZ8pLU';
+const GEMINI_URL=`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?key=${GEMINI_KEY}&alt=sse`;
 
 function escHtml(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
@@ -731,8 +686,6 @@ function askSuggestion(btn){
 
 async function sendMessage(){
   if(isLoading) return;
-  const GROQ_KEY=getGroqKey();
-  if(!GROQ_KEY){ openMobileSettings(); return; }
   const input=document.getElementById('chat-input');
   const q=input.value.trim();
   if(!q) return;
@@ -758,17 +711,13 @@ async function sendMessage(){
   isLoading=true;
 
   try{
-    const resp=await fetch('https://api.groq.com/openai/v1/chat/completions',{
+    const resp=await fetch(GEMINI_URL,{
       method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':`Bearer ${GROQ_KEY}`},
+      headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'llama-3.3-70b-versatile',
-        max_tokens:1000,
-        stream:true,
-        messages:[
-          {role:'system',content:`You are GeoLens, an elite geopolitical intelligence analyst. Answer questions about global conflicts, geopolitics, power dynamics, markets, and breaking news with sharp, expert-level clarity. Be concise but substantive — write 2-4 tight paragraphs. No bullet points. No jargon without explanation. End with one short "watch for" sentence highlighting what to monitor next. Keep the tone analytical and authoritative, like a top-tier intelligence brief.`},
-          {role:'user',content:q}
-        ]
+        systemInstruction:{parts:[{text:`You are GeoLens, an elite geopolitical intelligence analyst. Answer questions about global conflicts, geopolitics, power dynamics, markets, and breaking news with sharp, expert-level clarity. Be concise but substantive — write 2-4 tight paragraphs. No bullet points. No jargon without explanation. End with one short "watch for" sentence highlighting what to monitor next. Keep the tone analytical and authoritative, like a top-tier intelligence brief.`}]},
+        contents:[{role:'user',parts:[{text:q}]}],
+        generationConfig:{maxOutputTokens:1000}
       })
     });
 
@@ -785,7 +734,7 @@ async function sendMessage(){
     const reader=resp.body.getReader();
     const dec=new TextDecoder();
     let buf=''; let fullText='';
-    outer: while(true){
+    while(true){
       const {done,value}=await reader.read();
       if(done) break;
       buf+=dec.decode(value,{stream:true});
@@ -793,10 +742,10 @@ async function sendMessage(){
       for(const line of lines){
         if(!line.startsWith('data: ')) continue;
         const pay=line.slice(6).trim();
-        if(pay==='[DONE]') break outer;
+        if(pay==='[DONE]') continue;
         try{
           const ch=JSON.parse(pay);
-          const d=ch.choices?.[0]?.delta?.content||'';
+          const d=ch.candidates?.[0]?.content?.parts?.[0]?.text||'';
           if(d){ fullText+=d; textEl.innerHTML=fullText.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>'); scrollToBottom(); }
         }catch{}
       }
