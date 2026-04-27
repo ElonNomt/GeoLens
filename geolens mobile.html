@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 25.8.4.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		pre { font-size: 10pt; font-family: "Liberation Mono", monospace; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;/&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;/&gt;
+&lt;title&gt;GeoLens&lt;/title&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;/&gt;
+&lt;style&gt;
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+:root{
+  --bg:#020806;
+  --bg2:#061209;
+  --bg3:#0b1e0f;
+  --green:#00ff88;
+  --green-dim:rgba(0,255,136,0.5);
+  --green-border:rgba(0,255,136,0.16);
+  --green-ghost:rgba(0,255,136,0.07);
+  --text:#c8f5d8;
+  --text-muted:rgba(200,245,216,0.55);
+  --text-faint:rgba(200,245,216,0.28);
+  --red:#ff4455;
+  --amber:#ffaa00;
+  --mono:'JetBrains Mono',monospace;
+  --sans:'Inter',sans-serif;
+  --nav-h:56px;
+  --bar-h:60px;
+}
+html,body{
+  width:100%;height:100%;
+  background:var(--bg);color:var(--text);
+  font-family:var(--sans);
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── SHELL ── */
+.shell{display:flex;flex-direction:column;height:100dvh;position:relative;}
+
+/* ── TOP NAV ── */
+.topnav{
+height:var(–nav-h);flex-shrink:0;
+display:flex;align-items:center;justify-content:space-between;
+padding:0 16px;
+background:var(–bg2);
+border-bottom:1px solid var(–green-border);
+position:relative;z-index:20;
+}
+.topnav-logo{
+font-family:var(–mono);font-size:15px;font-weight:600;
+color:var(–green);letter-spacing:1.5px;
+display:flex;align-items:center;gap:8px;
+}
+.topnav-logo svg{width:18px;height:18px;}
+.topnav-live{
+display:flex;align-items:center;gap:5px;
+font-family:var(–mono);font-size:9px;color:var(–green-dim);letter-spacing:2px;
+}
+.live-dot{width:5px;height:5px;border-radius:50%;background:var(–green);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.topnav-time{
+font-family:var(–mono);font-size:10px;color:var(–text-faint);letter-spacing:1px;
+}
+
+/* ── SCROLL AREA ── */
+.scroll-area{
+flex:1;overflow-y:auto;overflow-x:hidden;
+-webkit-overflow-scrolling:touch;
+scroll-behavior:smooth;
+}
+.scroll-area::-webkit-scrollbar{display:none;}
+
+/* ── VIEWS ── */
+.view{display:none;flex-direction:column;min-height:100%;}
+.view.active{display:flex;}
+
+/* ═══════════════════════
+CHAT VIEW
+═══════════════════════ */
+.chat-view{padding-bottom:8px;}
+
+.chat-header{
+padding:16px 16px 0;
+flex-shrink:0;
+}
+.chat-header-title{
+font-family:var(–mono);font-size:9px;letter-spacing:3px;color:var(–green-dim);
+margin-bottom:12px;
+}
+
+/* Suggestion pills */
+.suggestions{
+display:flex;gap:6px;overflow-x:auto;padding-bottom:12px;
+scrollbar-width:none;
+}
+.suggestions::-webkit-scrollbar{display:none;}
+.sug-pill{
+flex-shrink:0;
+font-family:var(–mono);font-size:10px;letter-spacing:.5px;
+color:var(–text-faint);
+border:1px solid var(–green-border);
+border-radius:20px;padding:6px 12px;
+background:transparent;cursor:pointer;
+white-space:nowrap;transition:all .15s;
+}
+.sug-pill:active{background:var(–green-ghost);border-color:var(–green-dim);color:var(–green);}
+
+/* Messages */
+.messages{flex:1;padding:8px 16px 16px;display:flex;flex-direction:column;gap:16px;}
+
+.msg-user{align-self:flex-end;max-width:85%;}
+.msg-user-bubble{
+background:rgba(0,255,136,0.1);
+border:1px solid rgba(0,255,136,0.25);
+border-radius:16px 16px 4px 16px;
+padding:10px 14px;
+font-family:var(–mono);font-size:12px;color:var(–text);
+line-height:1.5;
+}
+.msg-user-bubble::before{content:’&gt; ’;color:var(–green);}
+
+.msg-ai{align-self:flex-start;max-width:100%;width:100%;}
+.msg-ai-meta{
+font-family:var(–mono);font-size:8px;color:var(–text-faint);
+letter-spacing:1.5px;margin-bottom:6px;
+display:flex;align-items:center;gap:6px;
+}
+.conf-pip{width:5px;height:5px;border-radius:50%;background:var(–green);}
+.conf-pip.loading{background:var(–amber);animation:blink 1s infinite;}
+.msg-ai-card{
+background:var(–bg2);
+border:1px solid var(–green-border);
+border-radius:4px 16px 16px 16px;
+padding:14px;
+}
+.msg-ai-text{
+font-size:13px;color:var(–text-muted);line-height:1.75;font-weight:300;
+}
+.msg-ai-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px;}
+.ai-chip{
+font-family:var(–mono);font-size:9px;letter-spacing:.5px;
+border:1px solid var(–green-border);border-radius:3px;
+padding:2px 7px;color:var(–green-dim);
+}
+
+/* Typing indicator */
+.typing-dots{display:flex;gap:4px;align-items:center;padding:4px 0;}
+.typing-dots span{
+width:5px;height:5px;border-radius:50%;background:var(–green);
+animation:bounce .9s infinite;
+}
+.typing-dots span:nth-child(2){animation-delay:.15s;}
+.typing-dots span:nth-child(3){animation-delay:.3s;}
+@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+
+/* ── INPUT BAR ── */
+.input-bar{
+position:sticky;bottom:0;
+background:var(–bg2);
+border-top:1px solid var(–green-border);
+padding:10px 12px;
+display:flex;align-items:center;gap:8px;
+z-index:15;
+flex-shrink:0;
+}
+.input-bar-prompt{
+font-family:var(–mono);font-size:12px;color:var(–green);flex-shrink:0;
+}
+.input-bar input{
+flex:1;background:transparent;border:none;outline:none;
+font-family:var(–mono);font-size:12px;color:var(–text);
+min-width:0;
+}
+.input-bar input::placeholder{color:var(–text-faint);}
+.send-btn{
+width:36px;height:36px;border-radius:8px;
+background:var(–green);border:none;
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;flex-shrink:0;transition:opacity .2s;
+}
+.send-btn:active{opacity:.7;}
+.send-btn svg{width:16px;height:16px;}
+
+/* ═══════════════════════
+FEED VIEW
+═══════════════════════ */
+.feed-view{padding-bottom:8px;}
+
+.feed-topbar{
+padding:14px 16px 10px;
+display:flex;align-items:center;justify-content:space-between;
+border-bottom:1px solid var(–green-border);
+flex-shrink:0;
+}
+.feed-topbar-label{font-family:var(–mono);font-size:9px;letter-spacing:3px;color:var(–green-dim);}
+.feed-stream{display:flex;align-items:center;gap:4px;font-family:var(–mono);font-size:9px;color:var(–text-faint);}
+
+.feed-filters{
+display:flex;gap:6px;overflow-x:auto;
+padding:10px 16px;border-bottom:1px solid var(–green-border);
+scrollbar-width:none;flex-shrink:0;
+}
+.feed-filters::-webkit-scrollbar{display:none;}
+.ff{
+flex-shrink:0;font-family:var(–mono);font-size:9px;letter-spacing:1px;
+border:1px solid var(–green-border);border-radius:3px;
+padding:5px 10px;background:transparent;color:var(–text-faint);cursor:pointer;
+transition:all .15s;
+}
+.ff.active{background:var(–green);color:#020806;border-color:var(–green);font-weight:600;}
+
+.feed-items{padding:0 0 16px;}
+.feed-item{
+padding:14px 16px;
+border-bottom:1px solid rgba(0,255,136,0.06);
+cursor:pointer;transition:background .15s;
+}
+.feed-item:active{background:var(–green-ghost);}
+.feed-item-meta{
+display:flex;align-items:center;gap:6px;margin-bottom:6px;
+font-family:var(–mono);font-size:9px;letter-spacing:.5px;flex-wrap:wrap;
+}
+.fi-time{color:var(–text-faint);}
+.fi-region{color:var(–text-muted);}
+.fi-sev{font-weight:600;border-radius:2px;padding:1px 5px;}
+.fi-sev.high{color:var(–red);background:rgba(255,68,85,0.1);}
+.fi-sev.med{color:var(–amber);background:rgba(255,170,0,0.1);}
+.fi-sev.low{color:var(–green-dim);background:rgba(0,255,136,0.08);}
+.fi-type{color:var(–text-faint);border:1px solid var(–green-border);padding:1px 5px;border-radius:2px;}
+.feed-item-title{font-size:14px;color:var(–text);line-height:1.4;font-weight:500;margin-bottom:4px;}
+.feed-item-src{font-family:var(–mono);font-size:9px;color:var(–text-faint);}
+
+/* ═══════════════════════
+MARKETS VIEW
+═══════════════════════ */
+.markets-view{padding:16px;}
+.mkt-header{font-family:var(–mono);font-size:9px;letter-spacing:3px;color:var(–green-dim);margin-bottom:14px;}
+.mkt-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px;}
+.mkt-card{
+background:var(–bg2);border:1px solid var(–green-border);
+border-radius:8px;padding:14px;
+}
+.mkt-name{font-family:var(–mono);font-size:9px;color:var(–text-faint);letter-spacing:1px;margin-bottom:6px;}
+.mkt-val{font-family:var(–mono);font-size:18px;color:var(–text);font-weight:500;}
+.mkt-chg{font-family:var(–mono);font-size:11px;display:block;margin-top:3px;}
+.mkt-chg.up{color:var(–green);}
+.mkt-chg.dn{color:var(–red);}
+
+.brief-header{font-family:var(–mono);font-size:9px;letter-spacing:3px;color:var(–green-dim);margin-bottom:14px;}
+.brief-item{
+background:var(–bg2);border:1px solid var(–green-border);
+border-radius:8px;padding:14px;margin-bottom:8px;
+}
+.brief-num{font-family:var(–mono);font-size:10px;color:var(–green);margin-bottom:6px;}
+.brief-title{font-size:14px;font-weight:600;color:var(–text);margin-bottom:4px;}
+.brief-desc{font-size:12px;color:var(–text-muted);line-height:1.6;font-weight:300;}
+
+/* ═══════════════════════
+MAP VIEW
+═══════════════════════ */
+.map-view{display:none;flex-direction:column;height:100%;}
+.map-view.active{display:flex;}
+.map-notice{
+padding:10px 16px;
+font-family:var(–mono);font-size:9px;letter-spacing:1.5px;color:var(–text-faint);
+border-bottom:1px solid var(–green-border);
+display:flex;align-items:center;gap:6px;flex-shrink:0;
+}
+.map-notice-dot{width:5px;height:5px;border-radius:50%;background:var(–amber);}
+
+/* ═══════════════════════
+BOTTOM NAV BAR
+═══════════════════════ */
+.bottom-nav{
+height:var(–bar-h);flex-shrink:0;
+display:flex;
+background:var(–bg2);
+border-top:1px solid var(–green-border);
+z-index:20;
+}
+.bnav-item{
+flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+gap:4px;cursor:pointer;transition:all .15s;
+border-top:2px solid transparent;
+padding-top:2px;
+}
+.bnav-item.active{border-top-color:var(–green);}
+.bnav-icon{width:20px;height:20px;opacity:.35;transition:opacity .15s;}
+.bnav-item.active .bnav-icon{opacity:1;}
+.bnav-label{
+font-family:var(–mono);font-size:8px;letter-spacing:1.5px;
+color:var(–text-faint);transition:color .15s;
+}
+.bnav-item.active .bnav-label{color:var(–green);}
+
+/* ═══════════════════════
+SLIDE-UP PANEL (feed detail)
+═══════════════════════ */
+.panel-overlay{
+position:fixed;inset:0;background:rgba(2,8,6,0.7);z-index:50;
+opacity:0;pointer-events:none;transition:opacity .25s;
+backdrop-filter:blur(4px);
+}
+.panel-overlay.open{opacity:1;pointer-events:all;}
+.slide-panel{
+position:fixed;bottom:0;left:0;right:0;
+background:var(–bg2);
+border-top:1px solid var(–green-border);
+border-radius:16px 16px 0 0;
+padding:20px 20px 40px;
+max-height:75dvh;overflow-y:auto;
+transform:translateY(100%);transition:transform .3s cubic-bezier(.32,.72,0,1);
+z-index:51;
+}
+.panel-overlay.open .slide-panel{transform:translateY(0);}
+.panel-handle{
+width:36px;height:3px;border-radius:2px;
+background:rgba(0,255,136,0.2);margin:0 auto 20px;
+}
+.panel-region{font-family:var(–mono);font-size:8px;letter-spacing:2px;color:var(–green-dim);margin-bottom:6px;}
+.panel-title{font-size:17px;font-weight:600;color:var(–text);margin-bottom:8px;line-height:1.4;}
+.panel-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+.panel-src{font-family:var(–mono);font-size:10px;color:var(–text-faint);margin-bottom:16px;}
+.panel-desc{font-size:13px;color:var(–text-muted);line-height:1.75;font-weight:300;margin-bottom:16px;}
+.panel-ask-btn{
+width:100%;padding:13px;
+background:var(–green);color:#020806;
+border:none;border-radius:8px;
+font-family:var(–mono);font-size:11px;font-weight:600;letter-spacing:1px;
+cursor:pointer;
+}
+&lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;shell&quot;&gt;
+
+  &lt;!-- TOP NAV --&gt;
+
+  &lt;div class=&quot;topnav&quot;&gt;
+    &lt;div class=&quot;topnav-logo&quot;&gt;
+      &lt;svg viewBox=&quot;0 0 20 20&quot; fill=&quot;none&quot; stroke=&quot;#00ff88&quot; stroke-width=&quot;1.5&quot;&gt;
+        &lt;circle cx=&quot;10&quot; cy=&quot;10&quot; r=&quot;8&quot;/&gt;
+        &lt;circle cx=&quot;10&quot; cy=&quot;10&quot; r=&quot;3&quot;/&gt;
+        &lt;line x1=&quot;10&quot; y1=&quot;2&quot; x2=&quot;10&quot; y2=&quot;0&quot;/&gt;
+        &lt;line x1=&quot;10&quot; y1=&quot;18&quot; x2=&quot;10&quot; y2=&quot;20&quot;/&gt;
+        &lt;line x1=&quot;2&quot; y1=&quot;10&quot; x2=&quot;0&quot; y2=&quot;10&quot;/&gt;
+        &lt;line x1=&quot;18&quot; y1=&quot;10&quot; x2=&quot;20&quot; y2=&quot;10&quot;/&gt;
+      &lt;/svg&gt;
+      GEOLENS
+    &lt;/div&gt;
+    &lt;div class=&quot;topnav-live&quot;&gt;&lt;div class=&quot;live-dot&quot;&gt;&lt;/div&gt;LIVE&lt;/div&gt;
+    &lt;div class=&quot;topnav-time&quot; id=&quot;topnav-time&quot;&gt;--:-- UTC&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- SCROLL AREA --&gt;
+
+  &lt;div class=&quot;scroll-area&quot; id=&quot;scroll-area&quot;&gt;
+
+```
+&lt;!-- CHAT VIEW --&gt;
+&lt;div class=&quot;view chat-view active&quot; id=&quot;view-chat&quot;&gt;
+  &lt;div class=&quot;chat-header&quot;&gt;
+    &lt;div class=&quot;chat-header-title&quot;&gt;// ANALYST QUERY TERMINAL&lt;/div&gt;
+    &lt;div class=&quot;suggestions&quot; id=&quot;suggestions&quot;&gt;
+      &lt;button class=&quot;sug-pill&quot; onclick=&quot;askSuggestion(this)&quot;&gt;South China Sea&lt;/button&gt;
+      &lt;button class=&quot;sug-pill&quot; onclick=&quot;askSuggestion(this)&quot;&gt;Who funds the Houthis?&lt;/button&gt;
+      &lt;button class=&quot;sug-pill&quot; onclick=&quot;askSuggestion(this)&quot;&gt;Ukraine war drivers&lt;/button&gt;
+      &lt;button class=&quot;sug-pill&quot; onclick=&quot;askSuggestion(this)&quot;&gt;Sahel coup belt&lt;/button&gt;
+      &lt;button class=&quot;sug-pill&quot; onclick=&quot;askSuggestion(this)&quot;&gt;Yuan vs dollar&lt;/button&gt;
+      &lt;button class=&quot;sug-pill&quot; onclick=&quot;askSuggestion(this)&quot;&gt;Taiwan Strait today&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;messages&quot; id=&quot;messages&quot;&gt;
+    &lt;!-- Welcome card --&gt;
+    &lt;div class=&quot;msg-ai&quot;&gt;
+      &lt;div class=&quot;msg-ai-meta&quot;&gt;// GEOLENS-79 · READY &lt;div class=&quot;conf-pip&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;msg-ai-card&quot;&gt;
+        &lt;div class=&quot;msg-ai-text&quot;&gt;Ask me anything about global conflicts, power dynamics, sanctions, or breaking geopolitical news. I'll give you a clear, expert-level answer — no jargon.&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;input-bar&quot;&gt;
+    &lt;div class=&quot;input-bar-prompt&quot;&gt;&amp;gt;_&lt;/div&gt;
+    &lt;input id=&quot;chat-input&quot; placeholder=&quot;Ask about any conflict or region...&quot; autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; spellcheck=&quot;false&quot;/&gt;
+    &lt;button class=&quot;send-btn&quot; onclick=&quot;sendMessage()&quot;&gt;
+      &lt;svg viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot; stroke=&quot;#020806&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;
+        &lt;line x1=&quot;2&quot; y1=&quot;8&quot; x2=&quot;14&quot; y2=&quot;8&quot;/&gt;
+        &lt;polyline points=&quot;9,3 14,8 9,13&quot;/&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- FEED VIEW --&gt;
+&lt;div class=&quot;view feed-view&quot; id=&quot;view-feed&quot;&gt;
+  &lt;div class=&quot;feed-topbar&quot;&gt;
+    &lt;div class=&quot;feed-topbar-label&quot;&gt;// LIVE INTEL FEED&lt;/div&gt;
+    &lt;div class=&quot;feed-stream&quot;&gt;&lt;div class=&quot;live-dot&quot;&gt;&lt;/div&gt;STREAM&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;feed-filters&quot;&gt;
+    &lt;button class=&quot;ff active&quot; onclick=&quot;filterFeed('ALL',this)&quot;&gt;ALL&lt;/button&gt;
+    &lt;button class=&quot;ff&quot; onclick=&quot;filterFeed('EU-EAST',this)&quot;&gt;EU-EAST&lt;/button&gt;
+    &lt;button class=&quot;ff&quot; onclick=&quot;filterFeed('MENA',this)&quot;&gt;MENA&lt;/button&gt;
+    &lt;button class=&quot;ff&quot; onclick=&quot;filterFeed('INDO-PAC',this)&quot;&gt;INDO-PAC&lt;/button&gt;
+    &lt;button class=&quot;ff&quot; onclick=&quot;filterFeed('AFRICA',this)&quot;&gt;AFRICA&lt;/button&gt;
+    &lt;button class=&quot;ff&quot; onclick=&quot;filterFeed('AMERICAS',this)&quot;&gt;AMERICAS&lt;/button&gt;
+    &lt;button class=&quot;ff&quot; onclick=&quot;filterFeed('GLOBAL',this)&quot;&gt;GLOBAL&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;feed-items&quot; id=&quot;feed-items&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- MARKETS VIEW --&gt;
+&lt;div class=&quot;view markets-view&quot; id=&quot;view-markets&quot;&gt;
+  &lt;div class=&quot;mkt-header&quot;&gt;// CONFLICT-LINKED MARKETS&lt;/div&gt;
+  &lt;div class=&quot;mkt-grid&quot;&gt;
+    &lt;div class=&quot;mkt-card&quot;&gt;
+      &lt;div class=&quot;mkt-name&quot;&gt;USD/RUB&lt;/div&gt;
+      &lt;div class=&quot;mkt-val&quot;&gt;94.21&lt;/div&gt;
+      &lt;span class=&quot;mkt-chg up&quot;&gt;+0.42%&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mkt-card&quot;&gt;
+      &lt;div class=&quot;mkt-name&quot;&gt;BRENT CRUDE&lt;/div&gt;
+      &lt;div class=&quot;mkt-val&quot;&gt;$87.14&lt;/div&gt;
+      &lt;span class=&quot;mkt-chg up&quot;&gt;+1.8%&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mkt-card&quot;&gt;
+      &lt;div class=&quot;mkt-name&quot;&gt;WHEAT&lt;/div&gt;
+      &lt;div class=&quot;mkt-val&quot;&gt;$612&lt;/div&gt;
+      &lt;span class=&quot;mkt-chg up&quot;&gt;+3.1%&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mkt-card&quot;&gt;
+      &lt;div class=&quot;mkt-name&quot;&gt;TWD/USD&lt;/div&gt;
+      &lt;div class=&quot;mkt-val&quot;&gt;32.18&lt;/div&gt;
+      &lt;span class=&quot;mkt-chg dn&quot;&gt;−0.22%&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mkt-card&quot;&gt;
+      &lt;div class=&quot;mkt-name&quot;&gt;UA-10Y&lt;/div&gt;
+      &lt;div class=&quot;mkt-val&quot;&gt;21.4%&lt;/div&gt;
+      &lt;span class=&quot;mkt-chg up&quot;&gt;+18bp&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mkt-card&quot;&gt;
+      &lt;div class=&quot;mkt-name&quot;&gt;VIX&lt;/div&gt;
+      &lt;div class=&quot;mkt-val&quot;&gt;17.2&lt;/div&gt;
+      &lt;span class=&quot;mkt-chg up&quot;&gt;+0.8&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;brief-header&quot;&gt;// TODAY'S BRIEFING&lt;/div&gt;
+  &lt;div class=&quot;brief-item&quot;&gt;
+    &lt;div class=&quot;brief-num&quot;&gt;01&lt;/div&gt;
+    &lt;div class=&quot;brief-title&quot;&gt;Odesa grain terminal strike&lt;/div&gt;
+    &lt;div class=&quot;brief-desc&quot;&gt;Drone strike disrupts key Black Sea export route. Wheat futures spiking. Watch for WFP response and Turkish mediation signal.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;brief-item&quot;&gt;
+    &lt;div class=&quot;brief-num&quot;&gt;02&lt;/div&gt;
+    &lt;div class=&quot;brief-desc&quot; style=&quot;font-size:13px;font-weight:600;color:var(--text)&quot;&gt;Niger uranium nationalization&lt;/div&gt;
+    &lt;div class=&quot;brief-desc&quot; style=&quot;margin-top:4px&quot;&gt;Junta seizes Orano concession. France's nuclear supply chain at risk. EU emergency session flagged.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;brief-item&quot;&gt;
+    &lt;div class=&quot;brief-num&quot;&gt;03&lt;/div&gt;
+    &lt;div class=&quot;brief-title&quot;&gt;PLA Miyako transit&lt;/div&gt;
+    &lt;div class=&quot;brief-desc&quot;&gt;Task group moves southbound — third this month. JMSDF shadowing. Pre-Taiwan exercise posturing or routine?&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- MAP VIEW --&gt;
+&lt;div class=&quot;map-view&quot; id=&quot;view-map&quot;&gt;
+  &lt;div class=&quot;map-notice&quot;&gt;
+    &lt;div class=&quot;map-notice-dot&quot;&gt;&lt;/div&gt;
+    TAP A PIN OR COUNTRY TO ANALYZE IN CHAT
+  &lt;/div&gt;
+  &lt;div class=&quot;map-filters-wrap&quot;&gt;
+    &lt;div class=&quot;feed-filters&quot; style=&quot;padding:8px 12px;border-bottom:1px solid var(--green-border);&quot;&gt;
+      &lt;button class=&quot;ff active&quot; onclick=&quot;setMapFilter('ALL',this)&quot;&gt;ALL&lt;/button&gt;
+      &lt;button class=&quot;ff&quot; onclick=&quot;setMapFilter('EU-EAST',this)&quot;&gt;EU-EAST&lt;/button&gt;
+      &lt;button class=&quot;ff&quot; onclick=&quot;setMapFilter('MENA',this)&quot;&gt;MENA&lt;/button&gt;
+      &lt;button class=&quot;ff&quot; onclick=&quot;setMapFilter('INDO-PAC',this)&quot;&gt;INDO-PAC&lt;/button&gt;
+      &lt;button class=&quot;ff&quot; onclick=&quot;setMapFilter('AFRICA',this)&quot;&gt;AFRICA&lt;/button&gt;
+      &lt;button class=&quot;ff&quot; onclick=&quot;setMapFilter('AMERICAS',this)&quot;&gt;AMERICAS&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;mobile-map-container&quot; style=&quot;flex:1;position:relative;background:var(--bg);touch-action:none;&quot;&gt;
+    &lt;svg id=&quot;mobile-world-svg&quot; style=&quot;width:100%;height:100%;display:block;&quot;&gt;&lt;/svg&gt;
+    &lt;div id=&quot;mobile-map-tt&quot; style=&quot;
+      position:absolute;pointer-events:none;display:none;z-index:20;
+      background:rgba(2,8,6,0.95);border:1px solid var(--green-border);
+      border-radius:6px;padding:8px 12px;max-width:160px;backdrop-filter:blur(8px);&quot;&gt;
+      &lt;div id=&quot;mtt-region&quot; style=&quot;font-family:var(--mono);font-size:8px;color:var(--green-dim);letter-spacing:2px;margin-bottom:3px;&quot;&gt;&lt;/div&gt;
+      &lt;div id=&quot;mtt-label&quot; style=&quot;font-family:var(--mono);font-size:12px;color:#fff;margin-bottom:4px;&quot;&gt;&lt;/div&gt;
+      &lt;div id=&quot;mtt-count&quot; style=&quot;font-family:var(--mono);font-size:9px;color:var(--text-faint);margin-bottom:8px;&quot;&gt;&lt;/div&gt;
+      &lt;button id=&quot;mtt-btn&quot; style=&quot;
+        width:100%;padding:6px;background:var(--green);color:#020806;
+        border:none;border-radius:4px;font-family:var(--mono);font-size:9px;
+        font-weight:600;letter-spacing:1px;cursor:pointer;&quot;&gt;ANALYZE →&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;position:absolute;bottom:10px;left:12px;display:flex;gap:12px;
+      font-family:var(--mono);font-size:9px;color:var(--text-faint);
+      background:rgba(2,8,6,0.8);border:1px solid var(--green-border);
+      border-radius:4px;padding:5px 10px;letter-spacing:1px;&quot;&gt;
+      &lt;span&gt;&lt;span style=&quot;display:inline-block;width:6px;height:6px;border-radius:50%;background:#ff4455;margin-right:3px;&quot;&gt;&lt;/span&gt;HIGH&lt;/span&gt;
+      &lt;span&gt;&lt;span style=&quot;display:inline-block;width:6px;height:6px;border-radius:50%;background:#ffaa00;margin-right:3px;&quot;&gt;&lt;/span&gt;MED&lt;/span&gt;
+      &lt;span&gt;&lt;span style=&quot;display:inline-block;width:6px;height:6px;border-radius:50%;background:#00ff88;margin-right:3px;&quot;&gt;&lt;/span&gt;LOW&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;position:absolute;bottom:10px;right:10px;display:flex;flex-direction:column;gap:2px;&quot;&gt;
+      &lt;button onclick=&quot;mobileZoom(1.4)&quot; style=&quot;width:32px;height:32px;border:1px solid var(--green-border);background:rgba(2,8,6,0.9);color:var(--text-muted);font-size:18px;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;&quot;&gt;+&lt;/button&gt;
+      &lt;button onclick=&quot;mobileZoom(1/1.4)&quot; style=&quot;width:32px;height:32px;border:1px solid var(--green-border);background:rgba(2,8,6,0.9);color:var(--text-muted);font-size:18px;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;&quot;&gt;−&lt;/button&gt;
+      &lt;button onclick=&quot;mobileResetZoom()&quot; style=&quot;width:32px;height:32px;border:1px solid var(--green-border);background:rgba(2,8,6,0.9);color:var(--text-muted);font-size:12px;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;&quot;&gt;⌂&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+```
+
+  &lt;/div&gt;&lt;!-- /scroll-area --&gt;
+
+  &lt;!-- BOTTOM NAV --&gt;
+
+  &lt;nav class=&quot;bottom-nav&quot;&gt;
+    &lt;div class=&quot;bnav-item active&quot; onclick=&quot;switchView('chat',this)&quot; id=&quot;bnav-chat&quot;&gt;
+      &lt;svg class=&quot;bnav-icon&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;none&quot; stroke=&quot;#00ff88&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot;&gt;
+        &lt;path d=&quot;M3 4h14v10H3z&quot; rx=&quot;1&quot;/&gt;
+        &lt;polyline points=&quot;3,14 7,14 10,18 13,14 17,14&quot;/&gt;
+      &lt;/svg&gt;
+      &lt;span class=&quot;bnav-label&quot;&gt;CHAT&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bnav-item&quot; onclick=&quot;switchView('feed',this)&quot; id=&quot;bnav-feed&quot;&gt;
+      &lt;svg class=&quot;bnav-icon&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;none&quot; stroke=&quot;#00ff88&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot;&gt;
+        &lt;line x1=&quot;3&quot; y1=&quot;5&quot; x2=&quot;17&quot; y2=&quot;5&quot;/&gt;
+        &lt;line x1=&quot;3&quot; y1=&quot;10&quot; x2=&quot;17&quot; y2=&quot;10&quot;/&gt;
+        &lt;line x1=&quot;3&quot; y1=&quot;15&quot; x2=&quot;11&quot; y2=&quot;15&quot;/&gt;
+        &lt;circle cx=&quot;16&quot; cy=&quot;15&quot; r=&quot;3&quot;/&gt;
+        &lt;circle cx=&quot;16&quot; cy=&quot;15&quot; r=&quot;1.2&quot; fill=&quot;#00ff88&quot;/&gt;
+      &lt;/svg&gt;
+      &lt;span class=&quot;bnav-label&quot;&gt;FEED&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bnav-item&quot; onclick=&quot;switchView('markets',this)&quot; id=&quot;bnav-markets&quot;&gt;
+      &lt;svg class=&quot;bnav-icon&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;none&quot; stroke=&quot;#00ff88&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot;&gt;
+        &lt;polyline points=&quot;2,15 7,8 11,11 15,5 18,7&quot;/&gt;
+        &lt;line x1=&quot;2&quot; y1=&quot;17&quot; x2=&quot;18&quot; y2=&quot;17&quot;/&gt;
+      &lt;/svg&gt;
+      &lt;span class=&quot;bnav-label&quot;&gt;MARKETS&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bnav-item&quot; onclick=&quot;switchView('map',this)&quot; id=&quot;bnav-map&quot;&gt;
+      &lt;svg class=&quot;bnav-icon&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;none&quot; stroke=&quot;#00ff88&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot;&gt;
+        &lt;circle cx=&quot;10&quot; cy=&quot;10&quot; r=&quot;8&quot;/&gt;
+        &lt;path d=&quot;M2 10 Q6 7 10 10 Q14 13 18 10&quot;/&gt;
+        &lt;path d=&quot;M10 2 Q7 6 10 10 Q13 14 10 18&quot;/&gt;
+      &lt;/svg&gt;
+      &lt;span class=&quot;bnav-label&quot;&gt;MAP&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+&lt;/div&gt;
+
+&lt;!-- SLIDE-UP PANEL --&gt;
+
+&lt;div class=&quot;panel-overlay&quot; id=&quot;panel-overlay&quot; onclick=&quot;closePanel(event)&quot;&gt;
+  &lt;div class=&quot;slide-panel&quot; id=&quot;slide-panel&quot;&gt;
+    &lt;div class=&quot;panel-handle&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel-region&quot; id=&quot;panel-region&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel-title&quot; id=&quot;panel-title&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel-meta&quot; id=&quot;panel-meta&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel-src&quot; id=&quot;panel-src&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel-desc&quot; id=&quot;panel-desc&quot;&gt;&lt;/div&gt;
+    &lt;button class=&quot;panel-ask-btn&quot; id=&quot;panel-ask-btn&quot;&gt;ANALYZE IN CHAT →&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// ── UTC CLOCK ──
+function updateClock(){
+  const n=new Date();
+  const t=`${String(n.getUTCHours()).padStart(2,'0')}:${String(n.getUTCMinutes()).padStart(2,'0')} UTC`;
+  document.getElementById('topnav-time').textContent=t;
+}
+updateClock(); setInterval(updateClock,1000);
+
+// ── VIEW SWITCHER ──
+let currentView='chat';
+let mapBuilt=false;
+function switchView(view, el){
+  document.querySelectorAll('.view, .map-view').forEach(v=&gt;v.classList.remove('active'));
+  document.querySelectorAll('.bnav-item').forEach(b=&gt;b.classList.remove('active'));
+  const target=document.getElementById('view-'+view);
+  if(target) target.classList.add('active');
+  if(el) el.classList.add('active');
+  currentView=view;
+  if(view!=='map') document.getElementById('scroll-area').scrollTop=0;
+  if(view==='map' &amp;&amp; !mapBuilt){ mapBuilt=true; setTimeout(buildMobileMap,80); }
+}
+
+// ── FEED DATA ──
+const feedData=[
+  {time:'14:42',region:'EU-EAST',sev:'high',type:'KINETIC',title:'Drone strike reported on Odesa grain terminal',src:'Reuters · UNIAN · OSINT-Twitter (3)',desc:'A drone strike hit the Odesa grain terminal, disrupting Black Sea export routes critical to global food supply. This is the third attack this month on port infrastructure. Wheat futures are up 3.1% on the news.',filter:'EU-EAST'},
+  {time:'14:38',region:'MENA',sev:'med',type:'DIPLO',title:'Saudi-Iran joint security working group convenes in Muscat',src:'Asharq · IRNA',desc:'A rare joint session signals ongoing normalization momentum brokered by China. Key agenda items include Yemen ceasefire monitoring and maritime security in the Strait of Hormuz.',filter:'MENA'},
+  {time:'14:31',region:'INDO-PAC',sev:'med',type:'MIL',title:'PLA Navy task group transits Miyako Strait southbound',src:'JMSDF · Reuters',desc:'Third Miyako transit this month. JMSDF is shadowing. Analysts are split between routine patrol posturing and pre-exercise positioning ahead of a rumored Taiwan Strait exercise.',filter:'INDO-PAC'},
+  {time:'14:22',region:'GLOBAL',sev:'low',type:'FIN',title:'IMF flags FX reserve drawdowns in 6 EM economies',src:'IMF brief · FT',desc:'Six emerging market economies showing significant reserve drawdowns. Elevated commodity import costs and strong dollar are the primary drivers. Sri Lanka, Pakistan, and Egypt are among those flagged.',filter:'GLOBAL'},
+  {time:'14:18',region:'AFRICA',sev:'high',type:'RESOURCE',title:'Niger junta nationalizes uranium concession',src:'AFP · Jeune Afrique',desc:'The military junta has seized the Orano (formerly Areva) uranium concession in Agadez. This directly threatens France\'s nuclear fuel supply chain. EU emergency consultation flagged.',filter:'AFRICA'},
+  {time:'14:09',region:'AMERICAS',sev:'low',type:'INFRA',title:'Mexico CFE outage cascades across 3 northern states',src:'CFE · Bloomberg',desc:'Grid failure in Chihuahua, Sonora, and Coahuila affecting 2.1M people. Timing is sensitive given US nearshoring investments in the region and ongoing water-energy stress from drought.',filter:'AMERICAS'},
+  {time:'13:55',region:'EU-EAST',sev:'med',type:'DIPLO',title:'Polish FM signals new aid tranche announcement',src:'PAP · Politico EU',desc:'Poland\'s Foreign Minister hinted at a new bilateral aid package for Ukraine ahead of the Brussels summit. Expected to include artillery munitions and air defense components.',filter:'EU-EAST'},
+  {time:'13:41',region:'INDO-PAC',sev:'low',type:'FIN',title:'TSMC capex revised +8% on US fab acceleration',src:'TSMC IR · Nikkei',desc:'TSMC raised its capital expenditure forecast, driven by accelerated construction at the Arizona fab. Signals confidence in US government subsidies under the CHIPS Act.',filter:'INDO-PAC'},
+];
+
+let activeFeedFilter='ALL';
+function filterFeed(f,el){
+  activeFeedFilter=f;
+  document.querySelectorAll('.ff').forEach(b=&gt;b.classList.remove('active'));
+  el.classList.add('active');
+  renderFeed();
+}
+function renderFeed(){
+  const items=activeFeedFilter==='ALL'?feedData:feedData.filter(d=&gt;d.filter===activeFeedFilter);
+  const container=document.getElementById('feed-items');
+  container.innerHTML=items.map((d,i)=&gt;`
+    &lt;div class=&quot;feed-item&quot; onclick=&quot;openPanel(${feedData.indexOf(d)})&quot;&gt;
+      &lt;div class=&quot;feed-item-meta&quot;&gt;
+        &lt;span class=&quot;fi-time&quot;&gt;${d.time}&lt;/span&gt;
+        &lt;span class=&quot;fi-region&quot;&gt;${d.region}&lt;/span&gt;
+        &lt;span class=&quot;fi-sev ${d.sev}&quot;&gt;${d.sev.toUpperCase()}&lt;/span&gt;
+        &lt;span class=&quot;fi-type&quot;&gt;${d.type}&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;feed-item-title&quot;&gt;${d.title}&lt;/div&gt;
+      &lt;div class=&quot;feed-item-src&quot;&gt;${d.src}&lt;/div&gt;
+    &lt;/div&gt;
+  `).join('');
+}
+renderFeed();
+
+// ── SLIDE PANEL ──
+function openPanel(idx){
+  const d=feedData[idx];
+  document.getElementById('panel-region').textContent=d.region+' // '+d.sev.toUpperCase();
+  document.getElementById('panel-title').textContent=d.title;
+  document.getElementById('panel-src').textContent=d.src;
+  document.getElementById('panel-desc').textContent=d.desc;
+  document.getElementById('panel-meta').innerHTML=`
+    &lt;span class=&quot;fi-sev ${d.sev}&quot;&gt;${d.sev.toUpperCase()}&lt;/span&gt;
+    &lt;span class=&quot;fi-type&quot;&gt;${d.type}&lt;/span&gt;
+    &lt;span class=&quot;fi-time&quot;&gt;${d.time} UTC&lt;/span&gt;
+  `;
+  document.getElementById('panel-ask-btn').onclick=()=&gt;{
+    closePanel();
+    switchView('chat', document.getElementById('bnav-chat'));
+    setTimeout(()=&gt;{
+      document.getElementById('chat-input').value=d.title;
+      sendMessage();
+    },300);
+  };
+  document.getElementById('panel-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closePanel(e){
+  if(e&amp;&amp;e.target!==document.getElementById('panel-overlay')) return;
+  document.getElementById('panel-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+// ── CHAT ──
+let isLoading=false;
+
+function askSuggestion(btn){
+  document.getElementById('chat-input').value=btn.textContent;
+  sendMessage();
+}
+
+async function sendMessage(){
+  if(isLoading) return;
+  const input=document.getElementById('chat-input');
+  const q=input.value.trim();
+  if(!q) return;
+  input.value='';
+
+  const messages=document.getElementById('messages');
+
+  // User bubble
+  const userDiv=document.createElement('div');
+  userDiv.className='msg-user';
+  userDiv.innerHTML=`&lt;div class=&quot;msg-user-bubble&quot;&gt;${q}&lt;/div&gt;`;
+  messages.appendChild(userDiv);
+  scrollToBottom();
+
+  // AI loading
+  const aiDiv=document.createElement('div');
+  aiDiv.className='msg-ai';
+  aiDiv.innerHTML=`
+    &lt;div class=&quot;msg-ai-meta&quot;&gt;// GEOLENS-79 · PROCESSING &lt;div class=&quot;conf-pip loading&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;msg-ai-card&quot;&gt;
+      &lt;div class=&quot;typing-dots&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;`;
+  messages.appendChild(aiDiv);
+  scrollToBottom();
+  isLoading=true;
+
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1000,
+        system:`You are GeoLens, an elite geopolitical intelligence analyst. Answer questions about global conflicts, geopolitics, power dynamics, markets, and breaking news with sharp, expert-level clarity. Be concise but substantive — write 2-4 tight paragraphs. No bullet points. No jargon without explanation. End with one short &quot;watch for&quot; sentence highlighting what to monitor next. Keep the tone analytical and authoritative, like a top-tier intelligence brief.`,
+        messages:[{role:'user',content:q}]
+      })
+    });
+    const data=await res.json();
+    const text=data.content?.map(c=&gt;c.text||'').join('')||'Unable to retrieve analysis. Check connection.';
+
+    // Extract key terms for chips (simple approach: capitalize region/country mentions)
+    const chips=extractChips(q+' '+text);
+
+    aiDiv.innerHTML=`
+      &lt;div class=&quot;msg-ai-meta&quot;&gt;// GEOLENS-79 · COMPLETE &lt;div class=&quot;conf-pip&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;msg-ai-card&quot;&gt;
+        &lt;div class=&quot;msg-ai-text&quot;&gt;${text.replace(/\n\n/g,'&lt;br&gt;&lt;br&gt;').replace(/\n/g,'&lt;br&gt;')}&lt;/div&gt;
+        ${chips.length?`&lt;div class=&quot;msg-ai-chips&quot;&gt;${chips.map(c=&gt;`&lt;span class=&quot;ai-chip&quot;&gt;${c}&lt;/span&gt;`).join('')}&lt;/div&gt;`:''}
+      &lt;/div&gt;`;
+  }catch(err){
+    aiDiv.innerHTML=`
+      &lt;div class=&quot;msg-ai-meta&quot;&gt;// GEOLENS-79 · ERROR &lt;div class=&quot;conf-pip&quot; style=&quot;background:var(--red)&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;msg-ai-card&quot;&gt;
+        &lt;div class=&quot;msg-ai-text&quot; style=&quot;color:var(--red)&quot;&gt;Signal lost. Check connection and retry.&lt;/div&gt;
+      &lt;/div&gt;`;
+  }
+
+  isLoading=false;
+  scrollToBottom();
+}
+
+function extractChips(text){
+  const regions=['China','Russia','Ukraine','Iran','Israel','Gaza','Taiwan','India','Pakistan','Turkey','Saudi Arabia','Yemen','Syria','Niger','Mali','Sudan','Philippines','Japan','Korea','NATO','EU','BRICS'];
+  const found=regions.filter(r=&gt;text.toLowerCase().includes(r.toLowerCase()));
+  return found.slice(0,5);
+}
+
+function scrollToBottom(){
+  const sa=document.getElementById('scroll-area');
+  setTimeout(()=&gt;sa.scrollTop=sa.scrollHeight,50);
+}
+
+document.getElementById('chat-input').addEventListener('keydown',e=&gt;{
+  if(e.key==='Enter'){e.preventDefault();sendMessage();}
+});
+
+// Keyboard handling — push content up
+const inp=document.getElementById('chat-input');
+inp.addEventListener('focus',()=&gt;{ setTimeout(scrollToBottom,350); });
+&lt;/script&gt;
+
+&lt;!-- D3 + TopoJSON for native map --&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+const mapIncidents=[
+  {id:0,lat:47.5,lng:33.5,region:'EU-EAST',label:'ODESA',sev:'high',count:4,filter:'EU-EAST'},
+  {id:1,lat:44.5,lng:34.0,region:'EU-EAST',label:'CRIMEA',sev:'high',count:2,filter:'EU-EAST'},
+  {id:2,lat:52.2,lng:21.0,region:'EU-EAST',label:'WARSAW',sev:'med',count:1,filter:'EU-EAST'},
+  {id:3,lat:23.6,lng:58.6,region:'MENA',label:'MUSCAT',sev:'med',count:1,filter:'MENA'},
+  {id:4,lat:31.5,lng:34.5,region:'MENA',label:'LEVANT',sev:'high',count:3,filter:'MENA'},
+  {id:5,lat:35.7,lng:51.4,region:'MENA',label:'TEHRAN',sev:'high',count:2,filter:'MENA'},
+  {id:6,lat:24.5,lng:125.3,region:'INDO-PAC',label:'MIYAKO',sev:'med',count:2,filter:'INDO-PAC'},
+  {id:7,lat:24.0,lng:122.0,region:'INDO-PAC',label:'TAIWAN',sev:'high',count:5,filter:'INDO-PAC'},
+  {id:8,lat:13.5,lng:2.1,region:'AFRICA',label:'NIAMEY',sev:'high',count:2,filter:'AFRICA'},
+  {id:9,lat:15.6,lng:32.5,region:'AFRICA',label:'KHARTOUM',sev:'med',count:1,filter:'AFRICA'},
+  {id:10,lat:26.5,lng:-104.5,region:'AMERICAS',label:'N.MEXICO',sev:'low',count:1,filter:'AMERICAS'},
+  {id:11,lat:38.9,lng:-77.0,region:'GLOBAL',label:'D.C.',sev:'low',count:1,filter:'ALL'},
+  {id:12,lat:28.6,lng:77.2,region:'GLOBAL',label:'DELHI',sev:'med',count:1,filter:'ALL'},
+];
+const sevCol={high:'#ff4455',med:'#ffaa00',low:'#00ff88'};
+
+let mSvg,mG,mProj,mPath,mZoom,mTransform=d3.zoomIdentity;
+let mActiveFilter='ALL';
+let mMapLoaded=false;
+
+async function buildMobileMap(){
+  if(mMapLoaded) return;
+  const container=document.getElementById('mobile-map-container');
+  const W=container.clientWidth||390;
+  const H=container.clientHeight||360;
+
+  mSvg=d3.select('#mobile-world-svg').attr('width',W).attr('height',H).attr('viewBox',`0 0 ${W} ${H}`);
+  mSvg.selectAll('*').remove();
+
+  mProj=d3.geoNaturalEarth1().scale(W/5.8).translate([W/2,H/2]);
+  mPath=d3.geoPath().projection(mProj);
+
+  mZoom=d3.zoom().scaleExtent([0.5,8]).on('zoom',(e)=&gt;{
+    mTransform=e.transform;
+    mG.attr('transform',mTransform);
+    rescalePins();
+  });
+
+  // Touch-friendly zoom
+  mSvg.call(mZoom).on('dblclick.zoom',null);
+
+  mSvg.append('rect').attr('width',W).attr('height',H).attr('fill','#020d06');
+  mG=mSvg.append('g');
+
+  // Ocean sphere
+  mG.append('path').datum({type:'Sphere'}).attr('d',mPath)
+    .attr('fill','#041008').attr('stroke','none');
+
+  // Graticule
+  mG.append('path').datum(d3.geoGraticule()())
+    .attr('d',mPath).attr('fill','none')
+    .attr('stroke','rgba(0,255,136,0.04)').attr('stroke-width',0.5);
+
+  try{
+    const world=await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+
+    mG.append('g').selectAll('path')
+      .data(topojson.feature(world,world.objects.countries).features)
+      .enter().append('path')
+      .attr('d',mPath)
+      .attr('fill','#0a1f0d')
+      .attr('stroke','rgba(0,255,136,0.15)')
+      .attr('stroke-width',0.5)
+      .on('click',function(event,d){
+        // tapped a country — dismiss any open tooltip
+        hideMTT();
+      });
+
+    mG.append('path')
+      .datum(topojson.mesh(world,world.objects.countries,(a,b)=&gt;a!==b))
+      .attr('d',mPath).attr('fill','none')
+      .attr('stroke','rgba(0,255,136,0.1)').attr('stroke-width',0.3);
+
+    mMapLoaded=true;
+  }catch(e){
+    mG.append('text').attr('x',W/2).attr('y',H/2)
+      .attr('fill','rgba(0,255,136,0.4)').attr('text-anchor','middle')
+      .attr('font-family','JetBrains Mono,monospace').attr('font-size',11)
+      .text('MAP DATA LOADING...');
+  }
+
+  // Pins
+  drawMobilePins();
+}
+
+function drawMobilePins(){
+  const pinsG=mG.append('g').attr('id','mpins');
+  mapIncidents.forEach(inc=&gt;{
+    const [x,y]=mProj([inc.lng,inc.lat]);
+    if(!x||!y) return;
+    const col=sevCol[inc.sev];
+    const grp=pinsG.append('g')
+      .attr('class',`mpin mpin-${inc.filter}`)
+      .attr('data-id',inc.id)
+      .attr('transform',`translate(${x},${y})`)
+      .style('cursor','pointer');
+
+    // Pulse ring
+    const ring=grp.append('circle').attr('r',12).attr('fill','none')
+      .attr('stroke',col).attr('stroke-width',1).attr('opacity',0.2);
+    ring.append('animate').attr('attributeName','r').attr('from',8).attr('to',20)
+      .attr('dur','3s').attr('repeatCount','indefinite');
+    ring.append('animate').attr('attributeName','opacity').attr('from',0.4).attr('to',0)
+      .attr('dur','3s').attr('repeatCount','indefinite');
+
+    grp.append('circle').attr('r',7).attr('fill','none')
+      .attr('stroke',col).attr('stroke-width',0.8).attr('opacity',0.4);
+    grp.append('circle').attr('r',4).attr('fill',col).attr('opacity',0.95);
+    grp.append('circle').attr('r',1.5).attr('fill','#fff').attr('opacity',0.8);
+
+    if(inc.count&gt;1){
+      grp.append('text').attr('x',6).attr('y',-5)
+        .attr('fill',col).attr('font-size',8)
+        .attr('font-family','JetBrains Mono,monospace').attr('font-weight',600)
+        .text(`×${inc.count}`);
+    }
+
+    // Touch tap
+    grp.on('click touchend',function(event){
+      event.stopPropagation();
+      showMTT(inc, event);
+    });
+  });
+}
+
+function showMTT(inc, event){
+  const container=document.getElementById('mobile-map-container');
+  const rect=container.getBoundingClientRect();
+  const tt=document.getElementById('mobile-map-tt');
+
+  // Get position
+  const [sx,sy]=mProj([inc.lng,inc.lat]);
+  const tx=(mTransform.x + sx*mTransform.k);
+  const ty=(mTransform.y + sy*mTransform.k);
+
+  // Position tooltip
+  let left=tx+12, top=ty-80;
+  if(left+170&gt;rect.width) left=tx-175;
+  if(top&lt;10) top=ty+12;
+
+  tt.style.left=left+'px';
+  tt.style.top=top+'px';
+  tt.style.display='block';
+
+  document.getElementById('mtt-region').textContent=inc.region+' // '+inc.sev.toUpperCase();
+  document.getElementById('mtt-label').textContent=inc.label;
+  document.getElementById('mtt-count').textContent=inc.count+' active signal'+(inc.count&gt;1?'s':'');
+  document.getElementById('mtt-btn').onclick=()=&gt;{
+    hideMTT();
+    switchView('chat', document.getElementById('bnav-chat'));
+    setTimeout(()=&gt;{
+      document.getElementById('chat-input').value='Analyze the situation in '+inc.label;
+      sendMessage();
+    },300);
+  };
+}
+
+function hideMTT(){
+  document.getElementById('mobile-map-tt').style.display='none';
+}
+
+// Tap background = hide tooltip
+document.addEventListener('click',function(e){
+  const tt=document.getElementById('mobile-map-tt');
+  if(tt &amp;&amp; !tt.contains(e.target)) hideMTT();
+});
+
+function rescalePins(){
+  const k=mTransform.k;
+  d3.selectAll('.mpin').attr('transform',function(){
+    const id=parseInt(this.getAttribute('data-id'));
+    const inc=mapIncidents[id];
+    const [x,y]=mProj([inc.lng,inc.lat]);
+    return `translate(${x},${y}) scale(${1/k})`;
+  });
+}
+
+function setMapFilter(f,el){
+  mActiveFilter=f;
+  document.querySelectorAll('.map-filters-wrap .ff').forEach(b=&gt;b.classList.remove('active'));
+  el.classList.add('active');
+  d3.selectAll('.mpin').style('display','');
+  if(f!=='ALL'){
+    d3.selectAll('.mpin').filter(function(){
+      return !this.classList.contains('mpin-'+f) &amp;&amp; !this.classList.contains('mpin-ALL');
+    }).style('display','none');
+  }
+}
+
+function mobileZoom(factor){
+  mSvg.transition().duration(250).call(mZoom.scaleBy,factor);
+}
+function mobileResetZoom(){
+  mSvg.transition().duration(350).call(mZoom.transform,d3.zoomIdentity);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
