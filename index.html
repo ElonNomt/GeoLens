@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLens</title>
+    <style>
+        /* Rotate the screen 90 degrees for the GeoLens app */
+        body {
+            transform: rotate(90deg);
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+        #app {
+            transform: rotate(-90deg);
+            width: 100vh;
+            height: 100vw;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Load the GeoLens application here -->
+        <script src="path/to/geolens-app.js"></script>
+    </div>
+</body>
+</html>
