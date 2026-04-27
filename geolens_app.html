@@ -330,19 +330,6 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 /* VIEW TOGGLE */
 .view-section{flex:1;overflow:hidden;display:flex;flex-direction:column;}
 .view-section.hidden{display:none;}
-/* SETTINGS MODAL */
-.stg-overlay{position:fixed;inset:0;background:rgba(2,8,6,0.88);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(6px);}
-.stg-overlay.show{display:flex;}
-.stg-modal{background:var(--bg2);border:1px solid var(--green-border);border-radius:8px;padding:26px 24px;width:360px;font-family:var(--mono);}
-.stg-hdr{font-size:11px;letter-spacing:3px;color:var(--green-dim);margin-bottom:20px;}
-.stg-lbl{font-size:9px;letter-spacing:2px;color:var(--text-faint);margin-bottom:5px;}
-.stg-hint{font-size:9px;color:var(--text-faint);opacity:0.55;margin-bottom:10px;}
-.stg-inp{width:100%;background:var(--bg);border:1px solid var(--green-border);border-radius:4px;padding:9px 12px;font-family:var(--mono);font-size:11px;color:var(--text);outline:none;letter-spacing:0.5px;margin-bottom:14px;}
-.stg-inp:focus{border-color:var(--green-dim);}
-.stg-btns{display:flex;gap:8px;}
-.stg-save{flex:1;font-family:var(--mono);font-size:11px;font-weight:600;background:var(--green);color:#020806;border:none;border-radius:4px;padding:9px;cursor:pointer;letter-spacing:1px;}
-.stg-cancel{font-family:var(--mono);font-size:11px;color:var(--text-faint);border:1px solid var(--green-border);border-radius:4px;padding:9px 14px;background:transparent;cursor:pointer;}
-.stg-status{font-size:9px;color:var(--green);margin-top:10px;letter-spacing:1px;min-height:14px;}
 </style>
 </head>
 <body>
@@ -371,7 +358,6 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
       <span>SHIFT A · <span class="meta-val">ANALYST</span></span>
     </div>
     <div class="topbar-right">
-      <button class="cmd-btn" onclick="openSettings()">⚙ API KEY</button>
       <button class="cmd-btn" onclick="clearChat()">⌘K · CLEAR</button>
       <button class="new-btn" onclick="clearChat()">NEW INVESTIGATION</button>
     </div>
@@ -582,43 +568,14 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
   </div>
 </div>
 
-<div class="stg-overlay" id="stg-overlay" onclick="if(event.target===this)closeSettings()">
-  <div class="stg-modal">
-    <div class="stg-hdr">// API CONFIGURATION</div>
-    <div class="stg-lbl">GROQ API KEY</div>
-    <div class="stg-hint">Free key at console.groq.com · Stored in your browser only, never sent to us</div>
-    <input class="stg-inp" id="stg-key-inp" type="password" placeholder="gsk_..." autocomplete="off" spellcheck="false"/>
-    <div class="stg-btns">
-      <button class="stg-save" onclick="saveSettings()">SAVE KEY</button>
-      <button class="stg-cancel" onclick="closeSettings()">CANCEL</button>
-    </div>
-    <div class="stg-status" id="stg-status"></div>
-  </div>
-</div>
 <div class="toast" id="toast"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script>
-// ── KEY MANAGEMENT ──
-function getGroqKey(){ return localStorage.getItem('groq_key')||''; }
-function openSettings(){
-  const inp=document.getElementById('stg-key-inp');
-  const saved=localStorage.getItem('groq_key');
-  if(saved) inp.value=saved;
-  document.getElementById('stg-status').textContent='';
-  document.getElementById('stg-overlay').classList.add('show');
-  setTimeout(()=>inp.focus(),120);
-}
-function closeSettings(){ document.getElementById('stg-overlay').classList.remove('show'); }
-function saveSettings(){
-  const key=document.getElementById('stg-key-inp').value.trim();
-  if(!key){ document.getElementById('stg-status').textContent='KEY CANNOT BE EMPTY'; return; }
-  localStorage.setItem('groq_key',key);
-  document.getElementById('stg-status').textContent='✓ SAVED — KEY STORED LOCALLY IN BROWSER';
-  setTimeout(closeSettings,1100);
-}
-if(!getGroqKey()) setTimeout(openSettings,700);
+const GEMINI_KEY='AIzaSyARyAiFdeFa0EHiZTh1_PwtF2lwdIZ8pLU';
+const GEMINI_URL=`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?key=${GEMINI_KEY}&alt=sse`;
+const GEMINI_URL_SYNC=`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`;
 
 // ── CLOCK ──
 function updateClock(){
@@ -743,8 +700,6 @@ function clearChat(){
 
 async function transmit(){
   if(isLoading) return;
-  const GROQ_KEY=getGroqKey();
-  if(!GROQ_KEY){ openSettings(); showToast('ADD YOUR GROQ KEY TO CONTINUE'); return; }
   const input=document.getElementById('chat-input');
   const q=input.value.trim();
   if(!q) return;
@@ -780,15 +735,15 @@ async function transmit(){
   messageHistory.push({role:'user',content:q});
 
   try{
-    const resp=await fetch('https://api.groq.com/openai/v1/chat/completions',{
+    const contents=messageHistory.map(m=>({
+      role:m.role==='assistant'?'model':m.role,
+      parts:[{text:m.content}]
+    }));
+    const resp=await fetch(GEMINI_URL,{
       method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':`Bearer ${GROQ_KEY}`},
+      headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'llama-3.3-70b-versatile',
-        max_tokens:1000,
-        stream:true,
-        messages:[
-          {role:'system',content:`You are GeoLens, an expert geopolitical intelligence analyst. You provide sharp, expert-level analysis of global conflicts, power dynamics, geopolitical events, and international relations.
+        systemInstruction:{parts:[{text:`You are GeoLens, an expert geopolitical intelligence analyst. You provide sharp, expert-level analysis of global conflicts, power dynamics, geopolitical events, and international relations.
 
 Your style:
 - Clear, direct, expert — like a seasoned intelligence analyst briefing a senior official
@@ -798,9 +753,9 @@ Your style:
 - Analytical confidence: state your assessment clearly, note uncertainties explicitly
 - Keep responses focused and useful — typically 200-400 words
 
-Do not add disclaimers about being an AI or about the limits of your knowledge unless directly relevant. Just analyze.`},
-          ...messageHistory
-        ]
+Do not add disclaimers about being an AI or about the limits of your knowledge unless directly relevant. Just analyze.`}]},
+        contents,
+        generationConfig:{maxOutputTokens:1000}
       })
     });
 
@@ -820,7 +775,7 @@ Do not add disclaimers about being an AI or about the limits of your knowledge u
     const reader=resp.body.getReader();
     const dec=new TextDecoder();
     let buf=''; let fullText='';
-    outer: while(true){
+    while(true){
       const {done,value}=await reader.read();
       if(done) break;
       buf+=dec.decode(value,{stream:true});
@@ -828,10 +783,10 @@ Do not add disclaimers about being an AI or about the limits of your knowledge u
       for(const line of lines){
         if(!line.startsWith('data: ')) continue;
         const pay=line.slice(6).trim();
-        if(pay==='[DONE]') break outer;
+        if(pay==='[DONE]') continue;
         try{
           const ch=JSON.parse(pay);
-          const d=ch.choices?.[0]?.delta?.content||'';
+          const d=ch.candidates?.[0]?.content?.parts?.[0]?.text||'';
           if(d){ fullText+=d; textEl.textContent=fullText; scrollBottom(); }
         }catch{}
       }
@@ -1313,23 +1268,20 @@ async function openCountryDrawer(feature){
   drawer.classList.add('open');
 
   try{
-    const resp=await fetch('https://api.groq.com/openai/v1/chat/completions',{
+    const resp=await fetch(GEMINI_URL_SYNC,{
       method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':`Bearer ${getGroqKey()}`},
+      headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'llama-3.3-70b-versatile',
-        max_tokens:800,
-        messages:[
-          {role:'system',content:`You are a geopolitical atlas with knowledge current to early 2025. CRITICAL: Use the CURRENT leader as of 2025. For example: USA = Donald Trump (not Biden), UK = Keir Starmer (not Sunak), France = Emmanuel Macron, Germany = Friedrich Merz, etc. Always return the actual sitting leader right now in 2025. JSON only, no markdown, no extra text. Schema:
-{"leader":"name","leader_role":"title","leader_wiki":"Wikipedia page title e.g. Donald_Trump","ideology":"short label","iso2":"2-letter ISO country code e.g. us","capital":"city","population":"e.g. 84M","gdp":"e.g. $2.1T","gdp_per_capita":"e.g. $12,400","military":"LOW|MED|HIGH","stability":"LOW|MED|HIGH","threat":"LOW|MED|HIGH","alliances":"e.g. NATO, EU","parties":[{"n":"name","pct":52,"c":"#00ff88"},{"n":"name","pct":31,"c":"#ffaa00"},{"n":"name","pct":17,"c":"#2a3d2a"}],"cabinet":[{"role":"Foreign","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Defense","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Finance","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Interior","name":"name","wiki":"Wikipedia_Page_Title"}],"brief":"2 sharp sentences on current 2025 geopolitical situation."}`},
-          {role:'user',content:`Country: ${name}. Return current 2025 leadership only.`}
-        ]
+        systemInstruction:{parts:[{text:`You are a geopolitical atlas with knowledge current to 2025. CRITICAL: Use the CURRENT leader as of 2025. For example: USA = Donald Trump (not Biden), UK = Keir Starmer (not Sunak), France = Emmanuel Macron, Germany = Friedrich Merz, etc. Always return the actual sitting leader right now in 2025. Return ONLY valid JSON, no markdown, no extra text. Schema:
+{"leader":"name","leader_role":"title","leader_wiki":"Wikipedia page title e.g. Donald_Trump","ideology":"short label","iso2":"2-letter ISO country code e.g. us","capital":"city","population":"e.g. 84M","gdp":"e.g. $2.1T","gdp_per_capita":"e.g. $12,400","military":"LOW|MED|HIGH","stability":"LOW|MED|HIGH","threat":"LOW|MED|HIGH","alliances":"e.g. NATO, EU","parties":[{"n":"name","pct":52,"c":"#00ff88"},{"n":"name","pct":31,"c":"#ffaa00"},{"n":"name","pct":17,"c":"#2a3d2a"}],"cabinet":[{"role":"Foreign","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Defense","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Finance","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Interior","name":"name","wiki":"Wikipedia_Page_Title"}],"brief":"2 sharp sentences on current 2025 geopolitical situation."}`}]},
+        contents:[{role:'user',parts:[{text:`Country: ${name}. Return current 2025 leadership only.`}]}],
+        generationConfig:{maxOutputTokens:800,responseMimeType:'application/json'}
       })
     });
 
     const data=await resp.json();
     if(data.error) throw new Error(data.error.message);
-    const raw=data.choices[0].message.content.replace(/```json|```/g,'').trim();
+    const raw=(data.candidates?.[0]?.content?.parts?.[0]?.text||'').replace(/```json|```/g,'').trim();
     const d=JSON.parse(raw);
 
     // Wikipedia REST summary → thumbnail
