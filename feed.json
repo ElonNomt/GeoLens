@@ -1,1 +1,225 @@
-{"updated": null, "items": []}
+{
+  "updated": "2026-04-27T16:10:40.949930+00:00",
+  "items": [
+    {
+      "time": "16:09",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Transcript: Sam Vinograd and AT Smith on \"Face the Nation with Margaret Brennan,\" April 26, 2026",
+      "src": "CBS News",
+      "desc": "The following is the transcript of the interview with CBS News national security correspondent Sam Vinograd and CBS News law enforcement analyst AT Smith that aired on \"Face the Nation with Margaret Brennan\" on April 26, 2026.",
+      "url": "https://www.cbsnews.com/news/sam-vinograd-at-smith-face-the-nation-transcript-04-26-2026/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:08",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Trump says shooting proves need for his White House ballroom",
+      "src": "The Times of India",
+      "desc": "President Donald Trump on Sunday used a shooting at a gala he attended in Washington to push his plans to construct a huge ballroom next to the White House that has faced legal challenges. \"This event would never have happened with the Militarily Top Secret B…",
+      "url": "https://economictimes.indiatimes.com/news/international/global-trends/trump-says-shooting-proves-need-for-his-white-house-ballroom/articleshow/130535149.cms",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "16:07",
+      "region": "MENA",
+      "sev": "med",
+      "type": "MIL",
+      "title": "Israel deploys Iron Dome, IDF troops to UAE amid Iran conflict",
+      "src": "Crypto Briefing",
+      "desc": "The deployment strengthens Israel-UAE military ties, but traders remain cautious, anticipating Iran's next move before adjusting odds.\nThe post Israel deploys Iron Dome, IDF troops to UAE amid Iran conflict appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/israel-deploys-iron-dome-idf-troops-to-uae-amid-iran-conflict/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:07",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Oppenheimer Lifts Nutrien (NTR) PT, Flags Resilient Sentiment in Agriculture",
+      "src": "Yahoo Entertainment",
+      "desc": "Nutrien Ltd. (NYSE:NTR) is included among the 10 Canadian Stocks with Highest Dividends. On April 22, Oppenheimer raised its price recommendation on Nutrien ...",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/oppenheimer-lifts-nutrien-ntr-pt-160734139.html",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:07",
+      "region": "EU-EAST",
+      "sev": "med",
+      "type": "FIN",
+      "title": "Iran’s foreign minister heads to Moscow as US-Iran ceasefire collapse looms",
+      "src": "Crypto Briefing",
+      "desc": "Iran's pivot to Russia amid US-Iran tensions may reshape regional alliances, impacting global diplomatic dynamics and economic sanctions.\nThe post Iran’s foreign minister heads to Moscow as US-Iran ceasefire collapse looms appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/irans-foreign-minister-heads-to-moscow-as-us-iran-ceasefire-collapse-looms/",
+      "filter": "EU-EAST"
+    },
+    {
+      "time": "16:06",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Leavitt Says Suspected Gunman Wanted To ‘Assassinate’ Trump At White House Correspondents’ Dinner (Live Updates)",
+      "src": "Forbes",
+      "desc": "Acting Attorney General Todd Blanche said the suspect traveled to the gala in Washington from Los Angeles.",
+      "url": "https://www.forbes.com/sites/zacharyfolk/2026/04/26/leavitt-says-suspected-gunman-wanted-to-assassinate-trump-at-white-house-correspondents-dinner-live-updates/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:06",
+      "region": "MENA",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Trump insists Iran talks by phone only, nuclear deal less likely by April 30",
+      "src": "Crypto Briefing",
+      "desc": "Trump's phone-only stance heightens diplomatic tensions, reducing negotiation flexibility and increasing the risk of conflict escalation.\nThe post Trump insists Iran talks by phone only, nuclear deal less likely by April 30 appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/trump-insists-iran-talks-by-phone-only-nuclear-deal-less-likely-by-april-30/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:05",
+      "region": "MENA",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Israeli soldier killed in Lebanon amid Israel-Hezbollah tensions",
+      "src": "Crypto Briefing",
+      "desc": "The soldier's death underscores the fragility of ceasefire prospects, potentially impacting market confidence and geopolitical stability.\nThe post Israeli soldier killed in Lebanon amid Israel-Hezbollah tensions appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/israeli-soldier-killed-in-lebanon-amid-israel-hezbollah-tensions/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:05",
+      "region": "MENA",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Sergeant Idan Fooks was killed in combat in southern Lebanon",
+      "src": "Israelnationalnews.com",
+      "desc": "It has been cleared for publication that Sergeant Idan Fooks, 19, from Petah Tikva, a soldier in Battalion 77, was killed from a drone explosion in southern Lebanon. Six additional soldiers were wounded-four of them seriously.",
+      "url": "https://www.israelnationalnews.com/news/426104",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:04",
+      "region": "EU-EAST",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Trump says he speaks with Putin and Zelensky, aims to settle the Ukraine war",
+      "src": "The Times of India",
+      "desc": "US President Donald Trump stated he is having productive discussions with Russian President Vladimir Putin and Ukrainian President Volodymyr Zelenskiy. Trump is actively working towards a resolution for the ongoing conflict in Ukraine. He expressed his belief…",
+      "url": "https://economictimes.indiatimes.com/news/international/global-trends/trump-says-he-speaks-with-putin-and-zelensky-aims-to-settle-the-ukraine-war/articleshow/130535085.cms",
+      "filter": "EU-EAST"
+    },
+    {
+      "time": "16:04",
+      "region": "EU-EAST",
+      "sev": "med",
+      "type": "INFRA",
+      "title": "EU approves $105B aid to Ukraine, reinforcing support amid US policy shift",
+      "src": "Crypto Briefing",
+      "desc": "The EU's aid to Ukraine underscores Europe's commitment, potentially prolonging conflict and complicating diplomatic resolutions.\nThe post EU approves $105B aid to Ukraine, reinforcing support amid US policy shift appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/eu-approves-105b-aid-to-ukraine-reinforcing-support-amid-us-policy-shift/",
+      "filter": "EU-EAST"
+    },
+    {
+      "time": "16:03",
+      "region": "MENA",
+      "sev": "med",
+      "type": "RESOURCE",
+      "title": "Trump claims destruction of Iran’s navy, reinforces Hormuz blockade",
+      "src": "Crypto Briefing",
+      "desc": "Heightened tensions and military posturing could hinder diplomatic efforts, impacting global oil markets and regional stability.\nThe post Trump claims destruction of Iran’s navy, reinforces Hormuz blockade appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/trump-claims-destruction-of-irans-navy-reinforces-hormuz-blockade/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:02",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Demi-finales FA Cup : Chelsea retrouve le sourire face à Leeds en se qualifiant pour la finale de la Coupe d’Anglettere",
+      "src": "SO FOOT",
+      "desc": "Chelsea 1-0 Leeds United",
+      "url": "https://www.sofoot.com/breves/demi-finales-fa-cup-chelsea-retrouve-le-sourire-face-a-leeds-en-se-qualifiant-pour-la-finale-de-la-coupe-danglettere",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:00",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "The true crime community is radicalizing kids online",
+      "src": "Kevinmd.com",
+      "desc": "As physicians who regularly work with pediatric patients, and experts in counter-terrorism, we know firsthand the dangers that online radicalization poses to youth. Nihilistic violent extremism (NVE), which glorifies violence for the sake of violence, is on t…",
+      "url": "https://kevinmd.com/2026/04/the-true-crime-community-is-radicalizing-kids-online.html",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:00",
+      "region": "MENA",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Israel Eliminates Hamas Terror Cell Commander Who Participated in October 7 Massacre",
+      "src": "Legalinsurrection.com",
+      "desc": "IDF continues uncovering and destroying Hamas tunnels within the Gaza ceasefire line.\nThe post Israel Eliminates Hamas Terror Cell Commander Who Participated in October 7 Massacre first appeared on Le·gal In·sur·rec·tion.",
+      "url": "https://legalinsurrection.com/2026/04/israel-eliminates-hamas-terror-cell-commander-who-participated-in-october-7-massacre/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:00",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "FIN",
+      "title": "Stagflation risk: Could 1970s-style inflation and low growth return?",
+      "src": "New Zealand Herald",
+      "desc": "OPINION: The Reserve Bank warns inflation could reach 4.2% in the June quarter.",
+      "url": "https://www.nzherald.co.nz/rotorua-daily-post/business/stagflation-risk-could-1970s-style-inflation-and-low-growth-return/premium/RRCFX7O5ARGCPO3DWOOHRZ6CWI/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:00",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "The collegiality of the Supreme Court is under attack — and it’s dangerous",
+      "src": "New York Post",
+      "desc": "Earlier this month, Justice Sonia Sotomayor took an extraordinarily personal shot at Justice Brett Kavanaugh — just the latest lack of civility.",
+      "url": "https://nypost.com/2026/04/26/opinion/supreme-court-civility-is-not-being-upheld-by-liberal-justices/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:00",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "5 Best Zendaya Performances in Movies & TV Shows, Ranked (That Aren’t MJ)",
+      "src": "ComicBook.com",
+      "desc": "The more time goes by, the more it feels like Zendaya doesn’t want to be treated as just an up-and-coming actress or just a buzzy name. What she keeps proving is her constant effort to break away from a fixed image, jumping between big projects and characters…",
+      "url": "http://comicbook.com/movies/list/5-best-zendaya-performances-in-movies-tv-shows-ranked-that-arent-mj/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:00",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Today's news and jokes",
+      "src": "Superpunch.net",
+      "desc": "After Conforto's single, Enrique on the bench was trying to get him to do the Dodgers single, lmao.[image or embed]\r\n— Chad Moriyama (@chadmoriyama.bsky.social) April 25, 2026 at 7:07 PM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnprecedented statement by JNIM has just been released.JNI…",
+      "url": "https://www.superpunch.net/2026/04/todays-news-and-jokes_01674391695.html",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:00",
+      "region": "EU-EAST",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "On Chernobyl Anniversary, Zelensky Warns of Danger",
+      "src": "Newser",
+      "desc": "Strikes across Ukraine, Russian-occupied territory, and Russia killed at least 16 people, authorities said, as the 40th anniversary of the Chernobyl nuclear disaster prompted fresh warnings about the risks posed by Russian attacks near the plant. Ukrainian Pr…",
+      "url": "https://www.newser.com/story/388010/on-chernobyl-anniversary-zelensky-warns-of-danger.html",
+      "filter": "EU-EAST"
+    }
+  ]
+}
