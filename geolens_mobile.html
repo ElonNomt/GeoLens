@@ -329,6 +329,19 @@ border:none;border-radius:8px;
 font-family:var(–mono);font-size:11px;font-weight:600;letter-spacing:1px;
 cursor:pointer;
 }
+/* SETTINGS */
+.m-stg-overlay{position:fixed;inset:0;background:rgba(2,8,6,0.92);z-index:200;display:none;align-items:flex-end;justify-content:center;padding-bottom:0;}
+.m-stg-overlay.show{display:flex;}
+.m-stg-sheet{background:#061209;border-top:1px solid rgba(0,255,136,0.18);border-radius:16px 16px 0 0;padding:20px 20px 44px;width:100%;}
+.m-stg-handle{width:36px;height:3px;border-radius:2px;background:rgba(0,255,136,0.2);margin:0 auto 20px;}
+.m-stg-hdr{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;color:rgba(0,255,136,0.5);margin-bottom:18px;}
+.m-stg-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;color:rgba(200,245,216,0.4);margin-bottom:5px;}
+.m-stg-hint{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(200,245,216,0.28);margin-bottom:12px;}
+.m-stg-inp{width:100%;background:#020806;border:1px solid rgba(0,255,136,0.18);border-radius:6px;padding:12px 14px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#c8f5d8;outline:none;margin-bottom:16px;}
+.m-stg-inp:focus{border-color:rgba(0,255,136,0.5);}
+.m-stg-save{width:100%;padding:14px;background:#00ff88;color:#020806;border:none;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:1px;cursor:pointer;margin-bottom:10px;}
+.m-stg-cancel{width:100%;padding:12px;background:transparent;border:1px solid rgba(0,255,136,0.18);border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(200,245,216,0.4);cursor:pointer;}
+.m-stg-status{font-family:'JetBrains Mono',monospace;font-size:9px;color:#00ff88;margin-top:10px;letter-spacing:1px;text-align:center;min-height:14px;}
 </style>
 
 </head>
@@ -351,13 +364,27 @@ cursor:pointer;
     </div>
     <div class="topnav-live"><div class="live-dot"></div>LIVE</div>
     <div class="topnav-time" id="topnav-time">--:-- UTC</div>
+    <button onclick="openMobileSettings()" style="background:transparent;border:1px solid rgba(0,255,136,0.2);border-radius:4px;padding:4px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(0,255,136,0.6);cursor:pointer;letter-spacing:1px;margin-left:8px;">KEY</button>
   </div>
+
+<!-- SETTINGS SHEET -->
+<div class="m-stg-overlay" id="m-stg-overlay" onclick="if(event.target===this)closeMobileSettings()">
+  <div class="m-stg-sheet">
+    <div class="m-stg-handle"></div>
+    <div class="m-stg-hdr">// API CONFIGURATION</div>
+    <div class="m-stg-lbl">GROQ API KEY</div>
+    <div class="m-stg-hint">Free key at console.groq.com · Stored in your browser only</div>
+    <input class="m-stg-inp" id="m-stg-key-inp" type="password" placeholder="gsk_..." autocomplete="off" spellcheck="false"/>
+    <button class="m-stg-save" onclick="saveMobileSettings()">SAVE KEY</button>
+    <button class="m-stg-cancel" onclick="closeMobileSettings()">CANCEL</button>
+    <div class="m-stg-status" id="m-stg-status"></div>
+  </div>
+</div>
 
   <!-- SCROLL AREA -->
 
   <div class="scroll-area" id="scroll-area">
 
-```
 <!-- CHAT VIEW -->
 <div class="view chat-view active" id="view-chat">
   <div class="chat-header">
@@ -509,7 +536,6 @@ cursor:pointer;
     </div>
   </div>
 </div>
-```
 
   </div><!-- /scroll-area -->
 
@@ -574,6 +600,28 @@ function updateClock(){
 }
 updateClock(); setInterval(updateClock,1000);
 
+// ── KEY MANAGEMENT ──
+function getGroqKey(){ return localStorage.getItem('groq_key')||''; }
+function openMobileSettings(){
+  const inp=document.getElementById('m-stg-key-inp');
+  const saved=localStorage.getItem('groq_key');
+  if(saved) inp.value=saved;
+  document.getElementById('m-stg-status').textContent='';
+  document.getElementById('m-stg-overlay').classList.add('show');
+  setTimeout(()=>inp.focus(),200);
+}
+function closeMobileSettings(){ document.getElementById('m-stg-overlay').classList.remove('show'); }
+function saveMobileSettings(){
+  const key=document.getElementById('m-stg-key-inp').value.trim();
+  if(!key){ document.getElementById('m-stg-status').textContent='KEY CANNOT BE EMPTY'; return; }
+  localStorage.setItem('groq_key',key);
+  document.getElementById('m-stg-status').textContent='✓ SAVED — KEY STORED LOCALLY';
+  setTimeout(closeMobileSettings,1100);
+}
+if(!getGroqKey()) setTimeout(openMobileSettings,700);
+
+function escHtml(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
 // ── VIEW SWITCHER ──
 let currentView='chat';
 let mapBuilt=false;
@@ -589,18 +637,20 @@ function switchView(view, el){
 }
 
 // ── FEED DATA ──
-const feedData=[
-  {time:'14:42',region:'EU-EAST',sev:'high',type:'KINETIC',title:'Drone strike reported on Odesa grain terminal',src:'Reuters · UNIAN · OSINT-Twitter (3)',desc:'A drone strike hit the Odesa grain terminal, disrupting Black Sea export routes critical to global food supply. This is the third attack this month on port infrastructure. Wheat futures are up 3.1% on the news.',filter:'EU-EAST'},
-  {time:'14:38',region:'MENA',sev:'med',type:'DIPLO',title:'Saudi-Iran joint security working group convenes in Muscat',src:'Asharq · IRNA',desc:'A rare joint session signals ongoing normalization momentum brokered by China. Key agenda items include Yemen ceasefire monitoring and maritime security in the Strait of Hormuz.',filter:'MENA'},
-  {time:'14:31',region:'INDO-PAC',sev:'med',type:'MIL',title:'PLA Navy task group transits Miyako Strait southbound',src:'JMSDF · Reuters',desc:'Third Miyako transit this month. JMSDF is shadowing. Analysts are split between routine patrol posturing and pre-exercise positioning ahead of a rumored Taiwan Strait exercise.',filter:'INDO-PAC'},
-  {time:'14:22',region:'GLOBAL',sev:'low',type:'FIN',title:'IMF flags FX reserve drawdowns in 6 EM economies',src:'IMF brief · FT',desc:'Six emerging market economies showing significant reserve drawdowns. Elevated commodity import costs and strong dollar are the primary drivers. Sri Lanka, Pakistan, and Egypt are among those flagged.',filter:'GLOBAL'},
-  {time:'14:18',region:'AFRICA',sev:'high',type:'RESOURCE',title:'Niger junta nationalizes uranium concession',src:'AFP · Jeune Afrique',desc:'The military junta has seized the Orano (formerly Areva) uranium concession in Agadez. This directly threatens France\'s nuclear fuel supply chain. EU emergency consultation flagged.',filter:'AFRICA'},
-  {time:'14:09',region:'AMERICAS',sev:'low',type:'INFRA',title:'Mexico CFE outage cascades across 3 northern states',src:'CFE · Bloomberg',desc:'Grid failure in Chihuahua, Sonora, and Coahuila affecting 2.1M people. Timing is sensitive given US nearshoring investments in the region and ongoing water-energy stress from drought.',filter:'AMERICAS'},
-  {time:'13:55',region:'EU-EAST',sev:'med',type:'DIPLO',title:'Polish FM signals new aid tranche announcement',src:'PAP · Politico EU',desc:'Poland\'s Foreign Minister hinted at a new bilateral aid package for Ukraine ahead of the Brussels summit. Expected to include artillery munitions and air defense components.',filter:'EU-EAST'},
-  {time:'13:41',region:'INDO-PAC',sev:'low',type:'FIN',title:'TSMC capex revised +8% on US fab acceleration',src:'TSMC IR · Nikkei',desc:'TSMC raised its capital expenditure forecast, driven by accelerated construction at the Arizona fab. Signals confidence in US government subsidies under the CHIPS Act.',filter:'INDO-PAC'},
+const STATIC_FEED_MOBILE=[
+  {time:'14:42',region:'EU-EAST',sev:'high',type:'KINETIC',title:'Drone strike reported on Odesa grain terminal',src:'Reuters · UNIAN · OSINT',desc:'A drone strike hit the Odesa grain terminal, disrupting Black Sea export routes. Wheat futures up 3.1%.',filter:'EU-EAST'},
+  {time:'14:38',region:'MENA',sev:'med',type:'DIPLO',title:'Saudi-Iran joint security working group convenes in Muscat',src:'Asharq · IRNA',desc:'Rare joint session signals normalization momentum brokered by China. Agenda includes Yemen ceasefire and Hormuz security.',filter:'MENA'},
+  {time:'14:31',region:'INDO-PAC',sev:'med',type:'MIL',title:'PLA Navy task group transits Miyako Strait southbound',src:'JMSDF · Reuters',desc:'Third Miyako transit this month. JMSDF shadowing. Analysts split on routine posturing vs pre-Taiwan exercise positioning.',filter:'INDO-PAC'},
+  {time:'14:22',region:'GLOBAL',sev:'low',type:'FIN',title:'IMF flags FX reserve drawdowns in 6 EM economies',src:'IMF brief · FT',desc:'Sri Lanka, Pakistan, and Egypt among economies flagged for significant reserve depletion amid dollar strength.',filter:'GLOBAL'},
+  {time:'14:18',region:'AFRICA',sev:'high',type:'RESOURCE',title:'Niger junta nationalizes uranium concession',src:'AFP · Jeune Afrique',desc:'Junta seizes Orano concession in Agadez. France nuclear supply chain at risk. EU emergency consultation flagged.',filter:'AFRICA'},
+  {time:'14:09',region:'AMERICAS',sev:'low',type:'INFRA',title:'Mexico CFE outage cascades across 3 northern states',src:'CFE · Bloomberg',desc:'Grid failure in Chihuahua, Sonora, Coahuila affecting 2.1M people amid US nearshoring investment surge.',filter:'AMERICAS'},
+  {time:'13:55',region:'EU-EAST',sev:'med',type:'DIPLO',title:'Polish FM signals new Ukraine aid tranche announcement',src:'PAP · Politico EU',desc:'New bilateral aid package expected to include artillery munitions and air defense components.',filter:'EU-EAST'},
+  {time:'13:41',region:'INDO-PAC',sev:'low',type:'FIN',title:'TSMC capex revised +8% on US fab acceleration',src:'TSMC IR · Nikkei',desc:'TSMC raised capex forecast on accelerated Arizona fab construction under CHIPS Act subsidies.',filter:'INDO-PAC'},
 ];
 
+let feedData=STATIC_FEED_MOBILE.slice();
 let activeFeedFilter='ALL';
+
 function filterFeed(f,el){
   activeFeedFilter=f;
   document.querySelectorAll('.ff').forEach(b=>b.classList.remove('active'));
@@ -613,17 +663,34 @@ function renderFeed(){
   container.innerHTML=items.map((d,i)=>`
     <div class="feed-item" onclick="openPanel(${feedData.indexOf(d)})">
       <div class="feed-item-meta">
-        <span class="fi-time">${d.time}</span>
-        <span class="fi-region">${d.region}</span>
+        <span class="fi-time">${escHtml(d.time)}</span>
+        <span class="fi-region">${escHtml(d.region)}</span>
         <span class="fi-sev ${d.sev}">${d.sev.toUpperCase()}</span>
-        <span class="fi-type">${d.type}</span>
+        <span class="fi-type">${escHtml(d.type)}</span>
       </div>
-      <div class="feed-item-title">${d.title}</div>
-      <div class="feed-item-src">${d.src}</div>
+      <div class="feed-item-title">${escHtml(d.title)}</div>
+      <div class="feed-item-src">${escHtml(d.src)}</div>
     </div>
   `).join('');
 }
-renderFeed();
+
+async function loadMobileFeed(){
+  try{
+    const resp=await fetch('feed.json?t='+Date.now());
+    if(!resp.ok) throw new Error('no feed');
+    const data=await resp.json();
+    const items=data.items||[];
+    if(items.length>0){
+      feedData=items;
+      renderFeed();
+      return;
+    }
+  }catch{}
+  feedData=STATIC_FEED_MOBILE.slice();
+  renderFeed();
+}
+loadMobileFeed();
+setInterval(loadMobileFeed, 5*60*1000);
 
 // ── SLIDE PANEL ──
 function openPanel(idx){
@@ -664,6 +731,8 @@ function askSuggestion(btn){
 
 async function sendMessage(){
   if(isLoading) return;
+  const GROQ_KEY=getGroqKey();
+  if(!GROQ_KEY){ openMobileSettings(); return; }
   const input=document.getElementById('chat-input');
   const q=input.value.trim();
   if(!q) return;
@@ -671,14 +740,12 @@ async function sendMessage(){
 
   const messages=document.getElementById('messages');
 
-  // User bubble
   const userDiv=document.createElement('div');
   userDiv.className='msg-user';
-  userDiv.innerHTML=`<div class="msg-user-bubble">${q}</div>`;
+  userDiv.innerHTML=`<div class="msg-user-bubble">${escHtml(q)}</div>`;
   messages.appendChild(userDiv);
   scrollToBottom();
 
-  // AI loading
   const aiDiv=document.createElement('div');
   aiDiv.className='msg-ai';
   aiDiv.innerHTML=`
@@ -691,33 +758,62 @@ async function sendMessage(){
   isLoading=true;
 
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
+    const resp=await fetch('https://api.groq.com/openai/v1/chat/completions',{
       method:'POST',
-      headers:{'Content-Type':'application/json'},
+      headers:{'Content-Type':'application/json','Authorization':`Bearer ${GROQ_KEY}`},
       body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
+        model:'llama-3.3-70b-versatile',
         max_tokens:1000,
-        system:`You are GeoLens, an elite geopolitical intelligence analyst. Answer questions about global conflicts, geopolitics, power dynamics, markets, and breaking news with sharp, expert-level clarity. Be concise but substantive — write 2-4 tight paragraphs. No bullet points. No jargon without explanation. End with one short "watch for" sentence highlighting what to monitor next. Keep the tone analytical and authoritative, like a top-tier intelligence brief.`,
-        messages:[{role:'user',content:q}]
+        stream:true,
+        messages:[
+          {role:'system',content:`You are GeoLens, an elite geopolitical intelligence analyst. Answer questions about global conflicts, geopolitics, power dynamics, markets, and breaking news with sharp, expert-level clarity. Be concise but substantive — write 2-4 tight paragraphs. No bullet points. No jargon without explanation. End with one short "watch for" sentence highlighting what to monitor next. Keep the tone analytical and authoritative, like a top-tier intelligence brief.`},
+          {role:'user',content:q}
+        ]
       })
     });
-    const data=await res.json();
-    const text=data.content?.map(c=>c.text||'').join('')||'Unable to retrieve analysis. Check connection.';
 
-    // Extract key terms for chips (simple approach: capitalize region/country mentions)
-    const chips=extractChips(q+' '+text);
+    if(!resp.ok){
+      const e=await resp.json().catch(()=>({error:{message:resp.statusText}}));
+      throw new Error(e.error?.message||resp.statusText);
+    }
 
+    aiDiv.innerHTML=`
+      <div class="msg-ai-meta">// GEOLENS-79 · STREAMING <div class="conf-pip"></div></div>
+      <div class="msg-ai-card"><div class="msg-ai-text" id="m-stream-txt"></div></div>`;
+    const textEl=document.getElementById('m-stream-txt');
+
+    const reader=resp.body.getReader();
+    const dec=new TextDecoder();
+    let buf=''; let fullText='';
+    outer: while(true){
+      const {done,value}=await reader.read();
+      if(done) break;
+      buf+=dec.decode(value,{stream:true});
+      const lines=buf.split('\n'); buf=lines.pop();
+      for(const line of lines){
+        if(!line.startsWith('data: ')) continue;
+        const pay=line.slice(6).trim();
+        if(pay==='[DONE]') break outer;
+        try{
+          const ch=JSON.parse(pay);
+          const d=ch.choices?.[0]?.delta?.content||'';
+          if(d){ fullText+=d; textEl.innerHTML=fullText.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>'); scrollToBottom(); }
+        }catch{}
+      }
+    }
+
+    const chips=extractChips(q+' '+fullText);
     aiDiv.innerHTML=`
       <div class="msg-ai-meta">// GEOLENS-79 · COMPLETE <div class="conf-pip"></div></div>
       <div class="msg-ai-card">
-        <div class="msg-ai-text">${text.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>')}</div>
-        ${chips.length?`<div class="msg-ai-chips">${chips.map(c=>`<span class="ai-chip">${c}</span>`).join('')}</div>`:''}
+        <div class="msg-ai-text">${fullText.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>')}</div>
+        ${chips.length?`<div class="msg-ai-chips">${chips.map(c=>`<span class="ai-chip">${escHtml(c)}</span>`).join('')}</div>`:''}
       </div>`;
   }catch(err){
     aiDiv.innerHTML=`
-      <div class="msg-ai-meta">// GEOLENS-79 · ERROR <div class="conf-pip" style="background:var(--red)"></div></div>
+      <div class="msg-ai-meta">// GEOLENS-79 · ERROR <div class="conf-pip" style="background:#ff4455"></div></div>
       <div class="msg-ai-card">
-        <div class="msg-ai-text" style="color:var(--red)">Signal lost. Check connection and retry.</div>
+        <div class="msg-ai-text" style="color:#ff4455">Signal lost. Check API key and connection.</div>
       </div>`;
   }
 

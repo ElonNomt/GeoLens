@@ -330,6 +330,19 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 /* VIEW TOGGLE */
 .view-section{flex:1;overflow:hidden;display:flex;flex-direction:column;}
 .view-section.hidden{display:none;}
+/* SETTINGS MODAL */
+.stg-overlay{position:fixed;inset:0;background:rgba(2,8,6,0.88);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(6px);}
+.stg-overlay.show{display:flex;}
+.stg-modal{background:var(--bg2);border:1px solid var(--green-border);border-radius:8px;padding:26px 24px;width:360px;font-family:var(--mono);}
+.stg-hdr{font-size:11px;letter-spacing:3px;color:var(--green-dim);margin-bottom:20px;}
+.stg-lbl{font-size:9px;letter-spacing:2px;color:var(--text-faint);margin-bottom:5px;}
+.stg-hint{font-size:9px;color:var(--text-faint);opacity:0.55;margin-bottom:10px;}
+.stg-inp{width:100%;background:var(--bg);border:1px solid var(--green-border);border-radius:4px;padding:9px 12px;font-family:var(--mono);font-size:11px;color:var(--text);outline:none;letter-spacing:0.5px;margin-bottom:14px;}
+.stg-inp:focus{border-color:var(--green-dim);}
+.stg-btns{display:flex;gap:8px;}
+.stg-save{flex:1;font-family:var(--mono);font-size:11px;font-weight:600;background:var(--green);color:#020806;border:none;border-radius:4px;padding:9px;cursor:pointer;letter-spacing:1px;}
+.stg-cancel{font-family:var(--mono);font-size:11px;color:var(--text-faint);border:1px solid var(--green-border);border-radius:4px;padding:9px 14px;background:transparent;cursor:pointer;}
+.stg-status{font-size:9px;color:var(--green);margin-top:10px;letter-spacing:1px;min-height:14px;}
 </style>
 </head>
 <body>
@@ -358,6 +371,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
       <span>SHIFT A · <span class="meta-val">ANALYST</span></span>
     </div>
     <div class="topbar-right">
+      <button class="cmd-btn" onclick="openSettings()">⚙ API KEY</button>
       <button class="cmd-btn" onclick="clearChat()">⌘K · CLEAR</button>
       <button class="new-btn" onclick="clearChat()">NEW INVESTIGATION</button>
     </div>
@@ -568,13 +582,44 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
   </div>
 </div>
 
+<div class="stg-overlay" id="stg-overlay" onclick="if(event.target===this)closeSettings()">
+  <div class="stg-modal">
+    <div class="stg-hdr">// API CONFIGURATION</div>
+    <div class="stg-lbl">GROQ API KEY</div>
+    <div class="stg-hint">Free key at console.groq.com · Stored in your browser only, never sent to us</div>
+    <input class="stg-inp" id="stg-key-inp" type="password" placeholder="gsk_..." autocomplete="off" spellcheck="false"/>
+    <div class="stg-btns">
+      <button class="stg-save" onclick="saveSettings()">SAVE KEY</button>
+      <button class="stg-cancel" onclick="closeSettings()">CANCEL</button>
+    </div>
+    <div class="stg-status" id="stg-status"></div>
+  </div>
+</div>
 <div class="toast" id="toast"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script>
-// ── CONFIG — paste your free Groq key here: console.groq.com ──
-const GROQ_KEY = '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';
+// ── KEY MANAGEMENT ──
+function getGroqKey(){ return localStorage.getItem('groq_key')||''; }
+function openSettings(){
+  const inp=document.getElementById('stg-key-inp');
+  const saved=localStorage.getItem('groq_key');
+  if(saved) inp.value=saved;
+  document.getElementById('stg-status').textContent='';
+  document.getElementById('stg-overlay').classList.add('show');
+  setTimeout(()=>inp.focus(),120);
+}
+function closeSettings(){ document.getElementById('stg-overlay').classList.remove('show'); }
+function saveSettings(){
+  const key=document.getElementById('stg-key-inp').value.trim();
+  if(!key){ document.getElementById('stg-status').textContent='KEY CANNOT BE EMPTY'; return; }
+  localStorage.setItem('groq_key',key);
+  document.getElementById('stg-status').textContent='✓ SAVED — KEY STORED LOCALLY IN BROWSER';
+  setTimeout(closeSettings,1100);
+}
+if(!getGroqKey()) setTimeout(openSettings,700);
+
 // ── CLOCK ──
 function updateClock(){
   const now=new Date();
@@ -609,34 +654,55 @@ function showToast(msg){
 }
 
 // ── FEED ──
-const feedItems=[
-  {time:'14:42',region:'EU-EAST',sev:'high',type:'KINETIC',title:'Drone strike reported on Odesa grain terminal',src:'Reuters · UNIAN · OSINT',q:'What is the strategic significance of attacks on Odesa grain terminals?'},
-  {time:'14:38',region:'MENA',sev:'med',type:'DIPLO',title:'Saudi-Iran joint security working group convenes in Muscat',src:'Asharq · IRNA',q:'What does the Saudi-Iran rapprochement mean for the wider Middle East?'},
-  {time:'14:31',region:'INDO-PAC',sev:'med',type:'MIL',title:'PLA Navy task group transits Miyako Strait southbound',src:'JMSDF · Reuters',q:'Why does PLA naval activity in the Miyako Strait matter?'},
-  {time:'14:22',region:'GLOBAL',sev:'low',type:'FIN',title:'IMF flags FX reserve drawdowns in 6 EM economies',src:'IMF brief · FT',q:'Which emerging markets are most vulnerable to FX reserve depletion?'},
-  {time:'14:18',region:'AFRICA',sev:'high',type:'RESOURCE',title:'Niger junta nationalizes uranium concession',src:'AFP · Jeune Afrique',q:'What are the implications of Niger nationalizing its uranium concessions?'},
-  {time:'14:09',region:'AMERICAS',sev:'low',type:'INFRA',title:'Mexico CFE outage cascades across 3 northern states',src:'CFE · Bloomberg',q:'How does Mexico\'s energy infrastructure vulnerability affect geopolitics?'},
-  {time:'13:55',region:'EU-EAST',sev:'med',type:'DIPLO',title:'Polish FM signals new Ukraine aid tranche announcement',src:'PAP · Politico EU',q:'What is Poland\'s strategic role in Western support for Ukraine?'},
-  {time:'13:41',region:'INDO-PAC',sev:'low',type:'FIN',title:'TSMC capex revised +8% on US fab acceleration',src:'TSMC IR · Nikkei',q:'What does TSMC\'s US expansion mean for semiconductor geopolitics?'},
+const STATIC_FEED=[
+  {time:'14:42',region:'EU-EAST',sev:'high',type:'KINETIC',title:'Drone strike reported on Odesa grain terminal',src:'Reuters · UNIAN · OSINT'},
+  {time:'14:38',region:'MENA',sev:'med',type:'DIPLO',title:'Saudi-Iran joint security working group convenes in Muscat',src:'Asharq · IRNA'},
+  {time:'14:31',region:'INDO-PAC',sev:'med',type:'MIL',title:'PLA Navy task group transits Miyako Strait southbound',src:'JMSDF · Reuters'},
+  {time:'14:22',region:'GLOBAL',sev:'low',type:'FIN',title:'IMF flags FX reserve drawdowns in 6 EM economies',src:'IMF brief · FT'},
+  {time:'14:18',region:'AFRICA',sev:'high',type:'RESOURCE',title:'Niger junta nationalizes uranium concession',src:'AFP · Jeune Afrique'},
+  {time:'14:09',region:'AMERICAS',sev:'low',type:'INFRA',title:'Mexico CFE outage cascades across 3 northern states',src:'CFE · Bloomberg'},
+  {time:'13:55',region:'EU-EAST',sev:'med',type:'DIPLO',title:'Polish FM signals new Ukraine aid tranche announcement',src:'PAP · Politico EU'},
+  {time:'13:41',region:'INDO-PAC',sev:'low',type:'FIN',title:'TSMC capex revised +8% on US fab acceleration',src:'TSMC IR · Nikkei'},
 ];
 
-const feedList=document.getElementById('feed-list');
-feedItems.forEach(item=>{
-  const div=document.createElement('div');
-  div.className='feed-item';
-  div.innerHTML=`
-    <div class="feed-item-meta">
-      <span class="feed-time">${item.time}</span>
-      <span class="feed-region">${item.region}</span>
-      <span class="feed-sev ${item.sev}">${item.sev.toUpperCase()}</span>
-      <span class="feed-type">${item.type}</span>
-    </div>
-    <div class="feed-title">${item.title}</div>
-    <div class="feed-src">${item.src}</div>
-    <div class="feed-ask">→ ANALYZE THIS</div>`;
-  div.addEventListener('click',()=>askQuestion(item.q));
-  feedList.appendChild(div);
-});
+function renderFeedItems(items){
+  const feedList=document.getElementById('feed-list');
+  feedList.innerHTML='';
+  items.forEach(item=>{
+    const div=document.createElement('div');
+    div.className='feed-item';
+    div.innerHTML=`
+      <div class="feed-item-meta">
+        <span class="feed-time">${item.time}</span>
+        <span class="feed-region">${item.region}</span>
+        <span class="feed-sev ${item.sev}">${item.sev.toUpperCase()}</span>
+        <span class="feed-type">${item.type}</span>
+      </div>
+      <div class="feed-title">${escHtml(item.title)}</div>
+      <div class="feed-src">${escHtml(item.src)}</div>
+      <div class="feed-ask">→ ANALYZE THIS</div>`;
+    div.addEventListener('click',()=>askQuestion(item.title));
+    feedList.appendChild(div);
+  });
+}
+
+async function loadFeed(){
+  try{
+    const resp=await fetch('feed.json?t='+Date.now());
+    if(!resp.ok) throw new Error('no feed');
+    const data=await resp.json();
+    const items=data.items||[];
+    if(items.length>0){
+      renderFeedItems(items);
+      const hdr=document.querySelector('.feed-header');
+      if(hdr) hdr.innerHTML=`// LIVE FEED · ${items.length} <div class="feed-stream"><div class="stream-dot"></div>STREAM</div>`;
+      return;
+    }
+  }catch{}
+  renderFeedItems(STATIC_FEED);
+}
+loadFeed();
+setInterval(loadFeed, 5*60*1000);
 
 // ── CHAT STATE ──
 let messageHistory=[];
@@ -677,6 +743,8 @@ function clearChat(){
 
 async function transmit(){
   if(isLoading) return;
+  const GROQ_KEY=getGroqKey();
+  if(!GROQ_KEY){ openSettings(); showToast('ADD YOUR GROQ KEY TO CONTINUE'); return; }
   const input=document.getElementById('chat-input');
   const q=input.value.trim();
   if(!q) return;
@@ -718,6 +786,7 @@ async function transmit(){
       body:JSON.stringify({
         model:'llama-3.3-70b-versatile',
         max_tokens:1000,
+        stream:true,
         messages:[
           {role:'system',content:`You are GeoLens, an expert geopolitical intelligence analyst. You provide sharp, expert-level analysis of global conflicts, power dynamics, geopolitical events, and international relations.
 
@@ -735,41 +804,45 @@ Do not add disclaimers about being an AI or about the limits of your knowledge u
       })
     });
 
-    const data=await resp.json();
-    if(data.error) throw new Error(data.error.message);
-    const text=data.choices[0].message.content;
+    if(!resp.ok){
+      const e=await resp.json().catch(()=>({error:{message:resp.statusText}}));
+      throw new Error(e.error?.message||resp.statusText);
+    }
 
-    messageHistory.push({role:'assistant',content:text});
-
-    // Update UI
     const typingEl=msgDiv.querySelector('.typing-indicator');
     if(typingEl) typingEl.remove();
-
     const metaEl=document.getElementById(`${msgId}-meta`);
     const srcCount=20+Math.floor(Math.random()*40);
-    const conf=(0.78+Math.random()*0.18).toFixed(2);
-    metaEl.innerHTML=`// RESPONSE · GEOLENS-79 &nbsp; SOURCES: ${srcCount} &nbsp; CONFIDENCE: ${conf} <div class="conf-dot done" style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#00ff88;margin-left:6px;"></div> COMPLETE`;
-
+    metaEl.innerHTML=`// STREAMING · GEOLENS-79 &nbsp; SOURCES: ${srcCount} <div class="conf-dot" style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#00ff88;margin-left:6px;animation:blink 1.5s infinite;"></div>`;
     const textEl=document.getElementById(`${msgId}-text`);
     textEl.style.display='block';
 
-    // Typewriter stream effect
-    let i=0;
-    const speed=12;
-    function typeNext(){
-      if(i<text.length){
-        textEl.textContent=text.slice(0,i+1);
-        i+=3;
-        scrollBottom();
-        setTimeout(typeNext,speed);
-      } else {
-        textEl.textContent=text;
-        addSuggestions(msgDiv, q);
-        updateInvList(q);
-        scrollBottom();
+    const reader=resp.body.getReader();
+    const dec=new TextDecoder();
+    let buf=''; let fullText='';
+    outer: while(true){
+      const {done,value}=await reader.read();
+      if(done) break;
+      buf+=dec.decode(value,{stream:true});
+      const lines=buf.split('\n'); buf=lines.pop();
+      for(const line of lines){
+        if(!line.startsWith('data: ')) continue;
+        const pay=line.slice(6).trim();
+        if(pay==='[DONE]') break outer;
+        try{
+          const ch=JSON.parse(pay);
+          const d=ch.choices?.[0]?.delta?.content||'';
+          if(d){ fullText+=d; textEl.textContent=fullText; scrollBottom(); }
+        }catch{}
       }
     }
-    typeNext();
+
+    messageHistory.push({role:'assistant',content:fullText});
+    const conf=(0.78+Math.random()*0.18).toFixed(2);
+    metaEl.innerHTML=`// RESPONSE · GEOLENS-79 &nbsp; SOURCES: ${srcCount} &nbsp; CONFIDENCE: ${conf} <div class="conf-dot done" style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#00ff88;margin-left:6px;"></div> COMPLETE`;
+    addSuggestions(msgDiv, q);
+    updateInvList(q);
+    scrollBottom();
 
   }catch(err){
     const typingEl=msgDiv.querySelector('.typing-indicator');
@@ -1242,7 +1315,7 @@ async function openCountryDrawer(feature){
   try{
     const resp=await fetch('https://api.groq.com/openai/v1/chat/completions',{
       method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':`Bearer ${GROQ_KEY}`},
+      headers:{'Content-Type':'application/json','Authorization':`Bearer ${getGroqKey()}`},
       body:JSON.stringify({
         model:'llama-3.3-70b-versatile',
         max_tokens:800,
