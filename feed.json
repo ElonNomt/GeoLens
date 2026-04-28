@@ -1,1 +1,225 @@
-{"updated": null, "items": []}
+{
+  "updated": "2026-04-28T16:59:44.977668+00:00",
+  "items": [
+    {
+      "time": "16:59",
+      "region": "MENA",
+      "sev": "med",
+      "type": "DIPLO",
+      "title": "Iran tightens Strait of Hormuz control, dimming US peace deal prospects",
+      "src": "Crypto Briefing",
+      "desc": "Iran's control over the Strait of Hormuz exacerbates geopolitical tensions, reducing the likelihood of diplomatic resolutions and economic stability.\nThe post Iran tightens Strait of Hormuz control, dimming US peace deal prospects appeared first on Crypto Bri…",
+      "url": "https://cryptobriefing.com/iran-tightens-strait-of-hormuz-control-dimming-us-peace-deal-prospects/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:58",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "News24 | Plane crash in South Sudan kills 14: officials",
+      "src": "News24",
+      "desc": "A small plane crashed on Monday in South Sudan near the capital Juba, killing all 13 passengers and the pilot, local officials said.",
+      "url": "https://www.news24.com/world/africa/plane-crash-in-south-sudan-kills-14-officials-20260427-1018",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "16:57",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Video Games Don’t Need To Be Made Into TV And Movies To Justify Their Existence Anymore",
+      "src": "Kotaku",
+      "desc": "Also: the Crimson Desert hype train hasn't slowed down",
+      "url": "https://kotaku.com/video-game-movies-hollywood-last-us-fallout-god-war-2000690841",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:57",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "DIPLO",
+      "title": "Fire crews called to blaze in building near historic fort",
+      "src": "BBC News",
+      "desc": "The fire service says the site was outside a military perimeter at Fort George near Ardersier.",
+      "url": "https://www.bbc.com/news/articles/c8x7xzn2w5lo",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:57",
+      "region": "AMERICAS",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "21 killed in deadliest Colombia bombing in decades",
+      "src": "Digital Journal",
+      "desc": "The death toll in a Colombian highway bombing blamed on cocaine-trafficking rebels has risen to 21, the government said Monday, in the country’s worst attack on civilians in decades and just ahead of elections. Saturday’s bombing in the southwestern Cauca dep…",
+      "url": "https://www.digitaljournal.com/world/21-killed-in-deadliest-colombia-bombing-in-decades/article",
+      "filter": "AMERICAS"
+    },
+    {
+      "time": "16:56",
+      "region": "MENA",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Trump admin warns Iraq over Iran terror proxies as US reportedly blocks cash payments",
+      "src": "Fox News",
+      "desc": "The Trump administration reportedly halted dollar shipments to Baghdad to pressure Iraq into disbanding Iran-backed militias that have attacked U.S. personnel.",
+      "url": "https://www.foxnews.com/world/trump-admin-warns-iraq-over-iran-terror-proxies-us-reportedly-blocks-cash-payments",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:56",
+      "region": "MENA",
+      "sev": "high",
+      "type": "INFRA",
+      "title": "JD Vance's anti-war leaks backfire as Trump makes VP scapegoat for Iran fiasco: analysis",
+      "src": "Raw Story",
+      "desc": "President Donald Trump has weaponized Vice President JD Vance to absorb blame over failed negotiations with Iran, an analyst reported on Monday.Salon's Amanda Marcotte described how Trump has forced Vance into a situation he didn't want to be in and by doing …",
+      "url": "https://www.rawstory.com/vance-s-anti-war-leaks-backfire-as-trump-makes-vp-scapegoat-for-iran-fiasco-analyst/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:56",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "DOJ: Drop The Lawsuit Against Trump’s Fortified Party Palace",
+      "src": "Crooksandliars.com",
+      "desc": "On Sunday, the Justice Department pressed the preservation group suing the White House over Trump’s ballroom project to drop the lawsuit in the wake of Saturday’s shooting at the White House Correspondents’ Association dinner. It looks like no one in the admi…",
+      "url": "https://crooksandliars.com/2026/04/doj-weaponizes-whca-shooting-drop-lawsuit",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:56",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "FIN",
+      "title": "90s Dad Novels: 10 That Still Rip",
+      "src": "Artofmanliness.com",
+      "desc": "Growing up in the 80s and 90s, if my dad wasn’t watching In the Heat of the Night on our wood-paneled television, he was sitting in his recliner with a book in his hand. But not just any book. Popular, mass-market paperbacks. Thick ones, with embossed covers …",
+      "url": "https://www.artofmanliness.com/living/reading/10-90s-dad-novels-to-check-out/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:55",
+      "region": "MENA",
+      "sev": "med",
+      "type": "RESOURCE",
+      "title": "Iran blockade strands 20,000 seafarers, 2,000 ships in Strait of Hormuz",
+      "src": "Crypto Briefing",
+      "desc": "The blockade could lead to increased geopolitical tensions and potential military interventions, affecting global trade and energy markets.\nThe post Iran blockade strands 20,000 seafarers, 2,000 ships in Strait of Hormuz appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/iran-blockade-strands-20000-seafarers-2000-ships-in-strait-of-hormuz/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:55",
+      "region": "MENA",
+      "sev": "high",
+      "type": "INFRA",
+      "title": "Iran would reopen Strait of Hormuz, postpone nuclear talks if U.S. lifts blockade and war ends: Reports (Kevin Breuninge",
+      "src": "Memeorandum.com",
+      "desc": "Kevin Breuninger / CNBC:\nIran would reopen Strait of Hormuz, postpone nuclear talks if U.S. lifts blockade and war ends: Reports … Iran has offered to reopen the Strait of Hormuz if the U.S. lifts its blockade of Iranian ports and the war ends, while setting …",
+      "url": "https://www.memeorandum.com/260427/p51",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:54",
+      "region": "EU-EAST",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Asymmetric Warfare Becoming Decisive In The Iran And Ukraine Conflicts",
+      "src": "Forbes",
+      "desc": "This piece highlights the increasingly decisive role that asymmetric warfare is playing in the Iran and Ukraine wars and the implications for future conflicts.",
+      "url": "https://www.forbes.com/sites/michaelpdempsey/2026/04/27/asymmetric-warfare-becoming-decisive-in-the-iran-and-ukraine-conflicts/",
+      "filter": "EU-EAST"
+    },
+    {
+      "time": "16:53",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "[Early Release Articles] Mechanobiology of the Hippo-YAP Signaling Network",
+      "src": "Cshlp.org",
+      "desc": "Cells are not only biochemical machines but also mechanical entities, which experience physical cues ranging from extracellular matrix (ECM) stiffness to cytoskeletal tension and intercellular adhesion. The Hippo signaling network is a key interpreter of thes…",
+      "url": "https://cshperspectives.cshlp.org/content/early/2026/04/27/cshperspect.a041902.short?rss=1",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:53",
+      "region": "MENA",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Bahrain-led coalition of 80 nations condemns Iran’s regional actions",
+      "src": "Crypto Briefing",
+      "desc": "The coalition's condemnation may further strain diplomatic efforts, reducing chances for a near-term US-Iran nuclear agreement.\nThe post Bahrain-led coalition of 80 nations condemns Iran’s regional actions appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/bahrain-led-coalition-of-80-nations-condemns-irans-regional-actions/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:53",
+      "region": "MENA",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Iran claims US seeks talks after failing in 2026 Iran war",
+      "src": "Crypto Briefing",
+      "desc": "The US's pursuit of talks post-conflict highlights shifting geopolitical dynamics and potential challenges in achieving diplomatic resolutions.\nThe post Iran claims US seeks talks after failing in 2026 Iran war appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/iran-claims-us-seeks-talks-after-failing-in-2026-iran-war/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:53",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "House Of The Dragon Season 3 Trailer And Premiere Date Revealed As War Continues And Revenge Is Plotted",
+      "src": "CBM (Comic Book Movie)",
+      "desc": "The new trailer for House of the Dragon Season 3 reveals when the series returns to HBO, while the action-packed sneak peek promises war, betrayal, and revenge as the fight for the Iron Throne continues.",
+      "url": "https://comicbookmovie.com/tv/hbo/game-of-thrones/house-of-the-dragon-season-3-trailer-and-premiere-date-revealed-as-war-continues-and-revenge-is-plotted-a227565",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:53",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Amazon FSx for OpenZFS Single-AZ (HA) file systems are now available in 17 additional AWS commercial and AWS GovCloud (U",
+      "src": "Amazon.com",
+      "desc": "You can now create Amazon FSx for OpenZFS Single-AZ (HA) file systems in seventeen additional AWS Regions across the South America, Europe, Africa, Asia Pacific, and AWS GovCloud (US). \nAmazon FSx for OpenZFS provides fully managed, cost-effective, shared fil…",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-fsx-openzfs-single-az-ha/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "16:52",
+      "region": "MENA",
+      "sev": "med",
+      "type": "FIN",
+      "title": "Issue is under discussion with both Iran, US: MEA on Chabahar port",
+      "src": "The Times of India",
+      "desc": "India said on Monday that the status of the Chabahar Port is under discussion with both Iran and the United States, after the US sanctions waiver for the project expired on April 26. The Ministry of External Affairs said the issue is complicated by the curren…",
+      "url": "https://economictimes.indiatimes.com/industry/transportation/shipping-/-transport/chabahar-port-issue-is-under-discussion-with-both-iran-us-mea/articleshow/130560269.cms",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:51",
+      "region": "MENA",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Netanyahu orders strikes in southern Lebanon, ceasefire odds recalibrate",
+      "src": "Crypto Briefing",
+      "desc": "Netanyahu's military actions in Lebanon heighten regional instability, challenging ceasefire prospects and increasing market volatility risks.\nThe post Netanyahu orders strikes in southern Lebanon, ceasefire odds recalibrate appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/netanyahu-orders-strikes-in-southern-lebanon-ceasefire-odds-recalibrate/",
+      "filter": "MENA"
+    },
+    {
+      "time": "16:51",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "FIN",
+      "title": "What shifts in a buyer’s vs. seller’s market?",
+      "src": "The Week Magazine",
+      "desc": "These terms refer to who will likely have the upper hand in housing transactions",
+      "url": "https://theweek.com/personal-finance/buyers-vs-sellers-market",
+      "filter": "GLOBAL"
+    }
+  ]
+}
