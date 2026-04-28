@@ -804,7 +804,7 @@ async function transmit(){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'llama-3.3-70b-versatile',
+        model:'compound-beta',
         max_tokens:1000,
         stream:true,
         messages:[
@@ -1337,21 +1337,22 @@ async function openCountryDrawer(feature){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'llama-3.3-70b-versatile',
-        max_tokens:800,
-        response_format:{type:'json_object'},
+        model:'compound-beta',
+        max_tokens:1000,
         messages:[
-          {role:'system',content:`You are a geopolitical atlas with knowledge current to 2025. CRITICAL: Use the CURRENT leader as of 2025. For example: USA = Donald Trump (not Biden), UK = Keir Starmer (not Sunak), France = Emmanuel Macron, Germany = Friedrich Merz, etc. Always return the actual sitting leader right now in 2025. Return ONLY valid JSON, no markdown, no extra text. Schema:
-{"leader":"name","leader_role":"title","leader_wiki":"Wikipedia page title e.g. Donald_Trump","ideology":"short label","iso2":"2-letter ISO country code e.g. us","capital":"city","population":"e.g. 84M","gdp":"e.g. $2.1T","gdp_per_capita":"e.g. $12,400","military":"LOW|MED|HIGH","stability":"LOW|MED|HIGH","threat":"LOW|MED|HIGH","alliances":"e.g. NATO, EU","parties":[{"n":"name","pct":52,"c":"#00ff88"},{"n":"name","pct":31,"c":"#ffaa00"},{"n":"name","pct":17,"c":"#2a3d2a"}],"cabinet":[{"role":"Foreign","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Defense","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Finance","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Interior","name":"name","wiki":"Wikipedia_Page_Title"}],"brief":"2 sharp sentences on current 2025 geopolitical situation."}`},
-          {role:'user',content:`Country: ${name}. Return current 2025 leadership only.`}
+          {role:'system',content:`You are a geopolitical atlas. Search the web for the most current information. Return ONLY a raw JSON object — no markdown, no code fences, no explanation. Schema:
+{"leader":"name","leader_role":"title","leader_wiki":"Wikipedia page title e.g. Donald_Trump","ideology":"short label","iso2":"2-letter ISO country code e.g. us","capital":"city","population":"e.g. 84M","gdp":"e.g. $2.1T","gdp_per_capita":"e.g. $12,400","military":"LOW|MED|HIGH","stability":"LOW|MED|HIGH","threat":"LOW|MED|HIGH","alliances":"e.g. NATO, EU","parties":[{"n":"name","pct":52,"c":"#00ff88"},{"n":"name","pct":31,"c":"#ffaa00"},{"n":"name","pct":17,"c":"#2a3d2a"}],"cabinet":[{"role":"Foreign","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Defense","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Finance","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Interior","name":"name","wiki":"Wikipedia_Page_Title"}],"brief":"2 sharp sentences on the current geopolitical situation."}`},
+          {role:'user',content:`Search the web for the current head of government and political situation of ${name} as of today. Return only the JSON object.`}
         ]
       })
     });
 
     const data=await resp.json();
     if(data.error) throw new Error(data.error.message);
-    const raw=data.choices[0].message.content.replace(/```json|```/g,'').trim();
-    const d=JSON.parse(raw);
+    const raw=data.choices[0].message.content.replace(/```json|```|`/g,'').trim();
+    const jsonMatch=raw.match(/\{[\s\S]*\}/);
+    if(!jsonMatch) throw new Error('No JSON in response');
+    const d=JSON.parse(jsonMatch[0]);
 
     // Wikipedia REST summary → thumbnail
     async function fetchWikiThumb(title){
