@@ -804,7 +804,7 @@ async function transmit(){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'compound-beta',
+        model:'llama-3.3-70b-versatile',
         max_tokens:1000,
         stream:true,
         messages:[
@@ -1337,12 +1337,23 @@ async function openCountryDrawer(feature){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'compound-beta',
+        model:'llama-3.3-70b-versatile',
         max_tokens:1000,
         messages:[
-          {role:'system',content:`You are a geopolitical atlas. Search the web for the most current information. Return ONLY a raw JSON object — no markdown, no code fences, no explanation. Schema:
-{"leader":"name","leader_role":"title","leader_wiki":"Wikipedia page title e.g. Donald_Trump","ideology":"short label","iso2":"2-letter ISO country code e.g. us","capital":"city","population":"e.g. 84M","gdp":"e.g. $2.1T","gdp_per_capita":"e.g. $12,400","military":"LOW|MED|HIGH","stability":"LOW|MED|HIGH","threat":"LOW|MED|HIGH","alliances":"e.g. NATO, EU","parties":[{"n":"name","pct":52,"c":"#00ff88"},{"n":"name","pct":31,"c":"#ffaa00"},{"n":"name","pct":17,"c":"#2a3d2a"}],"cabinet":[{"role":"Foreign","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Defense","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Finance","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Interior","name":"name","wiki":"Wikipedia_Page_Title"}],"brief":"2 sharp sentences on the current geopolitical situation."}`},
-          {role:'user',content:`Search the web for the current head of government and political situation of ${name} as of today. Return only the JSON object.`}
+          {role:'system',content:`You are a geopolitical atlas. Today is April 2026. Use ONLY post-2024 leadership. Critical updates since your training:
+- USA: Donald Trump (Jan 2025), VP: JD Vance
+- UK: Keir Starmer (Jul 2024)
+- Germany: Friedrich Merz (Apr 2025)
+- Canada: Mark Carney (Mar 2025)
+- Japan: Shigeru Ishiba (Oct 2024)
+- Iran: Masoud Pezeshkian (Jul 2024)
+- Mexico: Claudia Sheinbaum (Oct 2024)
+- France: Emmanuel Macron | Italy: Giorgia Meloni | Spain: Pedro Sánchez
+- Russia: Vladimir Putin | China: Xi Jinping | India: Narendra Modi
+- Argentina: Javier Milei (Dec 2023) | Poland: Donald Tusk (Dec 2023)
+Return ONLY a raw JSON object, no markdown, no code fences. Schema:
+{"leader":"name","leader_role":"title","leader_wiki":"Wikipedia page title e.g. Donald_Trump","ideology":"short label","iso2":"2-letter ISO country code e.g. us","capital":"city","population":"e.g. 84M","gdp":"e.g. $2.1T","gdp_per_capita":"e.g. $12,400","military":"LOW|MED|HIGH","stability":"LOW|MED|HIGH","threat":"LOW|MED|HIGH","alliances":"e.g. NATO, EU","parties":[{"n":"name","pct":52,"c":"#00ff88"},{"n":"name","pct":31,"c":"#ffaa00"},{"n":"name","pct":17,"c":"#2a3d2a"}],"cabinet":[{"role":"Foreign","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Defense","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Finance","name":"name","wiki":"Wikipedia_Page_Title"},{"role":"Interior","name":"name","wiki":"Wikipedia_Page_Title"}],"brief":"2 sharp sentences on the current geopolitical situation as of 2026."}`},
+          {role:'user',content:`Country: ${name}. Return the JSON profile using the most current 2025-2026 leadership data.`}
         ]
       })
     });
