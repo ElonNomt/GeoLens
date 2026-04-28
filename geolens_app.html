@@ -572,8 +572,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script src="config.js" onerror="console.warn('config.js not found — using Worker proxy for AI, no live news')"></script>
 <script>
-const GROQ_KEY='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';
 
 // ── CLOCK ──
 function updateClock(){
@@ -609,7 +609,7 @@ function showToast(msg){
 }
 
 // ── FEED ──
-const NEWS_API_KEY=''; // paste your newsapi.org key here for live news
+const NEWS_API_KEY=window.NEWS_API_KEY||'';
 
 const STATIC_FEED=[
   {time:'14:42',region:'EU-EAST',sev:'high',type:'KINETIC',title:'Drone strike reported on Odesa grain terminal',src:'Reuters · UNIAN · OSINT'},
@@ -800,9 +800,9 @@ async function transmit(){
   messageHistory.push({role:'user',content:q});
 
   try{
-    const resp=await fetch('https://api.groq.com/openai/v1/chat/completions',{
+    const resp=await fetch('https://geolens-proxy.chinnomt1.workers.dev',{
       method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':`Bearer ${GROQ_KEY}`},
+      headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
         model:'llama-3.3-70b-versatile',
         max_tokens:1000,
@@ -1333,9 +1333,9 @@ async function openCountryDrawer(feature){
   drawer.classList.add('open');
 
   try{
-    const resp=await fetch('https://api.groq.com/openai/v1/chat/completions',{
+    const resp=await fetch('https://geolens-proxy.chinnomt1.workers.dev',{
       method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':`Bearer ${GROQ_KEY}`},
+      headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
         model:'llama-3.3-70b-versatile',
         max_tokens:800,
