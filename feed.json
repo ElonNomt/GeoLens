@@ -1,6 +1,127 @@
 {
-  "updated": "2026-08-16T23:26:50.670544+00:00",
+  "updated": "2026-08-16T23:48:36.918352+00:00",
   "items": [
+    {
+      "time": "23:46",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Unauthorised sites are growing but travellers say they are forced to break the law",
+      "src": "BBC News",
+      "desc": "The government says such developments are unacceptable – so why do they keep springing up?",
+      "url": "https://www.bbc.co.uk/news/articles/cpq3w8q0j9go",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:40",
+      "region": "MENA",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "What Bessent’s economic isolation of Iran could look like",
+      "src": "Biztoc.com",
+      "desc": "While the Trump administration hasn't said what it's planning to do, there are still pressure points that the U.S. Treasury Department could hit.",
+      "url": "https://biztoc.com/x/26fea8cd8ecdda8f",
+      "filter": "MENA"
+    },
+    {
+      "time": "23:40",
+      "region": "AFRICA",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Court orders must bind the powerful, powerless — Eyimofe Atake, SAN",
+      "src": "The Punch",
+      "desc": "Eyimofe Atake SAN, a prominent Nigerian lawyer and chief, discusses integrity, resilience, and memorable cases, emphasizing that court orders must bind all\n\nRead More: https://punchng.com/court-orders-must-bind-the-powerful-powerless-eyimofe-atake-san/",
+      "url": "https://punchng.com/court-orders-must-bind-the-powerful-powerless-eyimofe-atake-san/",
+      "filter": "AFRICA"
+    },
+    {
+      "time": "23:40",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "‘Why Tinubu deserves second term’",
+      "src": "The Punch",
+      "desc": "A faith-based organisation, Victorious Prayer Network, explains why President Bola Tinubu deserves a second term in office, citing peace in the Niger Delta\n\nRead More: https://punchng.com/why-tinubu-deserves-second-term/",
+      "url": "https://punchng.com/why-tinubu-deserves-second-term/",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "23:40",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "DIPLO",
+      "title": "Otti tasks Abia monarchs on community security",
+      "src": "The Punch",
+      "desc": "Governor Alex Otti urges Abia monarchs to prioritize community security and good governance. A workshop equipped traditional rulers with conflict resolutio\n\nRead More: https://punchng.com/otti-tasks-abia-monarchs-on-community-security/",
+      "url": "https://punchng.com/otti-tasks-abia-monarchs-on-community-security/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:38",
+      "region": "EU-EAST",
+      "sev": "high",
+      "type": "FIN",
+      "title": "Kremlin’s top state bank predicts Russia could lose war of attrition",
+      "src": "Freerepublic.com",
+      "desc": "State-owned VEB.RF (Vnesheconombank) has stated that Russia cannot win the economic confrontation with the West as long as Western countries continue to support Ukraine. According to him, the Russian economy is facing rising costs, falling investment, and tec…",
+      "url": "https://freerepublic.com/focus/f-news/4391961/posts",
+      "filter": "EU-EAST"
+    },
+    {
+      "time": "23:37",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "INFRA",
+      "title": "AEW Collision Preview: Continental Cup, Trios Title, and More",
+      "src": "Bleeding Cool News",
+      "desc": "Greetings, comrades! It is I, your El Presidente, reporting to you live from my luxury suite at The Bellagio where I have just finished teaching my pet capybara Esteban the finer points of card counting at the blackjack tables. The casino has asked us to leav…",
+      "url": "https://bleedingcool.com/tv/aew-collision-preview-continental-cup-trios-title-and-more/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:35",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Top-secret SpaceX mission to launch from California",
+      "src": "New York Post",
+      "desc": "If the launch is scrubbed, SpaceX has another shot Sunday.",
+      "url": "https://nypost.com/2026/08/15/us-news/spacex-to-launch-falcon-9-rocket-from-vandenberg-base-in-california/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:30",
+      "region": "AMERICAS",
+      "sev": "high",
+      "type": "FIN",
+      "title": "Colombia president asks US to suspend tariffs over quake",
+      "src": "RTE",
+      "desc": "Colombia's new President Abelardo de la Espriella has called on his US counterpart Donald Trump to suspend tariffs currently targeting the South American nation, which is reeling after a deadly earthquake.",
+      "url": "https://www.rte.ie/news/2026/0816/1588056-colombia-tariffs/",
+      "filter": "AMERICAS"
+    },
+    {
+      "time": "23:28",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Filly Luster earns emphatic victory in $1M King's Plate thoroughbred race",
+      "src": "CBC News",
+      "desc": "John Velazquez rode filly Luster to an emphatic win in the King's Plate on Saturday.",
+      "url": "https://www.cbc.ca/news/canada/toronto/rac-kings-plate-9.7308828",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "23:27",
+      "region": "MENA",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Yemen’s government says Houthi strikes hit residential areas in Marib",
+      "src": "Al Jazeera English",
+      "desc": "Yemen's Ministry of Information denounces attacks on Marib as 'escalation' that threatens lives and increases suffering.",
+      "url": "https://www.aljazeera.com/news/2026/8/15/yemens-government-says-houthi-strikes-hit-residential-areas-in-marib",
+      "filter": "MENA"
+    },
     {
       "time": "23:20",
       "region": "GLOBAL",
@@ -99,127 +220,6 @@
       "desc": "The reason why the USS Abraham Lincoln has gone so long without repairs and resupply traces back to Iran taking out the Navy's logistics hub in Bahrain at the very beginning of Trump's war",
       "url": "https://www.fark.com/comments/14165008/The-reason-why-USS-Abraham-Lincoln-has-gone-so-long-without-repairs-resupply-traces-back-to-Iran-taking-out-Navys-logistics-hub-in-Bahrain-at-very-beginning-of-Trumps-war",
       "filter": "MENA"
-    },
-    {
-      "time": "23:04",
-      "region": "AMERICAS",
-      "sev": "low",
-      "type": "FIN",
-      "title": "Colombia asks Trump to suspend tariffs as country reels from earthquake",
-      "src": "Al Jazeera English",
-      "desc": "Post-earthquake reconstruction is expected to cost about $6.4bn, but Colombia has been hit by renewed US tariffs.",
-      "url": "https://www.aljazeera.com/news/2026/8/15/colombia-asks-trump-to-suspend-tariffs-as-country-reels-from-earthquake",
-      "filter": "AMERICAS"
-    },
-    {
-      "time": "23:04",
-      "region": "AMERICAS",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "The influencers getting bitten while chasing the perfect shark shot",
-      "src": "BBC News",
-      "desc": "Tayane Dalazen was on a shark-diving trip in Brazil when she was attacked.",
-      "url": "https://www.bbc.co.uk/news/articles/c5yvrn7rpqpo",
-      "filter": "AMERICAS"
-    },
-    {
-      "time": "23:03",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "INFRA",
-      "title": "Curtiss-Wright (CW) Just Raised Guidance Again, So What’s The Catch?",
-      "src": "Yahoo Entertainment",
-      "desc": "On August 6, Curtiss-Wright (NYSE:CW) held its second quarter 2026 earnings call and reported that the company’s sales climbed 5% year-over-year to $924 mill...",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/curtiss-wright-cw-just-raised-230318763.html",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:01",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "'Appalling' wildfire rages near people's homes in Wales as 200 soldiers are deployed to help firefighters",
-      "src": "Dailymail.com",
-      "desc": "South Wales Fire and Rescue service has issued a major incident update, and said it had already received 736 calls compared to an average of about 300.",
-      "url": "https://www.dailymail.com/news/article-16055679/Appalling-wildfire-rages-near-peoples-homes-Wales-200-soldiers-deployed-help-firefighters.html",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:01",
-      "region": "INDO-PAC",
-      "sev": "low",
-      "type": "MIL",
-      "title": "Fiasco in the Factory: Taxpayers Funded a $533 Million Artillery Plant That Made Nothing",
-      "src": "Freerepublic.com",
-      "desc": "Reporting Highlights Ready, Fire, Aim: In a rushed process exempted from normal rules, the Army hired General Dynamics, which brought on a Turkish subcontractor with little vetting, to make artillery shells. Money for Nothing: Despite being paid $533 million,…",
-      "url": "https://freerepublic.com/focus/f-news/4391959/posts",
-      "filter": "INDO-PAC"
-    },
-    {
-      "time": "23:00",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "Trump: Ballroom Lawsuit Exposed ‘Top Military Secrets’",
-      "src": "Legalinsurrection.com",
-      "desc": "President Trump has been the target of a number of recent assassination attempts, including . . . the threat of a missile attack against Air Force One.\nThe post Trump: Ballroom Lawsuit Exposed ‘Top Military Secrets’ first appeared on Le·gal In·sur·rec·tion.",
-      "url": "https://legalinsurrection.com/2026/08/trump-ballroom-lawsuit-exposed-top-military-secrets/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:00",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "5 Anime Heroes Who Would Absolutely Crush Solo Leveling’s Sung Jinwoo In A Fight",
-      "src": "Screen Rant",
-      "desc": "Sung Jinwoo is definitely the strongest Hunter in Solo Leveling, but anime is home to a few other powerhouses that would decimate him one-on-one.",
-      "url": "https://screenrant.com/anime-heroes-beat-solo-leveling-sung-jinwoo/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:56",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Dem Lawmaker Blasts 'Smash-And-Grab' Trump Scheme — And Says He '1,000%' Agrees With Joe Rogan",
-      "src": "HuffPost",
-      "desc": "“They’re turning the White House into one large insider trading conspiracy,” Rep. Jamie Raskin told Anderson Cooper.",
-      "url": "https://www.huffpost.com/entry/jamie-raskin-trump-truth-social-plan_n_6a80e722e4b0b3bc96f6c60d",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:55",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Belgium Construction Crew Unearths $10 Million in Hidden Gold While Laying Sewer Pipe",
-      "src": "Freerepublic.com",
-      "desc": "One person’s trash dramatically turned into another’s treasure as workers in Belgium happened upon a gold hoard worth more than $10 million while installing a sewer line in a building they were renovating. “Our first reaction was actually disbelief,” Kobe, an…",
-      "url": "https://freerepublic.com/focus/f-chat/4391958/posts",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:54",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "FIN",
-      "title": "Trump's tone-deaf brag leaves onlookers dumbfounded",
-      "src": "Raw Story",
-      "desc": "President Donald Trump on Friday said that the US economy is “doing unbelievably from the standpoint of Wall Street,” bragging about record equity prices as job and wage growth remain stagnant and millions of Americans struggle to afford groceries.In remarks …",
-      "url": "https://www.rawstory.com/trump-2677712197/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:53",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "The End Of Oak Street's Original Darker Ending Revealed By Star Ewan McGregor",
-      "src": "Screen Rant",
-      "desc": "Ewan McGregor revealed that the new science fiction thriller, The End of Oak Street, originally had a much darker ending for its characters.",
-      "url": "https://screenrant.com/the-end-of-oak-street-original-ending-ewan-mcgregor/",
-      "filter": "GLOBAL"
     }
   ]
 }
