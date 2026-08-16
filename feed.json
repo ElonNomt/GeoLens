@@ -1,6 +1,138 @@
 {
-  "updated": "2026-08-16T21:27:00.038350+00:00",
+  "updated": "2026-08-16T21:48:42.519764+00:00",
   "items": [
+    {
+      "time": "21:38",
+      "region": "MENA",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Hormuz Ship Attacks Mount As US Vows To Cripple Iran Economy",
+      "src": "gcaptain.com",
+      "desc": "By Arsalan Shahla, Catherine Lucey and Sara Gharaibeh Aug 15, 2026 (Bloomberg) –More ships have come under attack in the Strait of Hormuz as talks to end the war in the...",
+      "url": "https://gcaptain.com/hormuz-ship-attacks-mount-as-us-vows-to-cripple-iran-economy/",
+      "filter": "MENA"
+    },
+    {
+      "time": "21:37",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Palantir makes its case against frontier AI with 93% revenue growth as ammunition",
+      "src": "Crypto Briefing",
+      "desc": "Palantir's revenue surge highlights a growing enterprise demand for AI solutions prioritizing data sovereignty and operational autonomy.\nThe post Palantir makes its case against frontier AI with 93% revenue growth as ammunition appeared first on Crypto Briefi…",
+      "url": "https://cryptobriefing.com/palantir-case-against-frontier-ai/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "21:37",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Lanterns Composer Discusses Distinguishing Hal & John, Grounded Themes",
+      "src": "Bleeding Cool News",
+      "desc": "With 15 years of experience, Stephanie Economou has worked across film, TV, and video games across all genres, from action, adventure, comedy, drama, and horror. Among a few of her notable works are The Martian (2015), The Meg (2018), Whiskey Cavalier, Marvel…",
+      "url": "https://bleedingcool.com/tv/lanterns-composer-discusses-distinguishing-hal-john-grounded-themes/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "21:33",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "INFRA",
+      "title": "Why Chicago O’Hare Is One of My Favorite Airports, Especially When Traveling With Kids",
+      "src": "Johnnyjet.com",
+      "desc": "This post was created in partnership with Chicago O’Hare International Airport. As always, all opinions are my own. Chicago O’Hare International Airport (ORD) is massive. It’s one of the busiest...\nThe post Why Chicago O’Hare Is One of My Favorite Airports, E…",
+      "url": "https://johnnyjet.com/why-chicago-ohare-is-one-of-my-favorite-airports-especially-when-traveling-with-kids/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "21:32",
+      "region": "MENA",
+      "sev": "high",
+      "type": "MIL",
+      "title": "Iran can ‘poke the bear’ to keep war going and Trump will respond every time: Military expert",
+      "src": "Biztoc.com",
+      "desc": "Families of the U.S. Navy sailors aboard the USS Lincoln are speaking out about the conditions being reported on board the ...",
+      "url": "https://biztoc.com/x/61c16e2b37c5d186",
+      "filter": "MENA"
+    },
+    {
+      "time": "21:32",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Copper endures 2,595F in US nuclear fusion reactor material test, defies earlier models - Interesting Engineering",
+      "src": "Slashdot.org",
+      "desc": "Copper endures 2,595F in US nuclear fusion reactor material test, defies earlier modelsInteresting Engineering...",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184990906",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "21:30",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "As Paul Skenes lets his dad bod hang out at age 24, insiders reveal truth about his season from hell: Nasty rumor about ",
+      "src": "Dailymail.com",
+      "desc": "Paul Skenes was supposed to be untouchable, destined for a rise in baseball as blistering as his 102mph fastball.",
+      "url": "https://www.dailymail.com/sport/mlb/article-16050859/paul-skenes-pirates-dad-bod-livvy-dunne.html",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "21:29",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "MIL",
+      "title": "US navy veterans and military health experts express concern over USS Abraham Lincoln sailors",
+      "src": "Cashwalklabs.io",
+      "desc": "Prolonged deployment is coupled with reports of water shortages, plumbing issues and attempts to jump overboard",
+      "url": "https://test.cashwalklabs.io/news/us-navy-veterans-and-military-health-experts-express-concern-over-uss-abraham-lincoln-sailors",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "21:29",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "DIPLO",
+      "title": "Why cheapening Shoah vocabulary threatens American democracy",
+      "src": "Israelnationalnews.com",
+      "desc": "When critics hurl Nazi labels at progressive politicians, they fail to address the actual substance of the threat.  Opinion.",
+      "url": "https://www.israelnationalnews.com/news/431747",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "21:29",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "TV presenter who exposed people smugglers forced to flee home after police warned of death threats",
+      "src": "Dailymail.com",
+      "desc": "Patrick Christys has told The Mail on Sunday the threat is so serious that the Metropolitan Police ordered him to abandon his home in the small hours of the morning.",
+      "url": "https://www.dailymail.com/news/article-16055495/TV-presenter-exposed-people-smugglers-death-threats.html",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "21:29",
+      "region": "MENA",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Iran fires anti-ship missiles from Qeshm Island toward Gulf of Oman",
+      "src": "Crypto Briefing",
+      "desc": "Iran's missile launches heighten regional tensions, risking disruption of global oil supply and escalating military confrontations in strategic waters.\nThe post Iran fires anti-ship missiles from Qeshm Island toward Gulf of Oman appeared first on Crypto Brief…",
+      "url": "https://cryptobriefing.com/iran-anti-ship-missiles-qeshm-gulf-oman/",
+      "filter": "MENA"
+    },
+    {
+      "time": "21:28",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Breaking: PayPal Is “In Talks to Sell Itself” After Rejecting Stripe’s Initial $60.50 Bid in July",
+      "src": "24/7 Wall St.",
+      "desc": "Stripe and Advent rejected once and are circling back for PayPal, but the board already said the first price was not enough. Here is what the new terms might...",
+      "url": "https://247wallst.com/investing/2026/08/15/breaking-paypal-is-in-talks-to-sell-itself-after-rejecting-stripes-initial-60-50-bid-in-july/",
+      "filter": "GLOBAL"
+    },
     {
       "time": "21:26",
       "region": "INDO-PAC",
@@ -87,138 +219,6 @@
       "src": "Israelnationalnews.com",
       "desc": "After months of uncertainty, Tehran claims three pilots thought missing since their jets were shot down are alive and being held by Qatari forces.",
       "url": "https://www.israelnationalnews.com/news/431746",
-      "filter": "MENA"
-    },
-    {
-      "time": "21:15",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "She Couldn’t Get Her HOA to Help With Her Noisy Neighbors—So She Hired a Lawyer",
-      "src": "Twistedsifter.com",
-      "desc": "If only the neighbors could be considerate!\nThe post She Couldn’t Get Her HOA to Help With Her Noisy Neighbors—So She Hired a Lawyer appeared first on TwistedSifter.",
-      "url": "http://twistedsifter.com/2026/08/she-couldnt-get-her-hoa-to-help-with-her-noisy-neighbors-so-she-hired-a-lawyer/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "21:15",
-      "region": "AFRICA",
-      "sev": "med",
-      "type": "MIL",
-      "title": "Troops dismantle IPOB/ESN camps in Anambra, kill 3",
-      "src": "Vanguard",
-      "desc": "Troops of the newly established 15 Brigade, Nigerian Army, operating under the Joint Task Force South East, Operation Udoka, in a major operation against suspected members of the Indigenous People of Biafra/Eastern Security Network (IPOB/ESN), have dismantled…",
-      "url": "https://www.vanguardngr.com/2026/08/troops-dismantle-ipob-esn-camps-in-anambra-kill-3/",
-      "filter": "AFRICA"
-    },
-    {
-      "time": "21:15",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "6 Cop Shows Better Than SWAT",
-      "src": "Screen Rant",
-      "desc": "SWAT, a CBS series that was canceled three separate times over the course of its run, is a great cop show, but there are several that are better.",
-      "url": "https://screenrant.com/cop-shows-better-than-swat/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "21:08",
-      "region": "AFRICA",
-      "sev": "med",
-      "type": "MIL",
-      "title": "Army intercepts courier with 180 explosives in Zamfara",
-      "src": "The Punch",
-      "desc": "Nigerian Army troops intercepted a courier with 180 Super Power explosives in Zamfara, disrupting a major supply to terrorists. Read more on the Army inter\n\nRead More: https://punchng.com/army-intercepts-courier-with-180-explosives-in-zamfara/",
-      "url": "https://punchng.com/army-intercepts-courier-with-180-explosives-in-zamfara/",
-      "filter": "AFRICA"
-    },
-    {
-      "time": "21:07",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Farage to get prime spot at Remembrance Day service for the first time after by-election victory",
-      "src": "Dailymail.com",
-      "desc": "It has been a long-standing ambition of Nigel Farage to join the Prime Minister and other leaders at the Remembrance ceremony as a symbol of his breakthrough into the political mainstream",
-      "url": "https://www.dailymail.com/news/article-16055411/Farage-Remembrance-Day-election-victory.html",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "21:07",
-      "region": "EU-EAST",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Show HN: Open-source skill to run Matt Pocock's skills in bulk AFK",
-      "src": "Github.com",
-      "desc": "Article URL: https://github.com/rvoertmann/barbequeue\nComments URL: https://news.ycombinator.com/item?id=49314342\nPoints: 1\n# Comments: 0",
-      "url": "https://github.com/rvoertmann/barbequeue",
-      "filter": "EU-EAST"
-    },
-    {
-      "time": "21:07",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "MIL",
-      "title": "In 1942, Loyalhanna Dam went into operation while Pittsburgh factories produced wartime steel and the army relied on 54,",
-      "src": "The Times of India",
-      "desc": "Two 64-ton cranes at Loyalhanna Dam are receiving a major overhaul after eight decades of service. These aging machines manage massive steel gates for flood control in Westmoreland County. The rehabilitation addresses lead paint, asbestos, and outdated electr…",
-      "url": "https://economictimes.indiatimes.com/news/international/us/in-1942-loyalhanna-dam-went-into-operation-while-pittsburgh-factories-produced-wartime-steel-and-the-army-relied-on-54000-pigeons-84-years-later-the-dam-has-prevented-more-than-658-million-in-flood-damage-and-its-cranes-are-getting-a-major-overhaul/articleshow/133267549.cms",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "21:06",
-      "region": "GLOBAL",
-      "sev": "med",
-      "type": "DIPLO",
-      "title": "UK urged to help lead fight against Taliban's 'gender apartheid'",
-      "src": "Dailymail.com",
-      "desc": "The commemoration included a Kabul military parade in which Humvee trucks abandoned in the chaotic withdrawal of a US-led coalition force were rolled out as victory trophies.",
-      "url": "https://www.dailymail.com/news/article-16055357/UK-fight-against-Taliban-gender-apartheid.html",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "21:06",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Retired officers demand new law to protect British soldiers from witch-hunts",
-      "src": "Dailymail.com",
-      "desc": "The Northern Ireland Troubles Bill aims to establish a Legacy Commission to investigate killings during battles with Republicans and Loyalists as far back as 1969.",
-      "url": "https://www.dailymail.com/news/article-16055369/Retired-officers-law-British-soldiers-witch-hunt.html",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "21:05",
-      "region": "INDO-PAC",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "The road to nowhere! Dozens board 40 vintage red buses for annual one-day-only visit to 'ghost' village",
-      "src": "Dailymail.com",
-      "desc": "Striking images show passengers waving from the windows as a long line of buses made its way across Salisbury Plain to the 'ghost' village of Imber in Wiltshire.",
-      "url": "https://www.dailymail.com/news/article-16055413/The-road-Dozens-board-40-vintage-red-buses-annual-one-day-visit-ghost-village.html",
-      "filter": "INDO-PAC"
-    },
-    {
-      "time": "21:04",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "MAIL ON SUNDAY COMMENT: Elite Lefties welcome migrants - if they're not on their doorsteps",
-      "src": "Dailymail.com",
-      "desc": "On the issue of immigration, there has always been a great deal of long-distance charity and plentiful signalling of virtue by the new Left-wing elite.",
-      "url": "https://www.dailymail.com/news/article-16055363/MAIL-SUNDAY-COMMENT-Elite-Lefties-welcome-migrants-theyre-not-doorsteps.html",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "21:04",
-      "region": "MENA",
-      "sev": "high",
-      "type": "DIPLO",
-      "title": "Qatar denies capturing three Iranian pilots after downing fighter jets",
-      "src": "BBC News",
-      "desc": "Iran claims they have been held since Qatar downed two fighter jets at the start of the US-Iran war.",
-      "url": "https://www.bbc.com/news/articles/cj4kk8kz271o?xtor=AL-72-%5Bpartner%5D-%5Byahoo.north.america%5D-%5Bheadline%5D-%5Bnews%5D-%5Bbizdev%5D-%5Bisapi%5D",
       "filter": "MENA"
     }
   ]
