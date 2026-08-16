@@ -1,6 +1,149 @@
 {
-  "updated": "2026-08-16T19:26:15.513933+00:00",
+  "updated": "2026-08-16T19:47:32.598797+00:00",
   "items": [
+    {
+      "time": "19:43",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Mansour Abbas makes surprise announcement",
+      "src": "Israelnationalnews.com",
+      "desc": "Ra'am chairman MK Mansour Abbas says upcoming elections will be his last, declares, 'The Palestinian state has already been established.'",
+      "url": "https://www.israelnationalnews.com/news/431738",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "19:43",
+      "region": "MENA",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Review: Middle Eastern Wines of Domaine de Bargylus and Chateau Marsyas, 2026 Releases",
+      "src": "Drinkhacker.com",
+      "desc": "Most drinkers don’t think of the middle east as a wine production hotspot, but wine has been made in this area for the bulk of human history, daring back (or so I read) to roughly 8000 BCE. Today, you’ll find the well-regarded Chateau Musar as the most notewo…",
+      "url": "https://www.drinkhacker.com/2026/08/15/review-middle-eastern-wines-of-domaine-de-bargylus-and-chateau-marsyas-2026-releases/",
+      "filter": "MENA"
+    },
+    {
+      "time": "19:42",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "WWII monument vandal says she’s ‘freedom fighter’ being chased by ‘golf carts with people shooting’ in bizarre videos",
+      "src": "New York Post",
+      "desc": "A woman charged with defacing the World War II Memorial in DC with graffiti calls herself a “homeless freedom fighter” in bizarre videos before she allegedly spray painted the monument.",
+      "url": "https://nypost.com/2026/08/15/us-news/wwii-vandal-called-herself-homeless-freedom-fighter/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "19:41",
+      "region": "INDO-PAC",
+      "sev": "high",
+      "type": "INFRA",
+      "title": "Jeff Daniels Says His Film Portraying Reagan-Gorbachev Talks Will ‘Remind People What Statesmen Look Like’",
+      "src": "Freerepublic.com",
+      "desc": "The Newsroom and American Rust alum Jeff Daniels says The Brink of War, his new Cold War-era nail-biter, which tells an extraordinary true story, has themes that resonate today. “The world is still a dangerous place,” Daniels, 71, told UPI in a Zoom interview…",
+      "url": "https://freerepublic.com/focus/f-bloggers/4391948/posts",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "19:41",
+      "region": "MENA",
+      "sev": "high",
+      "type": "RESOURCE",
+      "title": "‘I’ll never apologize’ — Trump brushes off Iran war’s impact on oil prices and calls aircraft carrier’s 240+ days at sea",
+      "src": "Fortune",
+      "desc": "Trump acknowledged that he's used the U.S. military “a little bit more than I wanted to,\" while asserting anew that the U.S. operation against Iran is going well.",
+      "url": "https://fortune.com/2026/08/15/trump-iran-war-oil-prices-abraham-lincoln-aircraft-carriers-record-time-sea/",
+      "filter": "MENA"
+    },
+    {
+      "time": "19:40",
+      "region": "MENA",
+      "sev": "med",
+      "type": "RESOURCE",
+      "title": "Iran fires back at Trump's threat to declare Hormuz a US territory",
+      "src": "CNA",
+      "desc": "TEHRAN: Iran on Saturday (Aug 15) fired back at US President Donald Trump's claim that he would soon declare the Strait of Hormuz part of US territory, saying the crucial energy waterway it has blockaded \"will rem",
+      "url": "https://www.channelnewsasia.com/world/iran-fires-back-trumps-threat-declare-hormuz-us-territory-6321731",
+      "filter": "MENA"
+    },
+    {
+      "time": "19:39",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Lunatic who attacked NYC synagogue told cops ‘F–k the Jews,’ but aunt claims he wants to be Jewish",
+      "src": "New York Post",
+      "desc": "Larry Montes, 46, was charged with hate crimes after allegedly attacking Manhattan's Central Synagogue and injuring two people during Shabbat.",
+      "url": "https://nypost.com/2026/08/15/us-news/lunatic-who-attacked-nyc-synagogue-told-cops-f-k-the-jews/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "19:34",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Fox Flacks Roll Lamest Attack Yet To Defend Trump Mistreatment Of Troops",
+      "src": "Crooksandliars.com",
+      "desc": "The liars on Fox not \"news\" resorted to tired attacks on Sen. Richard Blumenthal to pretend the horrid conditions the service members on the USS Lincoln are experiencing aren't really happening.\nAs we've already discussed here, things are going so badly with …",
+      "url": "https://crooksandliars.com/2026/08/fox-flacks-roll-lamest-attack-yet-defend",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "19:33",
+      "region": "MENA",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Families of USS Lincoln crew say Trump should be 'ashamed' of conditions on board - NPR",
+      "src": "Slashdot.org",
+      "desc": "Families of USS Lincoln crew say Trump should be 'ashamed' of conditions on boardNPR US aircraft carrier expected to relieve USS Lincoln in Middle Eastaljazeera.com Navy and USS Lincoln’s Problems Are Tied to Attacks on U.S. Base Early in WarThe New York Time…",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184989662",
+      "filter": "MENA"
+    },
+    {
+      "time": "19:30",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "INFRA",
+      "title": "The excise dilemma: Political flashpoints ahead as pressure mounts over reversing fuel supports",
+      "src": "TheJournal.ie",
+      "desc": "Unwinding excise supports has been described as ‘political madness’ this week – will the government halt them?",
+      "url": "https://www.thejournal.ie/fuel-excise-reversal-plan-7131376-Aug2026/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "19:30",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "HBO Has Finally Found The True Successor To Succession",
+      "src": "Screen Rant",
+      "desc": "Three years after we last heard from the Roy family, a new internecine corporate satire is coming to HBO with major similarities to Succession.",
+      "url": "https://screenrant.com/war-hbo-new-succession-corporate-thriller-family-drama/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "19:29",
+      "region": "MENA",
+      "sev": "low",
+      "type": "FIN",
+      "title": "Missing Israeli mother and daughter located alive on South American bus",
+      "src": "Freerepublic.com",
+      "desc": "Israel Police announce that missing mother and daughter Mali and Liel Yahalomi were located alive on a bus in Buenos Aires. Police official: They accumulated financial debts. ....The Israel Police announced on Friday evening that mother and daughter Mali and …",
+      "url": "https://freerepublic.com/focus/f-chat/4391946/posts",
+      "filter": "MENA"
+    },
+    {
+      "time": "19:27",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "What To Watch This Weekend: New Shows And Movies To Stream On Netflix, Hulu, Prime Video, Apple TV And More",
+      "src": "Forbes",
+      "desc": "Looking for something new to stream this weekend? Here’s every major new movie and show hitting Netflix, Hulu, Prime Video, Apple TV and more.",
+      "url": "https://www.forbes.com/sites/erikkain/2026/08/15/what-to-watch-this-weekend-new-shows-and-movies-to-stream-on-netflix-hulu-prime-video-apple-tv-and-more/",
+      "filter": "GLOBAL"
+    },
     {
       "time": "19:25",
       "region": "MENA",
@@ -77,149 +220,6 @@
       "desc": "Police say 23 more bodies have been recovered from Lake Kariba after the overloaded vessel capsized on Tuesday.",
       "url": "https://www.aljazeera.com/news/2026/8/15/death-toll-from-zimbabwe-ferry-disaster-rises-to-69",
       "filter": "AFRICA"
-    },
-    {
-      "time": "19:09",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "DIPLO",
-      "title": "Consensus reached on proposed corridor for road connecting Nunavut and N.W.T.",
-      "src": "CBC News",
-      "desc": "The agreement is a step forward towards creating Canada’s first land-based link to Nunavut’s Arctic coast, providing year-round road access to Wekweètì and Gamèti.",
-      "url": "https://www.cbc.ca/news/canada/arctic-economic-and-security-corridor-9.7308710",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "19:08",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Game of Thrones Meets Lord of the Rings In The 12-Part Dark Fantasy Epic That's Aging Perfectly",
-      "src": "Screen Rant",
-      "desc": "DC's Black Label quietly delivered a 12-issue dark fantasy masterpiece that perfectly combines political betrayals with a classic fellowship quest.",
-      "url": "https://screenrant.com/the-last-god-game-of-thrones-meets-lord-rings/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "19:07",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "INFRA",
-      "title": "Musk’s $100 mn gamble helps mend rift with Trump – WSJ",
-      "src": "RT",
-      "desc": "Elon Musk will give $100 million to Republicans in midterm elections in a move that reportedly helps revive the alliance with Donald Trump Read Full Article at RT.com",
-      "url": "https://www.rt.com/news/644288-musk-100m-mend-rift-trump/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "19:03",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Transgenderism: Course change required",
-      "src": "Wnd.com",
-      "desc": "'Puberty blockers, hormone therapies, and sex-change surgeries are associated with significant risks'",
-      "url": "https://www.wnd.com/2026/08/transgenderism-course-change-required/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "19:03",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Bedbugs can cause people to lose sleep — and blood. Here's what to do about them",
-      "src": "Abcnews.com",
-      "desc": "Bedbugs are on the rise and they tend to be at their worst at this time of year",
-      "url": "https://abcnews.com/Health/wireStory/bedbugs-cause-people-lose-sleep-blood-135670653",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "19:03",
-      "region": "GLOBAL",
-      "sev": "med",
-      "type": "RESOURCE",
-      "title": "The Russini-Vrabel scandal just got a new twist; this podcaster is reigniting the case",
-      "src": "The Times of India",
-      "desc": "A podcaster has shifted the spotlight onto the Associated Press, alleging they have engaged in stonewalling and gaslighting regarding a voter's conflict of interest. This controversy gains traction with the involvement of Dianna Russini and Mike Vrabel in awa…",
-      "url": "https://timesofindia.indiatimes.com/sports/nfl/news/the-russini-vrabel-scandal-just-got-a-new-twist-this-podcaster-is-reigniting-the-case/articleshow/133267269.cms",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "19:03",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Abdul El-Sayed’s Sister Eman Abdelhadi Is One Scary Moonbat",
-      "src": "Moonbattery.com",
-      "desc": "With Islamocommie Abdul El-Sayed, Democrat nominee for US Senate from Michigan, moonbattery appears to run in the family. His half-sister Eman Abdelhadi teaches it at the University of Chicago. She describes herself as a “queer Muslim” and “community organize…",
-      "url": "https://moonbattery.com/abdul-el-sayeds-sister-eman-abdelhadi-is-one-scary-moonbat/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "19:00",
-      "region": "GLOBAL",
-      "sev": "med",
-      "type": "DIPLO",
-      "title": "New book claims Jadotville medal snub was to cover up for bad military and political leadership",
-      "src": "TheJournal.ie",
-      "desc": "The book’s author is military historian Dan Harvey who is a retired Lieutenant Colonel in the Irish Defence Forces.",
-      "url": "https://www.thejournal.ie/jadotville-benchmark-for-bravery-irish-defence-forces-peacekeepers-dsm-distinguished-service-medal-ireland-7124524-Aug2026/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "19:00",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "Woman Arrested for Allegedly Vandalizing WWII Memorial in Washington, DC",
-      "src": "Legalinsurrection.com",
-      "desc": "\"Vandalizing our World War II Memorial is a despicable attack on a sacred monument honoring the Americans who fought and died for our freedom.\"\nThe post Woman Arrested for Allegedly Vandalizing WWII Memorial in Washington, DC first appeared on Le·gal In·sur·r…",
-      "url": "https://legalinsurrection.com/2026/08/woman-arrested-for-allegedly-vandalizing-wwii-memorial-in-washington-dc/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "19:00",
-      "region": "INDO-PAC",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "The Last Places Standing When The Sky Turns To Ash: What They Don’t Want You To Know About Surviving The End",
-      "src": "Activistpost.com",
-      "desc": "“We are standing at the precipice of something we cannot comprehend, and the silence from those who know is deafening. The mechanisms are already in motion, the chess pieces positioned with mathematical precision while the world sleeps. I have seen the projec…",
-      "url": "https://www.activistpost.com/the-last-places-standing-when-the-sky-turns-to-ash-what-they-dont-want-you-to-know-about-surviving-the-end/",
-      "filter": "INDO-PAC"
-    },
-    {
-      "time": "19:00",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "RESOURCE",
-      "title": "The Battle Over North Sea Oil Is Heating Up Under Britain’s New PM",
-      "src": "OilPrice.com",
-      "desc": "With a new Prime Minister in office, it is uncertain whether the United Kingdom will continue accelerating its green transition or backtrack on climate pledges to support fossil fuel development. Many have speculated that the new Labour Party PM Andy Burnham …",
-      "url": "https://oilprice.com/Energy/Energy-General/The-Battle-Over-North-Sea-Oil-Is-Heating-Up-Under-Britains-New-PM.html",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "19:00",
-      "region": "INDO-PAC",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "I’ve played 1,500 hours of Battlefield — here’s why Battlefield 4 is still the most essential entry in the series",
-      "src": "TechRadar",
-      "desc": "Battlefield 6 Season 3 is a love letter to the series' roots – I went back to Battlefield 4 to see if it still holds up.",
-      "url": "https://www.techradar.com/gaming/ive-played-1-500-hours-of-battlefield-heres-why-battlefield-4-is-still-the-most-essential-entry-in-the-series",
-      "filter": "INDO-PAC"
-    },
-    {
-      "time": "19:00",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "5 Franchises That Have Better Comic Book Sequels Than Actual Movies",
-      "src": "ComicBook.com",
-      "desc": "It’s pretty much undeniable that movies form a core part of our collective pop culture consciousness. The movie industry has delivered some truly iconic stories, often populated by characters that become instantly recognisable even to those who haven’t seen t…",
-      "url": "http://comicbook.com/movies/list/5-franchises-that-have-better-comic-book-sequels-than-actual-movies/",
-      "filter": "GLOBAL"
     }
   ]
 }
