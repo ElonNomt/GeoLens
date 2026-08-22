@@ -1,6 +1,160 @@
 {
-  "updated": "2026-08-22T22:29:10.652567+00:00",
+  "updated": "2026-08-22T22:53:29.262307+00:00",
   "items": [
+    {
+      "time": "22:53",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "FIN",
+      "title": "Pentagon fires Stars and Stripes leaders amid Hegseth pressure campaign - CNN",
+      "src": "Slashdot.org",
+      "desc": "Pentagon fires Stars and Stripes leaders amid Hegseth pressure campaignCNN Open Letter to Our Stakeholders from the Military Deputy to the Publisherstripes.com Pentagon fires military newspaper staffers for insubordinationFinancial Times Editor of military ne…",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185091558",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:53",
+      "region": "MENA",
+      "sev": "med",
+      "type": "KINETIC",
+      "title": "U.S. ambassador responds to rising tensions between Israel, Turkey and Syria",
+      "src": "Biztoc.com",
+      "desc": "The Israeli military bombed an airbase in Syria, far from the Israeli border, sparking condemnation not only from Syria, but also Turkey and the Trump administration. U.S. Ambassador to Turkey Tom Barrack accused Israel of an \"unnecessary escalation that does…",
+      "url": "https://biztoc.com/x/50122043da26d140",
+      "filter": "MENA"
+    },
+    {
+      "time": "22:52",
+      "region": "MENA",
+      "sev": "high",
+      "type": "FIN",
+      "title": "Mobility Data Flashes Warning Sign Along Pakistan's Iran-Linked Copper-Corridor",
+      "src": "Biztoc.com",
+      "desc": "Mobility Data Flashes Warning Sign Along Pakistan's Iran-Linked Copper-Corridor\n \nAI-powered geospatial data platform xMap's data scientist, Dana Harrison, asked in a LinkedIn post: \"Can Mobility Data Spot Commodity Supply Risk Before the Market Does?\"\nHarris…",
+      "url": "https://biztoc.com/x/224cb6f14fa3cf65",
+      "filter": "MENA"
+    },
+    {
+      "time": "22:52",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "'One-Two Punch': After Attacking Roadless Rule, Trump Targets Off-Road Vehicle Limits",
+      "src": "Common Dreams",
+      "desc": "Still under fire for attacking the Roadless Area Conservation Rule this week, President Donald Trump's administration provoked a fresh wave of criticism on Friday by targeting another policy meant to protect public lands.The US Forest Service announced Friday…",
+      "url": "https://www.commondreams.org/news/trump-forest-service-overhaul",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:50",
+      "region": "MENA",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Wall St rises on the day but falls for the week; bond yields and Iran in focus",
+      "src": "The Straits Times",
+      "desc": "The Dow Jones Industrial Average rose 517.80 points, or 0.98 per cent, to 53,277.01. Read more at straitstimes.com. Read more at straitstimes.com.",
+      "url": "https://www.straitstimes.com/business/companies-markets/wall-st-rises-on-the-day-but-falls-for-the-week-bond-yields-and-iran-in-focus",
+      "filter": "MENA"
+    },
+    {
+      "time": "22:48",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Hegseth’s Iowa Trip Raises Early Questions About 2028",
+      "src": "Freerepublic.com",
+      "desc": "War Secretary Pete Hegseth’s visit to Iowa is fueling speculation that he could be testing the waters for a 2028 presidential run. Officials familiar with Hegseth’s thinking told the Washington Post that the Iowa visit fits the actions of someone considering …",
+      "url": "https://freerepublic.com/focus/f-bloggers/4392680/posts",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:46",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "FIN",
+      "title": "Wild gaffe as Trump threatens to unleash military on sluggish bond market",
+      "src": "Raw Story",
+      "desc": "President Donald Trump on Friday answered a reporter's question about calming the turbulent bond market by saying he'll use military force.Trump was asked whether he had spoken with Treasury Secretary Scott Bessent about \"another type of intervention\" after b…",
+      "url": "https://www.rawstory.com/trump-treasury-bonds/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:45",
+      "region": "MENA",
+      "sev": "high",
+      "type": "FIN",
+      "title": "Tehran says war with U.S. must end, as world now recognizes Iran's victory",
+      "src": "Haaretz",
+      "desc": "The Iranian parliament speaker said Tehran must prepare for 'unjust U.S. sanctions.' This came after the U.S. Treasury secretary announced additional sanctions against Iran, which he described as the toughest sanctions imposed to date",
+      "url": "https://www.haaretz.com/middle-east-news/iran/2026-08-22/ty-article/tehran-says-war-with-u-s-must-end-as-world-now-recognizes-irans-victory/000001a0-2651-d129-a3ba-667b4a100000",
+      "filter": "MENA"
+    },
+    {
+      "time": "22:45",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "INFRA",
+      "title": "Pentagon Fires Stars and Stripes' Publisher, Editor-In-Chief and a Reporter",
+      "src": "Military.com",
+      "desc": "The announcement was made Friday by the publication itself, coming hours after the publisher said he was planning to retire after three decades.",
+      "url": "https://military.com/pentagon-fires-stars-and-stripes-publisher-editor-chief-reporter",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "22:42",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "7 Real Things Republicans Did This Week That I Never Imagined Would Fit Into A Real Sentence",
+      "src": "Buzzfeed",
+      "desc": "I can’t handle this anymore.View Entire Post ›",
+      "url": "https://www.buzzfeed.com/alexalisitza/cringey-maga-moments-2",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:41",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "INFRA",
+      "title": "Mark Ruffalo Slams Ellisons’ Ties To Oracle Amid Paramount-WBD Merger: “Really Profoundly Scary People”",
+      "src": "Deadline",
+      "desc": "As Mayor Karen Bass shows her support for the Paramount-Warner Bros merger, Mark Ruffalo is continuing to fight the acquisition. On Friday, the 4x Oscar nominee called out the Ellisons ties to Oracle, sharing a video of the tech company’s executive vice chair…",
+      "url": "http://deadline.com/2026/08/mark-ruffalo-slams-ellisons-ties-oracle-paramount-wbd-1237047889/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:40",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Paramount's Warner Bros. bid and threat to leave California divide Hollywood",
+      "src": "PBS",
+      "desc": "The proposed $111 billion merger between Paramount and Warner Bros. Discovery hit a roadblock after California's attorney general and 11 other states sued to stop it. That move was followed by Paramount Skydance CEO David Ellison threatening to take his opera…",
+      "url": "https://www.pbs.org/newshour/show/paramounts-warner-bros-bid-and-threat-to-leave-california-divide-hollywood",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:31",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "INFRA",
+      "title": "Trump backs ‘honest’ Sen. Darline Graham after national security debate flop",
+      "src": "New York Post",
+      "desc": "\"All she was is being honest. She's very smart, and she was being honest,\" Trump told reporters.",
+      "url": "https://nypost.com/2026/08/21/us-news/trump-backs-honest-sen-darline-graham-after-national-security-debate-flop/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:30",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "MIL",
+      "title": "The Navy Chair That Refused to Be Replaced",
+      "src": "Yanko Design",
+      "desc": "The Navy Chair That Refused to Be ReplacedThe Emeco Navy Officer Swivel Chair walked into the present carrying about 75 years of history on its brushed aluminum frame. That kind of backstory...",
+      "url": "https://www.yankodesign.com/2026/08/21/the-navy-chair-that-refused-to-be-replaced/",
+      "filter": "INDO-PAC"
+    },
     {
       "time": "22:29",
       "region": "GLOBAL",
@@ -66,160 +220,6 @@
       "desc": "Nigerian Army troops arrested a suspected female gunrunner in Plateau State and rescued a kidnap victim in Edo State, demonstrating commitment to combating\n\nRead More: https://punchng.com/army-arrests-suspected-female-gunrunner-in-plateau-rescues-kidnap-victi…",
       "url": "https://punchng.com/?p=2221351",
       "filter": "INDO-PAC"
-    },
-    {
-      "time": "22:22",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Severance Season 3 Release Timeline Addressed By Star As Filming Continues",
-      "src": "Screen Rant",
-      "desc": "EXCLUSIVE: One of Severance's main cast members talks about the wait for the highly anticipated third season of Apple TV's mystery thriller.",
-      "url": "https://screenrant.com/severance-season-3-release-timeline-filming-update-tramell-tillman/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:19",
-      "region": "GLOBAL",
-      "sev": "med",
-      "type": "INFRA",
-      "title": "Pentagon fires longtime publisher, editor, reporter from military newspaper Stars and Stripes",
-      "src": "Fox News",
-      "desc": "The Pentagon fired three staffers from the military newspaper Stars and Stripes, including longtime publisher Max Lederer, for alleged insubordination.",
-      "url": "https://www.foxnews.com/media/pentagon-fires-longtime-publisher-editor-reporter-military-newspaper-stars-stripes",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:17",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "DIPLO",
-      "title": "Tasmania warned of 'stress, burnout' as justice staff wellbeing service axed",
-      "src": "ABC News (AU)",
-      "desc": "Budget pressures are being blamed for the axing of a wellbeing service for Tasmania's justice department employees, with opponents denouncing the move, which they say will lead to high staff turnover and psychological injury.",
-      "url": "https://www.abc.net.au/news/2026-08-22/tasmanian-safety-wellbeing-service-department-of-justice-axed/107065474",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:16",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Thank You for Your Inattention to This Matter",
-      "src": "The Atlantic",
-      "desc": "The good news is that the world has stopped responding breathlessly to Donald Trump’s every empty provocation. That’s also the bad news.",
-      "url": "https://www.theatlantic.com/newsletters/2026/08/trump-inattention-iran-war/688381/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:15",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "30 Years Later, Welfare Reform’s Biggest Legacy May Be Stronger Families, Architect Says",
-      "src": "Daily Signal",
-      "desc": "The welfare reform bill signed 30 years ago may have made its greatest impact on marriage and family structure, said the reform’s architect. “It was one of the greatest successes of modern conservatism on domestic policy,” Robert Rector, a senior research fel…",
-      "url": "https://www.dailysignal.com/2026/08/21/30-years-later-welfare-reforms-biggest-legacy-may-be-stronger-families-architect-says/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:13",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Boat hauls in 1,260-pound blue marlin believed to be East Coast's largest catch",
-      "src": "Abcnews.com",
-      "desc": "A Massachusetts charter fishing captain and a client have caught what they believe is the largest Atlantic blue marlin in U.S. East Coast history",
-      "url": "https://abcnews.com/US/wireStory/charter-boat-hauls-1260-pound-blue-marlin-believed-135852100",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:11",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "‘The Odyssey’ Streaming Date Is Set After Film Reaches Box Office Milestone",
-      "src": "Forbes",
-      "desc": "Christopher Nolan’s \"The Odyssey\" is setting sail for digital streaming later this year as the film continues to break records in theaters.",
-      "url": "https://www.forbes.com/sites/timlammers/2026/08/21/the-odyssey-streaming-date-is-set-after-film-reaches-box-office-milestone/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:09",
-      "region": "MENA",
-      "sev": "high",
-      "type": "FIN",
-      "title": "US Treasury Secretary Bessent to hold press conference on Monday",
-      "src": "Yahoo Entertainment",
-      "desc": "Treasury Secretary Scott Bessent will hold a press conference ‌on Monday, according to a statement, after ‌the U. warned of more sanctions against Iran and t...",
-      "url": "https://finance.yahoo.com/economy/policy/articles/us-treasury-secretary-bessent-hold-220931823.html",
-      "filter": "MENA"
-    },
-    {
-      "time": "22:09",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Denton Arts & Jazz Fest unveils full lineup for its 35th year",
-      "src": "Dallas Observer",
-      "desc": "Meet the 2026 headliners, new additions and the free festival's full lineup.",
-      "url": "http://www.dallasobserver.com/music/denton-arts-jazz-fest-unveils-full-lineup-for-its-35th-year-40706555/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:09",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "DIPLO",
-      "title": "4 perfectly bingable Netflix shows you can finish in one weekend (August 21-23)",
-      "src": "How-To Geek",
-      "desc": "The last hunt of the Pogues, a presidential assassination attempt, a deadly black-operative out of retirement, and a super-posh weed empire.",
-      "url": "https://www.howtogeek.com/netflix-shows-you-can-binge-in-one-weekend-august-21/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:06",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "INFRA",
-      "title": "Cheryl 'set for huge TV comeback as she's in talks to become a coach on The Voice UK' - six years after she last graced ",
-      "src": "Dailymail.com",
-      "desc": "Cheryl is reportedly set for a huge TV comeback as a coach on the new series of The Voice UK.",
-      "url": "https://www.dailymail.com/tvshowbiz/article-16071153/Cheryl-TV-comeback-coach-Voice-UK.html",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:03",
-      "region": "INDO-PAC",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Argentina star hit with one of the biggest bans in World Cup history",
-      "src": "ABC News (AU)",
-      "desc": "Argentina's Leandro Paredes is banned from playing for his country for 10 games after striking Spanish opponents after the final whistle in the World Cup final.",
-      "url": "https://www.abc.net.au/news/2026-08-22/fifa-hands-argentina-star-leando-paredes-10-match-ban/107066632",
-      "filter": "INDO-PAC"
-    },
-    {
-      "time": "22:03",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Iryna Zarutska's family files wrongful death lawsuit alleging no security guard was on train",
-      "src": "Fox News",
-      "desc": "The wrongful death lawsuit alleges no security guard was aboard the Charlotte light rail train when Iryna Zarutska was fatally stabbed in 2025.",
-      "url": "https://www.foxnews.com/us/iryna-zarutska-family-files-wrongful-death-lawsuit-alleging-no-security-guard-train",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:01",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "DIPLO",
-      "title": "Pro-Palestinian Protesters Get Jail Time for Golden Gate Bridge Shutdown",
-      "src": "KQED",
-      "desc": "The group of seven pro-Palestine activists faced a maximum of five-year sentences, a fraction of what was promised if jurors had not deadlocked last month on the top conspiracy charge.",
-      "url": "https://www.kqed.org/news/12096244/pro-palestinian-protesters-get-jail-time-for-golden-gate-bridge-shutdown",
-      "filter": "GLOBAL"
     }
   ]
 }
