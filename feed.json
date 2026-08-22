@@ -1,6 +1,160 @@
 {
-  "updated": "2026-08-22T23:27:12.878645+00:00",
+  "updated": "2026-08-22T23:49:53.532439+00:00",
   "items": [
+    {
+      "time": "23:48",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "INFRA",
+      "title": "Women initiate most divorces and report lower marital satisfaction than men, a gap that shows up only inside marriage an",
+      "src": "Theartfulage.com",
+      "desc": "Marriage rates have been falling for decades, and a good deal of commentary insists that women in particular have cooled on the whole idea. Like most claims about men, women and marriage, this one gets distorted in both directions: into a caricature of women …",
+      "url": "https://theartfulage.com/g-reasons-why-many-women-are-put-off-by-marriage/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:44",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "You Should Absolutely Buy These OG-107 Lookalike Pants That Are on Clearance for $10 Right Now",
+      "src": "Primermagazine.com",
+      "desc": "A faithful fatigue silhouette in thick 100% cotton, marked down from $24. I paid full price to find out for you, and I'd do it again.\nThe post You Should Absolutely Buy These OG-107 Lookalike Pants That Are on Clearance for $10 Right Now appeared first on Pri…",
+      "url": "https://www.primermagazine.com/2026/spend/free-assembly-og107-utility-pants",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:43",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "DIPLO",
+      "title": "skcoord 0.1.18",
+      "src": "Pypi.org",
+      "desc": "Sovereign multi-agent coordination + ITIL service management (conflict-free task board, kanban, CardStore, CMDB)",
+      "url": "https://pypi.org/project/skcoord/0.1.18/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:43",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Tesla and others begin record vehicle recall in China",
+      "src": "CNA",
+      "desc": "China has said it will ban concealed door handles from 2027, making it the first country to phase out a design popularised by Tesla and widely adopted by domestic Chinese EV makers.",
+      "url": "https://www.channelnewsasia.com/east-asia/china-evs-tesla-vehicle-recall-6334381",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "23:39",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "MIL",
+      "title": "WATCH: Navy weighs stripping Black WWII hero’s name on ship to replace with Trump's: Sources",
+      "src": "Abcnews.com",
+      "desc": "Sources tell ABC News the Pentagon may strip WWII hero Doris Miller's name from a U.S. aircraft carrier to rename the ship after Pres. Trump.",
+      "url": "https://abcnews.com/video/135852530/",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "23:38",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "DIPLO",
+      "title": "Police nab man for cyberbullying",
+      "src": "The Punch",
+      "desc": "Adamawa Police arrest 31-year-old for cyberbullying and criminal intimidation of a First-Class Chief. Learn more about this cyberbullying case.\n\nRead More: https://punchng.com/police-nab-man-for-cyberbullying/",
+      "url": "https://punchng.com/police-nab-man-for-cyberbullying/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:33",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "MIL",
+      "title": "Trump's Army Secretary to STEP DOWN in shock resignation after months of tensions with Pete Hegseth, sources say",
+      "src": "Dailymail.com",
+      "desc": "Driscoll has disagreed with Hegseth on a number of issues, including the Secretary's moves to block the promotion of several Army officers and the April ouster of a key Driscoll ally.",
+      "url": "https://www.dailymail.com/news/article-16071125/dan-driscoll-Army-Secretary-resignation-Pete-Hegseth.html",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:32",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "DIPLO",
+      "title": "The free speech administration",
+      "src": "Lawyersgunsmoneyblog.com",
+      "desc": "Finally, cancel culture is over: Pete Hegseth’s Pentagon on Friday fired the publisher and editor of the independent military news outlet Stars and Stripes for “insubordination.” Long-time publisher Max Lederer and Editor-in-Chief Erik Slavin were given “sepa…",
+      "url": "https://www.lawyersgunsmoneyblog.com/2026/08/the-free-speech-administration-3",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:32",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "LHC collisions reveal oxygen and neon's shifting nuclear geometry - Phys.org",
+      "src": "Slashdot.org",
+      "desc": "LHC collisions reveal oxygen and neon's shifting nuclear geometryPhys.org A little Big Bang: Bowling-pin-shaped nuclei shed new light on the universe's first momentsPhys.org Scientists smash atoms together to create ‘little’ big bangsPopular Science Large Had…",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185091918",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:30",
+      "region": "MENA",
+      "sev": "high",
+      "type": "MIL",
+      "title": "America's depleted arsenal and military readiness concerns",
+      "src": "PBS",
+      "desc": "America's military uses the world's most advanced and sought-after weapons. But months of war with Iran have diminished the stockpile, limiting options and the ability to defend allies. Could America's adversaries exploit this moment? Compass Points moderator…",
+      "url": "https://www.pbs.org/newshour/podcasts/compass-points-with-pbs-news/americas-depleted-arsenal-and-military-readiness-concerns",
+      "filter": "MENA"
+    },
+    {
+      "time": "23:30",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Maryland Football 2026 Briefing: Training Camp Insights and Strategic Outlook",
+      "src": "Sports Illustrated",
+      "desc": "Maryland Football's 2026 training camp reveals key roster developments, rising playmakers, and strategic vision shaping the Terps' path to a Big Ten title ru...",
+      "url": "https://www.si.com/college/maryland/maryland-football-2026-briefing-training-camp-insights-and-strategic-outlook-01m0k6x1j6ps",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "23:30",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Taiwan taps US startup Vatn for modular S12 undersea drones – Washington’s ally turns to cheaper underwater systems",
+      "src": "TechRadar",
+      "desc": "Vatn Systems and Taiwan's NCSIST sign memorandum to jointly develop autonomous undersea drones, though funding timeline details remain undisclosed.",
+      "url": "https://www.techradar.com/pro/taiwan-taps-us-startup-vatn-for-modular-s12-undersea-drones-washingtons-ally-turns-to-cheaper-underwater-systems",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "23:28",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "DIPLO",
+      "title": "Far-left Florida Democrat Angie Nixon claims GOP is ‘literally trying to kill’ Black Americans",
+      "src": "Fox News",
+      "desc": "The Department of Homeland Security rejected Angie Nixon's claim that ICE is a \"weaponized paramilitary force\" designed to terrorize minority groups.",
+      "url": "https://www.foxnews.com/media/far-left-florida-democrat-angie-nixon-claims-gop-literally-trying-kill-black-americans",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:28",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "FIN",
+      "title": "Straitjacket Trump: I'd Win Re-election 'By 25 Points' On This Economy",
+      "src": "Crooksandliars.com",
+      "desc": "Donald Trump joined his former henchmen and apparently former enemy Michael Cohen on his radio program and made delusional comments about the state of the economy and credible polling data that were so absurd, I believe a straitjacket is required. \nDid anyone…",
+      "url": "https://crooksandliars.com/2026/08/straight-jacket-trump-economy-so-good-id",
+      "filter": "INDO-PAC"
+    },
     {
       "time": "23:25",
       "region": "INDO-PAC",
@@ -65,160 +219,6 @@
       "src": "The Punch",
       "desc": "President Trump announces temporary tariff relief on ground beef imports to lower costs for American consumers amidst shrinking cattle herds and upcoming m\n\nRead More: https://punchng.com/trump-announces-temporary-tariff-relief-on-ground-beef-imports/",
       "url": "https://punchng.com/trump-announces-temporary-tariff-relief-on-ground-beef-imports/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:17",
-      "region": "INDO-PAC",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "Horrific plane crash kills eight in Alaska",
-      "src": "Yahoo Entertainment",
-      "desc": "Authorities say a charter plane crash at a remote radar station in Alaska killed all eight people on board. Two of the victims were U.S. Army Corps of Engine...",
-      "url": "https://www.yahoo.com/news/videos/horrific-plane-crash-kills-eight-231728338.html",
-      "filter": "INDO-PAC"
-    },
-    {
-      "time": "23:15",
-      "region": "INDO-PAC",
-      "sev": "med",
-      "type": "FIN",
-      "title": "Teen Says She Tackled A Middle School Football Player To Protect Her Brother, Now She Faces Charges",
-      "src": "Wealthofgeeks.com",
-      "desc": "A viral middle school football clip in Tennessee has turned into a juvenile court case, school sanctions and a dispute between two families over what ... Read More",
-      "url": "https://wealthofgeeks.com/teen-says-she-tackled-a-middle-school-football-player-to-protect-her-brother-now-she-faces-charges/",
-      "filter": "INDO-PAC"
-    },
-    {
-      "time": "23:13",
-      "region": "INDO-PAC",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "China investigates comedian after he altered a revolutionary song lyric onstage",
-      "src": "Abcnews.com",
-      "desc": "One of China’s best-known comedians is under investigation after changing lyrics of a revolutionary song during a performance",
-      "url": "https://abcnews.com/Entertainment/wireStory/china-investigates-comedian-after-altered-revolutionary-song-lyric-135852573",
-      "filter": "INDO-PAC"
-    },
-    {
-      "time": "23:12",
-      "region": "EU-EAST",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "Russian 'double-tap' strike on shopping centre in Ukraine kills 15 and wounds 130 - Reuters",
-      "src": "Slashdot.org",
-      "desc": "Russian 'double-tap' strike on shopping centre in Ukraine kills 15 and wounds 130Reuters At least 15 killed and over 100 wounded in Russian ‘double-tap’ strike on a Ukrainian shopping centerCNN Russian double-tap drone strike kills 15 in Ukrainian mall, offic…",
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185091790",
-      "filter": "EU-EAST"
-    },
-    {
-      "time": "23:11",
-      "region": "EU-EAST",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "Draft officer fatally stabbed in Ukraine (VIDEO)",
-      "src": "RT",
-      "desc": "A Ukrainian draft officer was fatally stabbed during a routine document check in Lviv, with police shooting and wounding the alleged attacker",
-      "url": "https://www.rt.com/russia/644504-ukrainian-draft-officer-stabbed/",
-      "filter": "EU-EAST"
-    },
-    {
-      "time": "23:11",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "The cjn, the barrister and our obsession with titles",
-      "src": "Vanguard",
-      "desc": "We are a people sociologically wired to chase titles because titles mean access. In a society where people almost worship money and the good things of life\nThe post The cjn, the barrister and our obsession with titles   appeared first on Vanguard News.",
-      "url": "https://www.vanguardngr.com/2026/08/the-cjn-the-barrister-and-our-obsession-with-titles/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:08",
-      "region": "GLOBAL",
-      "sev": "med",
-      "type": "INFRA",
-      "title": "Pentagon Firing Military Newspaper Editor Raises First Amendment Question",
-      "src": "Biztoc.com",
-      "desc": "The Pentagon has been accused of attempting to stifle free speech after a fired editor for military newspaper Stars and Stripes said he was ousted after objecting to censorship.\nThe newspaper is an important source of military news and has a long history of e…",
-      "url": "https://biztoc.com/x/c80cf62bfcdfbb8d",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:00",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Lions coach 'feels sorry' for Swans as likely finals clash looms",
-      "src": "ABC News (AU)",
-      "desc": "Brisbane Lions coach Chris Fagan describes the Sydney Swans scandal as a \"head-scratcher\", with the two teams likely to meet in the AFL qualifying final.",
-      "url": "https://www.abc.net.au/news/2026-08-22/afl-brisbane-lions-coach-chris-fagan-feels-sorry-sydney-swans/107066662",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:00",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "DIPLO",
-      "title": "Cloverleaf deal is latest example of Nvidia using its war chest to patch cracks in the AI bubble",
-      "src": "Theregister.com",
-      "desc": "Nv's new chips need new datacenters, but you can't have bit barns without power",
-      "url": "https://www.theregister.com/systems/2026/08/22/cloverleaf-deal-is-latest-example-of-nvidia-using-its-war-chest-to-patch-cracks-in-the-ai-bubble/5291369",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:00",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Charles I’s Sunken Treasure Ship May Have Just Been Found Off The Coast Of Scotland After 400 Years",
-      "src": "Allthatsinteresting.com",
-      "desc": "The Blessing of Burntisland sank into the Firth of Forth bay in 1633 — and it may have just been discovered only a mile from shore.\nThe post Charles I’s Sunken Treasure Ship May Have Just Been Found Off The Coast Of Scotland After 400 Years appeared first on …",
-      "url": "https://allthatsinteresting.com/scotland-blessing-of-burntisland-charles-i-treasure-ship",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:00",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Devotion Video...",
-      "src": "Daily Beast",
-      "desc": "A bizarre video has emerged raising yet more questions about the blonde 35-year-old who is constantly at President Donald Trump’s side. The social media clip...",
-      "url": "https://www.thedailybeast.com/natalie-harps-first-unhinged-trump-devotion-video-is-revealed/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:00",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "INFRA",
-      "title": "Amanda Serrano vs. Lucrecia Manzur live results, updates and highlights from TikTok boxing fight",
-      "src": "Sporting News",
-      "desc": "Follow The Sporting News’ live coverage of Amanda Serrano vs. Lucrecia Manzur, including round-by-round updates, results and highlights from the featherweight title fight on TikTok.",
-      "url": "https://www.sportingnews.com/us/boxing/news/amanda-serrano-lucrecia-manzur-live-updates-results-highlights-tiktok/3606fb1db5f7352b0d07aaf3",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:00",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "MIL",
-      "title": "Township Fights Nuclear Weapons Data Center By Passing a Moratorium on Electrical Infrastructure",
-      "src": "Slashdot.org",
-      "desc": "Ypsilanti Township, Michigan, has imposed a six-month moratorium on \"major electric utility infrastructure\" in its latest attempt to delay a proposed $1.2 billion University of Michigan-Los Alamos data center that would support nuclear-weapons research. Towns…",
-      "url": "https://hardware.slashdot.org/story/26/08/21/2015213/township-fights-nuclear-weapons-data-center-by-passing-a-moratorium-on-electrical-infrastructure",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:59",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "This is a dicey topic, because there are businesses …",
-      "src": "Hoops Hype",
-      "desc": "This is a dicey topic, because there are businesses …",
-      "url": "https://www.hoopshype.com/story/sports/nba/rumors/2026/08/21/this-is-a-dicey-topic-because-there-are-businesses/91412412007/",
       "filter": "GLOBAL"
     }
   ]
