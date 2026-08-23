@@ -1,6 +1,171 @@
 {
-  "updated": "2026-08-23T22:29:17.947443+00:00",
+  "updated": "2026-08-23T22:53:16.422849+00:00",
   "items": [
+    {
+      "time": "22:53",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Massachusetts fishermen land 1,260-pound blue marlin, just short of world record",
+      "src": "Fox News",
+      "desc": "Two Massachusetts fishermen landed a 1,260-pound Atlantic blue marlin off the East Coast of the U.S., falling just 142 pounds short of the world record.",
+      "url": "https://www.foxnews.com/lifestyle/massachusetts-fishermen-land-1260-pound-blue-marlin-short-world-record",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:50",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "FIN",
+      "title": "Carney Blows Up The US-Canada Trade Deal At Midnight",
+      "src": "Cdm.press",
+      "desc": "Canadian PM Mark Carney walked away from a near-done US-Canada trade deal at midnight, triggering 50% tariffs on $20 billion in goods. Critics say the timing — weeks before US midterms — was no accident.",
+      "url": "https://cdm.press/news/business/2026/08/22/carney-blows-up-us-canada-trade-deal-midnight-50-tariffs-section-338/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:50",
+      "region": "MENA",
+      "sev": "high",
+      "type": "FIN",
+      "title": "Iran warns countries against joining in US sanctions",
+      "src": "RTE",
+      "desc": "Iran warned countries against participating in the United States' \"economic war\" against the Islamic republic, saying they would be considered enemies.",
+      "url": "https://www.rte.ie/news/world/2026/0822/1588886-middle-east/",
+      "filter": "MENA"
+    },
+    {
+      "time": "22:49",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "INFRA",
+      "title": "Sam Thursfield: 23rd August 2026",
+      "src": "Wordpress.com",
+      "desc": "Hello,Here’s some thoughts on software for August.\nBear with me on these broad categories but I think you can group most software projects into one of these groups: art, infrastructure, and activism.\nArt is primarily to communicate experiences and feelings to…",
+      "url": "https://samthursfield.wordpress.com/2026/08/22/23rd-august-2026/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:49",
+      "region": "MENA",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Trump shares image calling Hormuz 'new US territory'; Iran says strait 'closed'",
+      "src": "The Times of India",
+      "desc": "US News: NEW DELHI: US President Donald Trump on Sunday again shared an image on Truth Social describing the strategically vital Strait of Hormuz as “NEW US Te.",
+      "url": "https://timesofindia.indiatimes.com/world/us/trump-shares-image-calling-hormuz-new-us-territory-iran-says-strait-closed/articleshow/133432963.cms",
+      "filter": "MENA"
+    },
+    {
+      "time": "22:49",
+      "region": "MENA",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Iran prioritizes nuclear bomb over F-35s amid US tensions",
+      "src": "Crypto Briefing",
+      "desc": "Iran's nuclear focus may hinder diplomatic efforts, increasing regional tensions and complicating future negotiations with Western powers.\nThe post Iran prioritizes nuclear bomb over F-35s amid US tensions appeared first on Crypto Briefing.",
+      "url": "https://cryptobriefing.com/iran-prioritizes-nuclear-bomb-over-f-35s-amid-us-tensions/",
+      "filter": "MENA"
+    },
+    {
+      "time": "22:46",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Mark Ruffalo Calls Paramount’s Response to Him ‘Dishonest’",
+      "src": "Vulture",
+      "desc": "Mark Ruffalo says Paramount calling his criticism of the pending Paramount-Warner Bros. merger ‘dishonest.’",
+      "url": "http://www.vulture.com/article/mark-ruffalo-paramount-wb-merger-response.html",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:45",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "zbook added to PyPI",
+      "src": "Pypi.org",
+      "desc": "A small, keyboard-first notebook with uv and Codex integration",
+      "url": "https://pypi.org/project/zbook/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:36",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "FIN",
+      "title": "Dane Myers trades barbs with former Reds outfielder on social media",
+      "src": "The Cincinnati Enquirer",
+      "desc": "Reds outfielder Dane Myers went back and forth with ex-Reds OF Tommy Pham on social media over Myers' costly fly-ball drop against the Cardinals.",
+      "url": "https://www.cincinnati.com/story/sports/mlb/reds/2026/08/22/dane-myers-tommy-pham-social-media-exchange/91426183007/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:36",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "New footage of El Chapo’s first hours in captivity reveals notorious drug lord insisting his cartel would not rescue him",
+      "src": "New York Post",
+      "desc": "Mexican newspaper El Universal released three never-before-seen videos that highlight Joaquín 'El Chapo' Guzmán first hours under the custody of security forces after his capture on Jan. 8, 2016.",
+      "url": "https://nypost.com/2026/08/22/world-news/new-video-shows-how-el-chapo-spent-first-hours-in-captivity/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:35",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "How to see hidden East Anglia as a US service member",
+      "src": "Petewarden.com",
+      "desc": "River Lark and old mill buildings, Mildenhall by Bikeboy Today I saw a question posted on Reddit from someone who’s deploying to Mildenhall from the US. They wanted insights on how to dive deeper into English culture as a visitor, and I since I grew up nearby…",
+      "url": "https://petewarden.com/2026/08/22/how-to-see-hidden-east-anglia-as-a-us-service-member/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:35",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Mark Ruffalo fires back after he was labeled an antisemite by top Hollywood film studio over 'genocide' comments",
+      "src": "Dailymail.com",
+      "desc": "In an extended social media post, the Oscar-winning actor called the company's remarks 'appalling and fundamentally dishonest.'",
+      "url": "https://www.dailymail.com/tvshowbiz/article-16072705/Mark-Ruffalo-Paramount-antisemitic-genocide-apartheid.html",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:31",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Did the Flyers Already Tease Their 'Hometown Remix' Jersey?",
+      "src": "The Hockey News",
+      "desc": "Just over a month until the official reveal.",
+      "url": "https://thehockeynews.com/nhl/philadelphia-flyers/latest-news/did-the-flyers-already-tease-their-hometown-remix-jersey",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:30",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Lanterns Just Cemented The One DC Green Lantern Retcon So Good, Nobody Even Questions It",
+      "src": "Screen Rant",
+      "desc": "John Stewart's origin was changed in 2000, and he hasn't been the same since.",
+      "url": "https://screenrant.com/lanterns-john-stewart-retcon-architect-army/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "22:29",
+      "region": "MENA",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Top Egyptian, Iranian diplomats talk about restarting negotiations with US",
+      "src": "New York Post",
+      "desc": "The two discussed resuming the implementation of the US-Iran memorandum of understanding -- signed in June -- with the goal of reaching a “comprehensive and sustainable agreement.”",
+      "url": "https://nypost.com/2026/08/22/world-news/top-egyptian-iranian-diplomats-talk-about-restarting-negotiations-with-us/",
+      "filter": "MENA"
+    },
     {
       "time": "22:28",
       "region": "GLOBAL",
@@ -55,171 +220,6 @@
       "desc": "People across Russia are now regularly withdrawing money because of rumours that Vladimir Putin is using their savings to fund war or prop up the economy.",
       "url": "https://www.dailymail.com/news/article-16072611/Zelenskys-drone-blitzkrieg-Russian-Amazon-turning-shellshocked-Putins-war.html",
       "filter": "EU-EAST"
-    },
-    {
-      "time": "22:15",
-      "region": "EU-EAST",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "Zelensky vows revenge for devastating Russian strikes that killed 16 in shopping center: ‘Animals’",
-      "src": "New York Post",
-      "desc": "Oleksandr Hanzha, the head of the Dnipropetrovsk Regional Military Administration, said that 22 children were wounded and two children are missing after the attack on the shopping center -- while 52 people, including 14 children, were still in hospitals as of…",
-      "url": "https://nypost.com/2026/08/22/world-news/zelensky-vows-revenge-for-devastating-russian-bombing-that-killed-16-in-shopping-center/",
-      "filter": "EU-EAST"
-    },
-    {
-      "time": "22:15",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "RESOURCE",
-      "title": "Romero vs. Lopez Highlights, Streaming Updates TONIGHT!",
-      "src": "MMA Mania",
-      "desc": "Rolly Romero vs. Teofimo Lopez will collide later TONIGHT (Sat., Aug. 22, 2026) for Rolly’s WBA Welterweight title inside T-Mobile Arena in Las Vegas, Nevada, streaming live on DAZN PPV. The fight will be Romero’s first chance to defend the strap he won last …",
-      "url": "https://www.mmamania.com/boxing/466267/rolly-romero-vs-teofimo-lopez-live-streaming-results-video-highlights-put-up-or-shut-up",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:14",
-      "region": "MENA",
-      "sev": "med",
-      "type": "DIPLO",
-      "title": "Ship traffic in Strait of Hormuz jumps amid geopolitical tensions",
-      "src": "Crypto Briefing",
-      "desc": "Increased ship traffic in the Strait of Hormuz highlights shifting maritime strategies and underscores ongoing regional security challenges.\nThe post Ship traffic in Strait of Hormuz jumps amid geopolitical tensions appeared first on Crypto Briefing.",
-      "url": "https://cryptobriefing.com/ship-traffic-in-strait-of-hormuz-jumps-amid-geopolitical-tensions/",
-      "filter": "MENA"
-    },
-    {
-      "time": "22:12",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "FIN",
-      "title": "The Most Expensive Number in Your Marketing Department Is a Lie",
-      "src": "Linkedin.com",
-      "desc": "In the fast-paced world of marketing, numbers often dictate decisions. Yet, one figure stands out as particularly misleading: the cost per lead.",
-      "url": "https://www.linkedin.com/pulse/most-expensive-number-your-marketing-department-lie-viktor-grant-pwz3c",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:12",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Tomi Lahren Admonishes Lindsay Clancy Critics Dismissing Postpartum Depression",
-      "src": "Mediaite",
-      "desc": "Fox News's The Big Weekend Show took on the issue of postpartum depression when discussing the case of Lindsay Clancy, accused of murdering her three children.\nThe post Tomi Lahren Admonishes Lindsay Clancy Critics Dismissing Postpartum Depression first appea…",
-      "url": "https://www.mediaite.com/media/news/tomi-lahren-admonishes-lindsay-clancy-critics-dismissing-postpartum-depression/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:12",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "Half of the suspects in 2026 Fairfax County homicide cases are in the U.S. illegally",
-      "src": "Freerepublic.com",
-      "desc": "\"A total of nine people have been killed in eight Fairfax County homicide cases so far in 2026. Reporting shows that half of the suspects in theses cases are in the U.S. illegally.\"",
-      "url": "https://freerepublic.com/focus/f-chat/4392794/posts",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:10",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "FIN",
-      "title": "Canada retaliates as trade war with US escalates",
-      "src": "The Punch",
-      "desc": "Canada announces retaliatory tariffs on US goods as the trade war escalates, impacting industries from steel to dairy. Learn how this affects both nations.\n\nRead More: https://punchng.com/canada-retaliates-as-trade-war-with-us-escalates/",
-      "url": "https://punchng.com/canada-retaliates-as-trade-war-with-us-escalates/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:09",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "INFRA",
-      "title": "Missing Ukrainian woman who vanished in SoCal over a year ago likely went to Mexico",
-      "src": "New York Post",
-      "desc": "Ganna Kovrizhnykh, a Ukrainian citizen, was driving through San Diego County on a cross-country road trip before she was reported missing by a friend on July 12, 2025.",
-      "url": "https://nypost.com/2026/08/22/us-news/missing-ukraine-woman-who-vanished-in-san-diego-a-year-ago-likely-crossed-into-mexico-police/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:04",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Giancarlo Stanton and outrunning the sunset",
-      "src": "Pinstripe Alley",
-      "desc": "Is it finally time to say goodbye to a unique source of power?",
-      "url": "https://www.pinstripealley.com/yankees-analysis-sabermetrics/203853/yankees-giancarlo-stanton-injuries-hall-of-fame-judge-marlins-postseason",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:03",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "DIPLO",
-      "title": "OPERATION ISOLATION: Leaked FEMA Documents Reveal the ‘Lone Wolf’ Survival Protocol Was Engineered to Ensure Mass Casual",
-      "src": "Activistpost.com",
-      "desc": "There exists, in the architecture of human delusion, a particular cognitive trap so seductive that even the intelligent, the disciplined, and the otherwise rational succumb to its geometry. It is the fantasy of the homo silens—the silent man who watches the c…",
-      "url": "https://www.activistpost.com/operation-isolation-leaked-fema-documents-reveal-the-lone-wolf-survival-protocol-was-engineered-to-ensure-mass-casualties-during-collapse-the-340000-death-trap-they-don-2/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:01",
-      "region": "INDO-PAC",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "EXCLUSIVE – Tom Emmer: Tim Walz Mining Ban Empowers China, Kills Union Jobs",
-      "src": "Breitbart News",
-      "desc": "House Majority Whip Tom Emmer (R-MN) said Minnesota Gov. Tim Walz's order blocking copper-nickel mining near the Boundary Waters will empower foreign adversaries like China and kill union jobs across the state's northern Iron Range.\nThe post EXCLUSIVE – Tom E…",
-      "url": "https://www.breitbart.com/politics/2026/08/22/exclusive-tom-emmer-tim-walz-mining-ban-empowers-china-kills-union-jobs/",
-      "filter": "INDO-PAC"
-    },
-    {
-      "time": "22:01",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "FIN",
-      "title": "Trump Stock Disclosure Shows More Than 1,000 Trades in June",
-      "src": "Livemint",
-      "desc": "President Donald Trump made more than 1,000 securities trades in June, including significant purchases of Berkshire Hathaway Inc., Visa Inc., Mastercard Inc. and Cintas Corp., according to a financial disclosure published Saturday.",
-      "url": "https://www.livemint.com/companies/trump-stock-disclosure-shows-more-than-1-000-trades-in-june-11787436079488.html",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:00",
-      "region": "EU-EAST",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "Macron Pledges Delivery Of French Air Interceptors Following Deadly Wave Of Russian Attacks",
-      "src": "Radio Free Europe/ Radio Liberty",
-      "desc": "French leader Emmanuel Macron has vowed to accelerate delivery of new French air interceptor missiles to Kyiv following devasting Russian air attacks on a Ukrainian city and a call with President Volodymyr Zelenskyy.",
-      "url": "https://www.rferl.org/a/macron-interceptor-missiles-ukraine-zelenskyy-russia-kryviy-rih/33836260.html",
-      "filter": "EU-EAST"
-    },
-    {
-      "time": "22:00",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "65 Unhinged Text Exchanges That Are Almost Certainly Fictional But Absolutely Hilarious",
-      "src": "Boredpanda.com",
-      "desc": "Not everyone knows the magic spell to dish out funny fake texts, but these folks definitely did. We have compiled the most unhinged ones for you, and some will make you think about the chaos that would have followed if they were real. Scroll through the list …",
-      "url": "https://www.boredpanda.com/funny-fake-texts/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "22:00",
-      "region": "GLOBAL",
-      "sev": "med",
-      "type": "RESOURCE",
-      "title": "Gas turbine shortage becomes AI’s biggest constraint as backlogs stretch to 2031",
-      "src": "Crypto Briefing",
-      "desc": "The turbine shortage could hinder AI growth, escalate energy costs, and intensify global competition for power infrastructure resources.\nThe post Gas turbine shortage becomes AI’s biggest constraint as backlogs stretch to 2031 appeared first on Crypto Briefin…",
-      "url": "https://cryptobriefing.com/gas-turbine-shortage-ai-constraint/",
-      "filter": "GLOBAL"
     }
   ]
 }
