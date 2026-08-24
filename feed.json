@@ -1,6 +1,160 @@
 {
-  "updated": "2026-08-24T23:27:48.284179+00:00",
+  "updated": "2026-08-24T23:51:32.915992+00:00",
   "items": [
+    {
+      "time": "23:50",
+      "region": "EU-EAST",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Ukraine: Three killed in Russian strike on outskirts of Kharkiv",
+      "src": "Israelnationalnews.com",
+      "desc": "Three people were killed in a Russian strike on the outskirts of Kharkiv in northeastern Ukraine, the regional governor said.Emergency crews rescued eight people from the area, some of whom were injured.",
+      "url": "https://www.israelnationalnews.com/flashes/692263",
+      "filter": "EU-EAST"
+    },
+    {
+      "time": "23:46",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "FIN",
+      "title": "UPDATE: Canada retaliates against USA...",
+      "src": "Yahoo Entertainment",
+      "desc": "Canadian Prime Minister Mark Carney announced retaliatory tariffs on the United States on Saturday, after walking away from a \"bad deal\" on trade in a deepen...",
+      "url": "https://finance.yahoo.com/economy/policy/articles/us-canada-fail-reach-trade-042829871.html",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:46",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "MIL",
+      "title": "He was waiting for his son to return from the USS Lincoln. Then Border Patrol arrested him....",
+      "src": "Associated Press",
+      "desc": "The father of a man serving on the USS Abraham Lincoln has been arrested by immigration authorities. The ship has set a record for uninterrupted time at sea and its deployment has raised concerns about supply shortages and mental health among sailors. Luis Av…",
+      "url": "https://apnews.com/article/uss-lincoln-soldier-immigrant-detention-trump-8697cd00f0b3099a0c03932e40f674db",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:40",
+      "region": "AFRICA",
+      "sev": "med",
+      "type": "MIL",
+      "title": "Soldiers neutralise bandit kingpin, arrest two in Benue",
+      "src": "The Punch",
+      "desc": "Nigerian troops neutralise a notorious bandit kingpin, ‘Cool Nigga’, and arrest two kidnappers in separate operations across Benue State. Read more on the\n\nRead More: https://punchng.com/soldiers-neutralise-bandit-kingpin-arrest-two-in-benue/",
+      "url": "https://punchng.com/soldiers-neutralise-bandit-kingpin-arrest-two-in-benue/",
+      "filter": "AFRICA"
+    },
+    {
+      "time": "23:39",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "INFRA",
+      "title": "Taiwan lifts 2027 tech budget, studies new TTA site in BSTP",
+      "src": "Digitimes",
+      "desc": "Taiwan's Executive Yuan approved a larger 2027 technology budget of NT$229.2 billion (approx. US$7.2 billion), an increase of NT$25.9 billion from 2026, as the government also raised funding for the Ten Major AI Infrastructure Projects to NT$40.6 billion. The…",
+      "url": "https://www.digitimes.com/news/a20260821PD230/taiwan-tta-budget-2027-technology.html",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "23:38",
+      "region": "EU-EAST",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Burnham to visit Kyiv, pledge help in missile production",
+      "src": "Biztoc.com",
+      "desc": "British Prime Minister Andy Burnham will travel to Kyiv for his first foreign visit on Independence Day, where he will announce a new agreement to help Ukraine establish local manufacturing lines for ...",
+      "url": "https://biztoc.com/x/bb64026ad132ce69",
+      "filter": "EU-EAST"
+    },
+    {
+      "time": "23:38",
+      "region": "GLOBAL",
+      "sev": "med",
+      "type": "DIPLO",
+      "title": "skcoord 0.1.34",
+      "src": "Pypi.org",
+      "desc": "Sovereign multi-agent coordination + ITIL service management (conflict-free task board, kanban, CardStore, CMDB)",
+      "url": "https://pypi.org/project/skcoord/0.1.34/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:35",
+      "region": "INDO-PAC",
+      "sev": "high",
+      "type": "KINETIC",
+      "title": "Why Reds' Dane Myers 'surprised' by Tommy Pham's social media attack",
+      "src": "The Cincinnati Enquirer",
+      "desc": "\"I know when I'm older if I see a younger Black guy, especially, playing the game hard, I (won't) call him out in public,\" Reds CF Dane Myers said.",
+      "url": "https://www.cincinnati.com/story/sports/mlb/reds/2026/08/23/reds-dane-myers-tommy-pham-social-media/91434872007/",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "23:33",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Reform vows to put British workers at top of the list for social housing",
+      "src": "Dailymail.com",
+      "desc": "Reform UK has vowed to put British-born workers at the front of the queue for council housing if it gets into power.",
+      "url": "https://www.dailymail.com/news/article-16074353/reform-vows-British-workers-list-social-housing.html",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:32",
+      "region": "EU-EAST",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Wartime election would 'destroy' Ukraine, Zelenskiy says - Reuters",
+      "src": "Slashdot.org",
+      "desc": "Wartime election would 'destroy' Ukraine, Zelenskiy saysReuters Zelensky should be asked what he knew about government corruption, ex-minister Mykhailo Fedorov tells BBCBBC Wartime election would ‘destroy’ Ukraine, Zelenskyy saysHonolulu Star-Advertiser Holdi…",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185121492",
+      "filter": "EU-EAST"
+    },
+    {
+      "time": "23:31",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Four More Join “One Piece” Season 3",
+      "src": "Dark Horizons",
+      "desc": "Four more names have been revealed to have joined the cast of Netflix’s live-action “One Piece” series in its third season, which wrapped filming last month. The new additions include Omid Abtahi (“The Boys,” “The Mandalorian”) as the kindhearted but staunch …",
+      "url": "https://www.darkhorizons.com/four-more-join-one-piece-season-3/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:30",
+      "region": "INDO-PAC",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "Asian companies prepare for busiest earnings week, focusing on AI rally and China’s recovery",
+      "src": "Crypto Briefing",
+      "desc": "Asian firms face a dual challenge: leveraging AI growth while navigating China's sluggish consumer recovery, impacting future strategies.\nThe post Asian companies prepare for busiest earnings week, focusing on AI rally and China’s recovery appeared first on C…",
+      "url": "https://cryptobriefing.com/asian-earnings-ai-rally-china-recovery/",
+      "filter": "INDO-PAC"
+    },
+    {
+      "time": "23:30",
+      "region": "GLOBAL",
+      "sev": "low",
+      "type": "DIPLO",
+      "title": "8 Signs Reacher Missed That Lila Was A Villain",
+      "src": "Screen Rant",
+      "desc": "Reacher season 4 has put his analytical skills to the test, with Reacher making some surprising mistakes, including missing a major villain.",
+      "url": "https://screenrant.com/reacher-lila-villain-signs-missed/",
+      "filter": "GLOBAL"
+    },
+    {
+      "time": "23:30",
+      "region": "GLOBAL",
+      "sev": "high",
+      "type": "DIPLO",
+      "title": "Star Trek Owed Its Success To Four Things, According To Isaac Asimov",
+      "src": "/FILM",
+      "desc": "Isaac Asimov observed four details that seemed to make Star Trek a success, eventually leading to swarms of fans, huge conventions, and an entire franchise.",
+      "url": "https://www.slashfilm.com/2184370/star-trek-owed-success-four-things-isaac-asimov/",
+      "filter": "GLOBAL"
+    },
     {
       "time": "23:25",
       "region": "EU-EAST",
@@ -66,160 +220,6 @@
       "desc": "Patients are waiting in soiled beds at North Shore Hospital's emergency department and nurses say conditions are so bad it feels feral.",
       "url": "https://www.rnz.co.nz/news/health/1092928/absolute-nightmare-patients-left-waiting-in-soiled-beds-at-north-shore-emergency-department",
       "filter": "GLOBAL"
-    },
-    {
-      "time": "23:18",
-      "region": "INDO-PAC",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Another Chinese robot just beat Usain Bolt’s 100M record, and then it face-planted into a wall",
-      "src": "Freerepublic.com",
-      "desc": "A ⁠robot ran the 100m in 9.32 seconds at the World Humanoid Robot Games on Saturday, beating Usain Bolt’s record. The machine reached a peak velocity of 14.5 meters per second during a test run before running face-first into a wall. The robot, named Lightning…",
-      "url": "https://freerepublic.com/focus/f-news/4392876/posts",
-      "filter": "INDO-PAC"
-    },
-    {
-      "time": "23:18",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "The AI Debt Boom Is Helping Push Everyone’s Cost of Capital Higher",
-      "src": "24/7 Wall St.",
-      "desc": "Every bond a hyperscaler sells to fund its next GPU cluster competes directly with Treasuries for the same pool of capital, and the ripple is now hitting fiv...",
-      "url": "https://247wallst.com/investing/2026/08/23/the-ai-debt-boom-is-helping-push-everyones-cost-of-capital-higher/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:17",
-      "region": "MENA",
-      "sev": "med",
-      "type": "DIPLO",
-      "title": "Iran rips Trump's 'empty talk' while issuing blistering ultimatum to neighboring nations",
-      "src": "Dailymail.com",
-      "desc": "Iran dismissed Donald Trump's threats as 'empty talk' as Washington prepares to ramp up economic pressure on Tehran.",
-      "url": "https://www.dailymail.com/news/article-16073625/Iran-rips-Trumps-talk-issuing-blistering-ultimatum.html",
-      "filter": "MENA"
-    },
-    {
-      "time": "23:15",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Natalie, Ossoff And Message Discipline",
-      "src": "Crooksandliars.com",
-      "desc": "I've been thinking about the Natalie Harp story and the possibility that it's not doing as much damage to Donald Trump as we're all hoping it is.\nThe main problem with the story is that it suggests two possible realities, which point to two very different vie…",
-      "url": "https://crooksandliars.com/2026/08/natalie-ossoff-and-message-discipline",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:15",
-      "region": "EU-EAST",
-      "sev": "high",
-      "type": "FIN",
-      "title": "Russia is suffering from a slow-motion bank run as the Kremlin scavenges for war funding—and it may start seizing recrui",
-      "src": "Yahoo Entertainment",
-      "desc": "The financial sector's loss of deposits has created a liquidity crunch so severe that it's threatening Russia's ability to fund its war.",
-      "url": "https://finance.yahoo.com/economy/articles/russia-suffering-slow-motion-bank-231531238.html",
-      "filter": "EU-EAST"
-    },
-    {
-      "time": "23:15",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "INFRA",
-      "title": "Trump's Weight Gain Sparks Health Concerns Among Doctors - Policy Wire",
-      "src": "Policy-wire.com",
-      "desc": "POLICY WIRE — Washington, D.C. — Former President Donald Trump has experienced a significant weight increase over the past three years, according to recent reports. In May, Trump's weight was app",
-      "url": "https://policy-wire.com/trumps-weight-gain-sparks-health-concerns-among-doctors/",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:14",
-      "region": "MENA",
-      "sev": "high",
-      "type": "FIN",
-      "title": "US Treasury to launch largest financial offensive against Iran tomorrow",
-      "src": "Crypto Briefing",
-      "desc": "The U.S. Treasury's financial offensive against Iran may exacerbate economic isolation, hindering future diplomatic and nuclear negotiations.\nThe post US Treasury to launch largest financial offensive against Iran tomorrow appeared first on Crypto Briefing.",
-      "url": "https://cryptobriefing.com/us-treasury-to-launch-largest-financial-offensive-against-iran-tomorrow/",
-      "filter": "MENA"
-    },
-    {
-      "time": "23:13",
-      "region": "MENA",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "EU condemns Israel's E1 construction plans: Damage to two-state solution",
-      "src": "Israelnationalnews.com",
-      "desc": "EU foreign policy chief Kaja Kallas condemns Israel's E1 construction plans, saying the project would undermine prospects for a two-state solution.",
-      "url": "https://www.israelnationalnews.com/news/432129",
-      "filter": "MENA"
-    },
-    {
-      "time": "23:12",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "FIN",
-      "title": "Manitoba business owners worry about importing material, selling products with retaliatory tariffs",
-      "src": "CBC News",
-      "desc": "As Manitoban businesses are trying to make sense of the trade war with the U.S., some say they're less concerned about U.S. tariffs on Canadian goods, and more worried about what the federal government's dollar-for-dollar retaliatory tariffs might mean for th…",
-      "url": "https://www.cbc.ca/news/canada/manitoba/manitoba-businesses-worried-about-canadian-retaliatory-tariffs-9.7317735",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:09",
-      "region": "GLOBAL",
-      "sev": "low",
-      "type": "DIPLO",
-      "title": "Guinea rubbish landfill collapse kills 30 in Conakry",
-      "src": "BBC News",
-      "desc": "A mound of rubbish at a major waste site buried several homes in the capital, the government says.",
-      "url": "https://www.bbc.com/news/articles/c4g3g36z7p6o",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:08",
-      "region": "MENA",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "Syria, Israel hold US-mediated talks to ease tensions, Syria news agency says",
-      "src": "Biztoc.com",
-      "desc": "By Feras Dalatey\nAug 24 (Reuters) - Syria and Israel held high-level, U.S.-mediated talks in Jordan on Sunday aimed at easing tensions following recent Israeli strikes on Syrian territory, Syria's state news agency SANA reported, citing a diplomatic source at…",
-      "url": "https://biztoc.com/x/a8897346e1f53f4e",
-      "filter": "MENA"
-    },
-    {
-      "time": "23:08",
-      "region": "MENA",
-      "sev": "high",
-      "type": "KINETIC",
-      "title": "Syria says Israel talks addressed de-escalation, staying out of Israel-Turkey tensions",
-      "src": "Biztoc.com",
-      "desc": "Syria said it held talks with Israel in Jordan on Sunday on de-escalation after recent Israeli strikes, and on keeping the country out of tensions between Israel and Turkey, an ally of Damascus.\nThe high-level negotiations came after the sides in January agre…",
-      "url": "https://biztoc.com/x/fd58d2b146fc47c0",
-      "filter": "MENA"
-    },
-    {
-      "time": "23:07",
-      "region": "GLOBAL",
-      "sev": "high",
-      "type": "FIN",
-      "title": "PA governor blasts Trump's 'trade war' with Canada",
-      "src": "Biztoc.com",
-      "desc": "Pennsylvania Democratic Governor Josh Shapiro said United States President Donald Trump's strategy of \"doubling down on his reckless trade war\" with Canada is harming American citizens.\"He's not only ...",
-      "url": "https://biztoc.com/x/2d3576c3499ff6cd",
-      "filter": "GLOBAL"
-    },
-    {
-      "time": "23:07",
-      "region": "EU-EAST",
-      "sev": "high",
-      "type": "INFRA",
-      "title": "Burnham to visit Kyiv on first foreign trip and reaffirm UK support for Ukraine",
-      "src": "BBC News",
-      "desc": "It comes after Moscow warned of \"consequences\" over the reported use of British drones by Ukraine.",
-      "url": "https://www.bbc.co.uk/news/articles/clyqypkrzq5o",
-      "filter": "EU-EAST"
     }
   ]
 }
